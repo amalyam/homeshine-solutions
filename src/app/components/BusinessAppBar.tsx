@@ -12,9 +12,9 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import Image from "next/image";
-import HomeShineLogo from "../HomeShine-transparent.svg";
+import HomeShineLogo from "src/images/HomeShine-transparent.svg";
 
-const pages = ["Home", "Services", "Free Quote", "Blog", "About Us", "FAQ"];
+const pages = ["Home", "Services", "Blog", "FAQ", "About Us"];
 
 export default function BusinessAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
@@ -42,7 +42,10 @@ export default function BusinessAppBar() {
   return (
     <AppBar position="sticky">
       <Container maxWidth="xl">
-        <Toolbar disableGutters>
+        <Toolbar
+          disableGutters
+          sx={{ flexDirection: { xs: "column", md: "row" } }}
+        >
           <Typography
             variant="h6"
             noWrap
@@ -58,7 +61,6 @@ export default function BusinessAppBar() {
               textDecoration: "none",
             }}
           ></Typography>
-
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
@@ -110,10 +112,20 @@ export default function BusinessAppBar() {
               color: "inherit",
               textDecoration: "none",
             }}
+          ></Typography>
+          <Image
+            src={HomeShineLogo}
+            alt="HomeShine logo"
+            style={{ objectFit: "contain", height: "55px" }}
+          />
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: "none", md: "flex" },
+              mx: 9,
+              paddingTop: "10px",
+            }}
           >
-            <Image src={HomeShineLogo} alt="HomeShine logo" />
-          </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
               <Button
                 key={page}
@@ -123,7 +135,37 @@ export default function BusinessAppBar() {
                 {page}
               </Button>
             ))}
+            <Button
+              variant="contained"
+              sx={{
+                p: 1,
+                mx: 3,
+                color: "black",
+                backgroundColor: "e6c74d",
+              }}
+            >
+              FREE QUOTE
+            </Button>
           </Box>
+          <div>
+            <div>
+              <Box sx={{ typography: { textAlign: "right" } }}>
+                <a
+                  style={{ color: "white" }}
+                  href="mailto:HomeShineRoofPro@gmail.com"
+                >
+                  HomeShineRoofPro@gmail.com
+                </a>
+              </Box>
+            </div>
+            <div>
+              <Box sx={{ typography: { textAlign: "right" }, marginTop: 0.75 }}>
+                <a style={{ color: "white" }} href="tel:5089210275">
+                  (508) 921-0275
+                </a>
+              </Box>
+            </div>
+          </div>
         </Toolbar>
       </Container>
     </AppBar>
