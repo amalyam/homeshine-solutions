@@ -9,6 +9,7 @@ import FormGroup from "@mui/material/FormGroup";
 import TextField from "@mui/material/TextField";
 import { Theme, useTheme } from "@mui/material/styles";
 import Input from "@mui/material/Input";
+import OutlinedInput from "@mui/material/OutlinedInput";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
@@ -31,12 +32,6 @@ soft wash:
 - sq ft of siding or roof
 
 -add popup to message box when selected with prompt for details to include 
-
-How did you hear about HomeShine?
-
-
-
-What can we help you with?
 
 */
 
@@ -91,11 +86,11 @@ function MultipleSelectChip() {
   return (
     <div>
       <FormControl sx={{ m: 1, width: 300 }}>
-        <InputLabel id="how-did-you-hear-about-us">
+        <InputLabel id="how-did-you-hear-about-us-label">
           How did you hear about us?
         </InputLabel>
         <Select
-          labelId="how-did-you-hear-about-us"
+          labelId="how-did-you-hear-about-us-label"
           id="how-did-you-hear-about-us"
           multiple
           value={optionText}
@@ -138,50 +133,62 @@ export default function ContactForm() {
           borderRadius: "10px",
         }}
       >
-        <div>Contact Form</div>
+        <div>Free Quote</div>
         <div>
-          <div>
-            <TextField
-              id="name"
-              label="Name"
-              type="string"
-              variant="standard"
-              placeholder="Jane Doe"
-              required
-            />
-          </div>
-          <div>
-            <TextField
-              id="email"
-              label="Email"
-              type="string"
-              variant="standard"
-              placeholder="janedoe@gmail.com"
-            />
-          </div>
-          <div>
-            <TextField
-              id="phone"
-              label="Phone Number"
-              type="tel"
-              variant="standard"
-              placeholder="(888) 888-8888"
-            />
-          </div>
-          <div>
-            <TextField
-              id="zip"
-              label="Zip Code"
-              type="text"
-              variant="standard"
-              placeholder=""
-              inputProps={{
-                pattern: "[0-9]{5}",
-                minlength: "5",
-                maxlength: "5",
-              }}
-            />
-          </div>
+          <FormGroup>
+            <div>
+              <TextField
+                id="name"
+                label="Name"
+                type="string"
+                variant="standard"
+                placeholder="Jane Doe"
+                required
+              />
+            </div>
+            <div>
+              <TextField
+                id="email"
+                label="Email"
+                type="string"
+                variant="standard"
+                placeholder="janedoe@gmail.com"
+              />
+            </div>
+            <div>
+              <TextField
+                id="phone"
+                label="Phone Number"
+                type="tel"
+                variant="standard"
+                placeholder="(888) 888-8888"
+              />
+            </div>
+            <div>
+              <TextField
+                id="address"
+                label="Address"
+                type="string"
+                variant="standard"
+                placeholder="000 Main St."
+              />
+            </div>
+            <div>
+              <TextField
+                id="zip"
+                label="Zip Code"
+                type="text"
+                variant="standard"
+                placeholder=""
+                inputProps={{
+                  pattern: "[0-9]{5}",
+                  minlength: "5",
+                  maxlength: "5",
+                }}
+                required
+              />
+            </div>
+          </FormGroup>
           <FormGroup aria-label="services">
             <div>
               <FormControlLabel
