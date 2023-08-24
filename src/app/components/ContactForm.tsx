@@ -17,6 +17,7 @@ import Select, { SelectChangeEvent } from "@mui/material/Select";
 import Chip from "@mui/material/Chip";
 import { useState } from "react";
 import { FormHelperText } from "@mui/material";
+import theme from "../theme";
 
 /* 
 address
@@ -251,7 +252,20 @@ export default function ContactForm() {
             required
           />
           <div>
-            <Button variant="contained" type="submit">
+            <Button
+              variant="contained"
+              sx={{
+                py: 1,
+                px: 1.25,
+                mx: 3,
+                backgroundColor: theme.palette.secondary.dark,
+                color: theme.palette.primary.main,
+                "&:hover": {
+                  backgroundColor: theme.palette.secondary.light,
+                },
+              }}
+              type="submit"
+            >
               Submit
             </Button>
           </div>
