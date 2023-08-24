@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import BusinessAppBar from "./components/BusinessAppBar";
+import { ThemeProvider } from "@mui/material/styles";
+import theme from "./theme";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,8 +19,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <BusinessAppBar />
-        {children}
+        <ThemeProvider theme={theme}>
+          <BusinessAppBar />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
