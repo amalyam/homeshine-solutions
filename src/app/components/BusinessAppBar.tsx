@@ -12,7 +12,13 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import Image from "next/image";
-import HomeShineLogo from "src/images/HomeShine-transparent.svg";
+import theme from "../theme";
+import HomeShineLogoTransparent from "src/images/homeshine-llc-transparent.svg";
+import HomeShineLogoWhite from "src/images/homeshine-logo-llc-white.svg";
+
+// TODO: get contact info to align center in sm
+// set contact info color from parent Box?
+// show "FREE QUOTE" button in sm
 
 const pages = ["Home", "Services", "Blog", "FAQ", "About Us"];
 
@@ -46,21 +52,6 @@ export default function BusinessAppBar() {
           disableGutters
           sx={{ flexDirection: { xs: "column", md: "row" } }}
         >
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: "none", md: "flex" },
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "inherit",
-              textDecoration: "none",
-            }}
-          ></Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
@@ -114,23 +105,29 @@ export default function BusinessAppBar() {
             }}
           ></Typography>
           <Image
-            src={HomeShineLogo}
+            src={HomeShineLogoTransparent}
             alt="HomeShine logo"
-            style={{ objectFit: "contain", height: "55px" }}
+            style={{ objectFit: "contain", height: "80px" }}
           />
           <Box
             sx={{
               flexGrow: 1,
               display: { xs: "none", md: "flex" },
               mx: 9,
-              paddingTop: "10px",
+              paddingTop: 2,
+              alignItems: "center",
             }}
           >
             {pages.map((page) => (
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
+                sx={{
+                  my: 2,
+                  color: theme.palette.primary.dark,
+                  display: "block",
+                  fontSize: "1rem",
+                }}
               >
                 {page}
               </Button>
@@ -138,34 +135,52 @@ export default function BusinessAppBar() {
             <Button
               variant="contained"
               sx={{
-                p: 1,
+                py: 1,
+                px: 1.25,
                 mx: 3,
-                color: "black",
-                backgroundColor: "e6c74d",
+                marginBottom: 1.5,
+                fontSize: "1.25rem",
+                backgroundColor: theme.palette.secondary.main,
+                color: theme.palette.primary.main,
+                "&:hover": {
+                  backgroundColor: theme.palette.secondary.light,
+                },
               }}
             >
               FREE QUOTE
             </Button>
           </Box>
-          <div>
+          <Box
+            sx={{
+              typography: {
+                sm: { textAlign: "center", display: "center" },
+                md: { textAlign: "right" },
+              },
+            }}
+          >
             <div>
-              <Box sx={{ typography: { textAlign: "right" } }}>
-                <a
-                  style={{ color: "white" }}
-                  href="mailto:HomeShineRoofPro@gmail.com"
-                >
-                  HomeShineRoofPro@gmail.com
-                </a>
-              </Box>
+              <div>
+                <Box>
+                  <a
+                    style={{ color: theme.palette.primary.dark }}
+                    href="mailto:HomeShineRoofPro@gmail.com"
+                  >
+                    HomeShineRoofPro@gmail.com
+                  </a>
+                </Box>
+              </div>
+              <div>
+                <Box>
+                  <a
+                    style={{ color: theme.palette.primary.dark }}
+                    href="tel:5089210275"
+                  >
+                    (508) 921-0275
+                  </a>
+                </Box>
+              </div>
             </div>
-            <div>
-              <Box sx={{ typography: { textAlign: "right" }, marginTop: 0.75 }}>
-                <a style={{ color: "white" }} href="tel:5089210275">
-                  (508) 921-0275
-                </a>
-              </Box>
-            </div>
-          </div>
+          </Box>
         </Toolbar>
       </Container>
     </AppBar>
