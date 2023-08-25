@@ -139,7 +139,7 @@ export default function BusinessAppBar() {
                 px: 1.25,
                 mx: 3,
                 marginBottom: 1.5,
-                fontSize: "1.25rem",
+                fontSize: "1.15rem",
                 backgroundColor: theme.palette.secondary.main,
                 color: theme.palette.primary.main,
                 "&:hover": {
