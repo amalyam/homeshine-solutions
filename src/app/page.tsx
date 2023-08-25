@@ -3,7 +3,15 @@ import Image from "next/image";
 import LogoAndServices from "/src/images/logo-and-services.jpg";
 import CleanRoof from "/src/images/clean-roof.jpg";
 
-/* <Image
+/* 
+TODO create color theme based on Homeshine logo
+primary white
+teal
+yellow
+text black
+
+
+<Image
 src={LogoAndServices}
 width={781.5}
 height={374}
@@ -13,8 +21,7 @@ placeholder="blur"
 
 export default function Home() {
   return (
-    <div>
-      <Image src={CleanRoof} alt="clean roof" placeholder="blur" />
+    <div style={{ backgroundImage: `url(${CleanRoof.src})`, height: "100vh" }}>
       <ContactForm />
     </div>
   );
