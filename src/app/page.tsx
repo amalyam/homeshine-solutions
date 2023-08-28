@@ -2,6 +2,7 @@ import ContactForm from "./components/ContactForm";
 import Image from "next/image";
 import LogoAndServices from "/src/images/logo-and-services.jpg";
 import CleanRoof from "/src/images/clean-roof.jpg";
+import IntroText from "./components/IntroText";
 
 /* 
 TODO create color theme based on Homeshine logo
@@ -22,7 +23,10 @@ placeholder="blur"
 export default function Home() {
   return (
     <div style={{ backgroundImage: `url(${CleanRoof.src})`, height: "100vh" }}>
-      <ContactForm />
+      <div style={{ display: "flex", flexDirection: "row" }}>
+        <IntroText />
+        <ContactForm />
+      </div>
     </div>
   );
 }
