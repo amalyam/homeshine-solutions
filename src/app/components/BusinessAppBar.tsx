@@ -14,7 +14,6 @@ import MenuItem from "@mui/material/MenuItem";
 import Image from "next/image";
 import theme from "../theme";
 import HomeShineLogoTransparent from "src/images/homeshine-llc-transparent.svg";
-import HomeShineLogoWhite from "src/images/homeshine-logo-llc-white.svg";
 
 // TODO: get contact info to align center in sm
 // set contact info color from parent Box?
@@ -146,6 +145,7 @@ export default function BusinessAppBar() {
                   backgroundColor: theme.palette.secondary.light,
                 },
               }}
+              onClick={() => document.getElementById("name")?.focus()}
             >
               FREE QUOTE
             </Button>
