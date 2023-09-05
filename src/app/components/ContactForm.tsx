@@ -61,11 +61,11 @@ const serviceOptions = [
 
 export default function ContactForm() {
   return (
-    <Container sx={{ m: 3, width: 925 }}>
+    <Container sx={{ m: 3, width: "45%", display: "flex" }}>
       <Card
         elevation={24}
         sx={{
-          width: 925,
+          width: "100%",
           borderRadius: "10px",
           p: 2,
         }}
@@ -85,155 +85,153 @@ export default function ContactForm() {
         >
           <Box
             sx={{
-              display: "flex",
+              display: "block",
               justifyContent: "left",
               m: 1,
             }}
           >
-            <div>
-              <CardHeader
-                title="Free Quote"
-                sx={{ display: "center", paddingBottom: 0 }}
-              />
-              <CardContent sx={{ display: "flex", flexDirection: "column" }}>
-                <FormGroup sx={{ marginTop: 0, marginBottom: 3 }}>
-                  <TextFieldElement
-                    name={"name"}
-                    id="name"
-                    label="Name"
-                    type="string"
-                    variant="standard"
-                    placeholder="Jane Doe"
-                    required
-                    sx={{ width: "75%" }}
-                  />
-                  <TextFieldElement
-                    name={"email"}
-                    id="email"
-                    label="Email"
-                    type="string"
-                    variant="standard"
-                    placeholder="janedoe@gmail.com"
-                    sx={{ width: "75%" }}
-                  />
-                  <TextFieldElement
-                    name={"phone"}
-                    id="phone"
-                    label="Phone Number"
-                    type="tel"
-                    variant="standard"
-                    placeholder="(888) 888-8888"
-                    sx={{ width: "75%" }}
-                  />
-                  <TextFieldElement
-                    name={"address"}
-                    id="address"
-                    label="Address"
-                    type="string"
-                    variant="standard"
-                    multiline
-                    rows={3}
-                    placeholder="111 Main St."
-                  />
-                  <TextFieldElement
-                    name={"zip"}
-                    id="zip"
-                    label="Zip Code"
-                    type="text"
-                    variant="standard"
-                    placeholder="00000"
-                    inputProps={{
-                      pattern: "[0-9]{5}",
-                      minlength: "5",
-                      maxlength: "5",
-                    }}
-                    required
-                    sx={{ width: "35%" }}
-                  />
-                </FormGroup>
-                <FormControl sx={{ width: "100%", my: 1 }}>
-                  <MultiSelectElement
-                    label="What services are you interested in?"
-                    id="services"
-                    name={"services"}
-                    multiple
-                    input={<Input id="select-multiple-chip" />}
-                    options={serviceOptions}
-                    showChips
-                    MenuProps={{
-                      PaperProps: {
-                        style: {
-                          maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
-                          width: 350,
-                        },
-                      },
-                    }}
-                  ></MultiSelectElement>
-                  <FormHelperText>You may select more than one</FormHelperText>
-                </FormControl>
-                <FormHelperText sx={{ marginTop: 0, marginBottom: 3 }}>
-                  *You may select more than one
-                </FormHelperText>
-                <FormControl sx={{ width: "100%", my: 1 }}>
-                  <MultiSelectElement
-                    label="How did you hear about us?"
-                    id="how-did-you-hear-about-us"
-                    name={"referralSource"}
-                    multiple
-                    input={<Input id="select-multiple-chip" />}
-                    options={referralOptions}
-                    showChips
-                    MenuProps={{
-                      PaperProps: {
-                        style: {
-                          maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
-                          width: 350,
-                        },
-                      },
-                    }}
-                  ></MultiSelectElement>
-                  <FormHelperText>You may select more than one</FormHelperText>
-                </FormControl>
+            <CardHeader
+              title="Free Quote"
+              sx={{ display: "center", paddingBottom: 0 }}
+            />
+            <CardContent sx={{ display: "flex", flexDirection: "column" }}>
+              <FormGroup sx={{ marginTop: 0, marginBottom: 3 }}>
                 <TextFieldElement
-                  name={"message"}
-                  id="message"
-                  label="Message"
+                  name={"name"}
+                  id="name"
+                  label="Name"
+                  type="string"
+                  variant="standard"
+                  placeholder="Jane Doe"
+                  required
+                  sx={{ width: "75%" }}
+                />
+                <TextFieldElement
+                  name={"email"}
+                  id="email"
+                  label="Email"
+                  type="string"
+                  variant="standard"
+                  placeholder="janedoe@gmail.com"
+                  sx={{ width: "75%" }}
+                />
+                <TextFieldElement
+                  name={"phone"}
+                  id="phone"
+                  label="Phone Number"
+                  type="tel"
+                  variant="standard"
+                  placeholder="(888) 888-8888"
+                  sx={{ width: "75%" }}
+                />
+                <TextFieldElement
+                  name={"address"}
+                  id="address"
+                  label="Address"
                   type="string"
                   variant="standard"
                   multiline
-                  rows="4"
-                  placeholder="What can we help you with?"
-                  helperText="What can we help you with?"
-                  required
-                  sx={{ width: "100%" }}
-                  inputProps={{ style: { resize: "vertical" } }}
+                  rows={3}
+                  placeholder="111 Main St."
                 />
-                <Typography
-                  variant="caption"
-                  style={{ alignSelf: "flex-end", color: "rgba(0,0,0,0.6)" }}
-                >
-                  * indicates a required field
-                </Typography>
-              </CardContent>
-              <CardActions sx={{ paddingLeft: 2 }}>
-                <Button
-                  variant="contained"
-                  sx={{
-                    py: 1,
-                    px: 3,
-                    fontSize: ".99rem",
-                    backgroundColor: theme.palette.secondary.dark,
-                    color: theme.palette.primary.main,
-                    "&:hover": {
-                      backgroundColor: theme.palette.secondary.light,
+                <TextFieldElement
+                  name={"zip"}
+                  id="zip"
+                  label="Zip Code"
+                  type="text"
+                  variant="standard"
+                  placeholder="00000"
+                  inputProps={{
+                    pattern: "[0-9]{5}",
+                    minlength: "5",
+                    maxlength: "5",
+                  }}
+                  required
+                  sx={{ width: "35%" }}
+                />
+              </FormGroup>
+              <FormControl sx={{ width: "100%", my: 1 }}>
+                <MultiSelectElement
+                  label="What services are you interested in?"
+                  id="services"
+                  name={"services"}
+                  multiple
+                  input={<Input id="select-multiple-chip" />}
+                  options={serviceOptions}
+                  showChips
+                  MenuProps={{
+                    PaperProps: {
+                      style: {
+                        maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
+                        width: 350,
+                      },
                     },
                   }}
-                  type="submit"
-                >
-                  Submit
-                </Button>
-              </CardActions>
-            </div>
+                ></MultiSelectElement>
+                <FormHelperText>You may select more than one</FormHelperText>
+              </FormControl>
+              <FormHelperText sx={{ marginTop: 0, marginBottom: 3 }}>
+                *You may select more than one
+              </FormHelperText>
+              <FormControl sx={{ width: "100%", my: 1 }}>
+                <MultiSelectElement
+                  label="How did you hear about us?"
+                  id="how-did-you-hear-about-us"
+                  name={"referralSource"}
+                  multiple
+                  input={<Input id="select-multiple-chip" />}
+                  options={referralOptions}
+                  showChips
+                  MenuProps={{
+                    PaperProps: {
+                      style: {
+                        maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
+                        width: 350,
+                      },
+                    },
+                  }}
+                ></MultiSelectElement>
+                <FormHelperText>You may select more than one</FormHelperText>
+              </FormControl>
+              <TextFieldElement
+                name={"message"}
+                id="message"
+                label="Message"
+                type="string"
+                variant="standard"
+                multiline
+                rows="4"
+                placeholder="What can we help you with?"
+                helperText="What can we help you with?"
+                required
+                sx={{ width: "100%" }}
+                inputProps={{ style: { resize: "vertical" } }}
+              />
+              <Typography
+                variant="caption"
+                style={{ alignSelf: "flex-end", color: "rgba(0,0,0,0.6)" }}
+              >
+                * indicates a required field
+              </Typography>
+            </CardContent>
+            <CardActions sx={{ paddingLeft: 2 }}>
+              <Button
+                variant="contained"
+                sx={{
+                  py: 1,
+                  px: 3,
+                  fontSize: ".99rem",
+                  backgroundColor: theme.palette.secondary.dark,
+                  color: theme.palette.primary.main,
+                  "&:hover": {
+                    backgroundColor: theme.palette.secondary.light,
+                  },
+                }}
+                type="submit"
+              >
+                Submit
+              </Button>
+            </CardActions>
           </Box>
         </FormContainer>
       </Card>
