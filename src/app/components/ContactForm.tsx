@@ -21,16 +21,12 @@ import {
 
 /* 
 TODO
-get checkboxes to not turn white on
+fix weird chip selector behavior 
 
-Checkboxes for services you're interested in
-Other (please describe below)
-gutter cleaning
+Details you might include as relevant to your project:
 - linear ft of gutter
-- no stories
+- no. stories
 - pitch of house
-
-soft wash:
 - sq ft of siding or roof
 
 -add popup to message box when selected with prompt for details to include 
@@ -61,13 +57,13 @@ const serviceOptions = [
 
 export default function ContactForm() {
   return (
-    <Container sx={{ m: 3, width: "45%", display: "flex" }}>
+    <Container sx={{ display: "flex" }}>
       <Card
         elevation={24}
         sx={{
-          width: "100%",
           borderRadius: "10px",
           p: 2,
+          width: "40vw",
         }}
       >
         <FormContainer
@@ -124,31 +120,39 @@ export default function ContactForm() {
                   placeholder="(888) 888-8888"
                   sx={{ width: "75%" }}
                 />
-                <TextFieldElement
-                  name={"address"}
-                  id="address"
-                  label="Address"
-                  type="string"
-                  variant="standard"
-                  multiline
-                  rows={3}
-                  placeholder="111 Main St."
-                />
-                <TextFieldElement
-                  name={"zip"}
-                  id="zip"
-                  label="Zip Code"
-                  type="text"
-                  variant="standard"
-                  placeholder="00000"
-                  inputProps={{
-                    pattern: "[0-9]{5}",
-                    minlength: "5",
-                    maxlength: "5",
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "flex-end",
                   }}
-                  required
-                  sx={{ width: "35%" }}
-                />
+                >
+                  <TextFieldElement
+                    name={"address"}
+                    id="address"
+                    label="Address"
+                    type="string"
+                    variant="standard"
+                    multiline
+                    rows={3}
+                    placeholder="111 Main St."
+                    style={{ paddingRight: 3 }}
+                  />
+                  <TextFieldElement
+                    name={"zip"}
+                    id="zip"
+                    label="Zip Code"
+                    type="text"
+                    variant="standard"
+                    placeholder="00000"
+                    inputProps={{
+                      pattern: "[0-9]{5}",
+                      minlength: "5",
+                      maxlength: "5",
+                    }}
+                    required
+                    sx={{ width: "35%" }}
+                  />
+                </div>
               </FormGroup>
               <FormControl sx={{ width: "100%", my: 1 }}>
                 <MultiSelectElement
@@ -170,9 +174,6 @@ export default function ContactForm() {
                 ></MultiSelectElement>
                 <FormHelperText>You may select more than one</FormHelperText>
               </FormControl>
-              <FormHelperText sx={{ marginTop: 0, marginBottom: 3 }}>
-                *You may select more than one
-              </FormHelperText>
               <FormControl sx={{ width: "100%", my: 1 }}>
                 <MultiSelectElement
                   label="How did you hear about us?"
