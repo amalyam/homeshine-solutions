@@ -22,6 +22,9 @@ import {
 /* 
 TODO
 fix weird chip selector behavior 
+get chips to be same line in md + lg view
+typography - make chip "What..." text smaller
+sm: "Services?" "Referral?" lg: full text
 
 Details you might include as relevant to your project:
 - linear ft of gutter
@@ -63,7 +66,7 @@ export default function ContactForm() {
         sx={{
           borderRadius: "10px",
           p: 2,
-          width: "40vw",
+          width: { xs: "100%", sm: "40%", lg: "80%" },
         }}
       >
         <FormContainer
@@ -102,24 +105,31 @@ export default function ContactForm() {
                   required
                   sx={{ width: "75%" }}
                 />
-                <TextFieldElement
-                  name={"email"}
-                  id="email"
-                  label="Email"
-                  type="string"
-                  variant="standard"
-                  placeholder="janedoe@gmail.com"
-                  sx={{ width: "75%" }}
-                />
-                <TextFieldElement
-                  name={"phone"}
-                  id="phone"
-                  label="Phone Number"
-                  type="tel"
-                  variant="standard"
-                  placeholder="(888) 888-8888"
-                  sx={{ width: "75%" }}
-                />
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "flex-end",
+                  }}
+                >
+                  <TextFieldElement
+                    name={"email"}
+                    id="email"
+                    label="Email"
+                    type="string"
+                    variant="standard"
+                    placeholder="janedoe@gmail.com"
+                    sx={{ width: "75%", paddingRight: 1 }}
+                  />
+                  <TextFieldElement
+                    name={"phone"}
+                    id="phone"
+                    label="Phone Number"
+                    type="tel"
+                    variant="standard"
+                    placeholder="(888) 888-8888"
+                    sx={{ width: "75%" }}
+                  />
+                </div>
                 <div
                   style={{
                     display: "flex",
@@ -135,7 +145,7 @@ export default function ContactForm() {
                     multiline
                     rows={3}
                     placeholder="111 Main St."
-                    style={{ paddingRight: 3 }}
+                    sx={{ width: "60%", paddingRight: 1 }}
                   />
                   <TextFieldElement
                     name={"zip"}
@@ -154,46 +164,54 @@ export default function ContactForm() {
                   />
                 </div>
               </FormGroup>
-              <FormControl sx={{ width: "100%", my: 1 }}>
-                <MultiSelectElement
-                  label="What services are you interested in?"
-                  id="services"
-                  name={"services"}
-                  multiple
-                  input={<Input id="select-multiple-chip" />}
-                  options={serviceOptions}
-                  showChips
-                  MenuProps={{
-                    PaperProps: {
-                      style: {
-                        maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
-                        width: 350,
+              <div style={{ display: "flex", alignItems: "flex-end" }}>
+                <FormControl sx={{ width: { sm: "100%", md: "50%" }, my: 1 }}>
+                  <MultiSelectElement
+                    label="What services are you interested in?"
+                    id="services"
+                    name={"services"}
+                    multiple
+                    input={<Input id="select-multiple-chip" />}
+                    options={serviceOptions}
+                    showChips
+                    MenuProps={{
+                      PaperProps: {
+                        style: {
+                          maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
+                          width: 350,
+                        },
                       },
-                    },
+                    }}
+                  ></MultiSelectElement>
+                  <FormHelperText>You may select more than one</FormHelperText>
+                </FormControl>
+                <FormControl
+                  sx={{
+                    width: { sm: "100%", md: "50%" },
+                    my: 1,
+                    paddingInline: 3,
                   }}
-                ></MultiSelectElement>
-                <FormHelperText>You may select more than one</FormHelperText>
-              </FormControl>
-              <FormControl sx={{ width: "100%", my: 1 }}>
-                <MultiSelectElement
-                  label="How did you hear about us?"
-                  id="how-did-you-hear-about-us"
-                  name={"referralSource"}
-                  multiple
-                  input={<Input id="select-multiple-chip" />}
-                  options={referralOptions}
-                  showChips
-                  MenuProps={{
-                    PaperProps: {
-                      style: {
-                        maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
-                        width: 350,
+                >
+                  <MultiSelectElement
+                    label="How did you hear about us?"
+                    id="how-did-you-hear-about-us"
+                    name={"referralSource"}
+                    multiple
+                    input={<Input id="select-multiple-chip" />}
+                    options={referralOptions}
+                    showChips
+                    MenuProps={{
+                      PaperProps: {
+                        style: {
+                          maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
+                          width: 350,
+                        },
                       },
-                    },
-                  }}
-                ></MultiSelectElement>
-                <FormHelperText>You may select more than one</FormHelperText>
-              </FormControl>
+                    }}
+                  ></MultiSelectElement>
+                  <FormHelperText>You may select more than one</FormHelperText>
+                </FormControl>
+              </div>
               <TextFieldElement
                 name={"message"}
                 id="message"
