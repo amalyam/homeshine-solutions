@@ -3,23 +3,26 @@
 import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
+import Button from "@mui/material/Button";
+import Container from "@mui/material/Container";
+import HomeShineLogoTransparent from "src/images/homeshine-llc-transparent.svg";
 import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
+import Image from "next/image";
+import Link from "@mui/material/Link";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
-import Container from "@mui/material/Container";
-import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
-import Image from "next/image";
 import theme from "../theme";
-import HomeShineLogoTransparent from "src/images/homeshine-llc-transparent.svg";
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
 
 // TODO: get contact info to align center in sm
 // set contact info color from parent Box?
 // show "FREE QUOTE" button in sm
+// free quote button center contact form in viewport
 
 const pages = ["Home", "Services", "Blog", "FAQ", "About Us"];
+const links = ["/", "/ComingSoon", "/ComingSoon", "/ComingSoon", "/ComingSoon"];
 
 export default function BusinessAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
@@ -80,10 +83,17 @@ export default function BusinessAppBar() {
                 display: { xs: "block", md: "none" },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
+              {pages.map((page, index) => (
+                <Link href={links[index]} underline="none">
+                  <MenuItem key={page} onClick={handleCloseNavMenu}>
+                    <Typography
+                      textAlign="center"
+                      color={theme.palette.primary.dark}
+                    >
+                      {page}
+                    </Typography>
+                  </MenuItem>
+                </Link>
               ))}
             </Menu>
           </Box>
@@ -117,19 +127,21 @@ export default function BusinessAppBar() {
               alignItems: "center",
             }}
           >
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{
-                  my: 2,
-                  color: theme.palette.primary.dark,
-                  display: "block",
-                  fontSize: "1rem",
-                }}
-              >
-                {page}
-              </Button>
+            {pages.map((page, index) => (
+              <Link href={links[index]} underline="none">
+                <MenuItem
+                  key={page}
+                  onClick={handleCloseNavMenu}
+                  sx={{
+                    my: 2,
+                    color: theme.palette.primary.dark,
+                    display: "block",
+                    fontSize: "1rem",
+                  }}
+                >
+                  {page}
+                </MenuItem>
+              </Link>
             ))}
             <Button
               variant="contained"
