@@ -175,24 +175,23 @@ export default function BusinessAppBar() {
             <div>
               <div>
                 <Box>
-                  <a
-                    style={{ color: theme.palette.primary.dark }}
+                  <Link
                     href="mailto:HomeShineRoofPro@gmail.com"
+                    color={theme.palette.primary.dark}
                   >
                     HomeShineRoofPro@gmail.com
-                  </a>
+                  </Link>
                 </Box>
               </div>
               <div>
                 <Box>
-                  <a
-                    style={{
-                      color: theme.palette.primary.dark,
-                    }}
+                  <Link
                     href="tel:5089210275"
+                    color={theme.palette.primary.dark}
+                    underline="none"
                   >
                     (508) 921-0275
-                  </a>
+                  </Link>
                 </Box>
               </div>
             </div>
