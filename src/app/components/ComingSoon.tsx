@@ -1,10 +1,15 @@
-import Box from "@mui/material/Box";
-import Container from "@mui/material/Container";
+import TextBox from "./TextBox";
+import MossHand from "/src/images/moss-hand.png";
 
 export default function ComingSoon() {
   return (
-    <Container>
-      <Box></Box>
-    </Container>
+    <div
+      style={{
+        backgroundImage: `url(${MossHand.src})`,
+        height: "100vh",
+      }}
+    >
+      <TextBox text={"COMING SOON"} />
+    </div>
   );
 }
