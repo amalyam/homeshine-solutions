@@ -22,7 +22,6 @@ import Typography from "@mui/material/Typography";
 // free quote button center contact form in viewport
 
 const pages = ["Home", "Services", "Blog", "FAQ", "About Us"];
-const links = ["/", "/ComingSoon", "/ComingSoon", "/ComingSoon", "/ComingSoon"];
 
 export default function BusinessAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
@@ -83,8 +82,11 @@ export default function BusinessAppBar() {
                 display: { xs: "block", md: "none" },
               }}
             >
-              {pages.map((page, index) => (
-                <Link href={links[index]} underline="none">
+              {pages.map((page) => (
+                <Link
+                  href={page === "Home" ? "/" : `/${page}`}
+                  underline="none"
+                >
                   <MenuItem key={page} onClick={handleCloseNavMenu}>
                     <Typography
                       textAlign="center"
@@ -127,8 +129,8 @@ export default function BusinessAppBar() {
               alignItems: "center",
             }}
           >
-            {pages.map((page, index) => (
-              <Link href={links[index]} underline="none">
+            {pages.map((page) => (
+              <Link href={page === "Home" ? "/" : `/${page}`} underline="none">
                 <MenuItem
                   key={page}
                   onClick={handleCloseNavMenu}
@@ -184,7 +186,9 @@ export default function BusinessAppBar() {
               <div>
                 <Box>
                   <a
-                    style={{ color: theme.palette.primary.dark }}
+                    style={{
+                      color: theme.palette.primary.dark,
+                    }}
                     href="tel:5089210275"
                   >
                     (508) 921-0275
