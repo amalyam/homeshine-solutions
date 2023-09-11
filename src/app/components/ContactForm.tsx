@@ -60,200 +60,199 @@ const serviceOptions = [
 
 export default function ContactForm() {
   return (
-    <Container sx={{ display: "flex" }}>
-      <Card
-        elevation={24}
-        sx={{
-          borderRadius: "10px",
-          p: 2,
-          width: { xs: "100%", sm: "40%", lg: "80%" },
+    <Card
+      elevation={24}
+      sx={{
+        borderRadius: "10px",
+        p: 2,
+        m: 3,
+        flex: "0 1 40%",
+      }}
+    >
+      <FormContainer
+        defaultValues={{
+          name: "",
+          email: "",
+          phone: "",
+          address: "",
+          zip: "",
+          message: "",
+        }}
+        onSuccess={(data) => {
+          alert(JSON.stringify(data, undefined, 2));
         }}
       >
-        <FormContainer
-          defaultValues={{
-            name: "",
-            email: "",
-            phone: "",
-            address: "",
-            zip: "",
-            message: "",
-          }}
-          onSuccess={(data) => {
-            alert(JSON.stringify(data, undefined, 2));
+        <Box
+          sx={{
+            display: "block",
+            justifyContent: "left",
+            m: 1,
           }}
         >
-          <Box
-            sx={{
-              display: "block",
-              justifyContent: "left",
-              m: 1,
-            }}
-          >
-            <CardHeader
-              title="Free Quote"
-              sx={{ display: "center", paddingBottom: 0 }}
-            />
-            <CardContent sx={{ display: "flex", flexDirection: "column" }}>
-              <FormGroup sx={{ marginTop: 0, marginBottom: 3 }}>
-                <TextFieldElement
-                  name={"name"}
-                  id="name"
-                  label="Name"
-                  type="string"
-                  variant="standard"
-                  placeholder="Jane Doe"
-                  required
-                  sx={{ width: "75%" }}
-                />
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "flex-end",
-                  }}
-                >
-                  <TextFieldElement
-                    name={"email"}
-                    id="email"
-                    label="Email"
-                    type="string"
-                    variant="standard"
-                    placeholder="janedoe@gmail.com"
-                    sx={{ width: "75%", paddingRight: 1 }}
-                  />
-                  <TextFieldElement
-                    name={"phone"}
-                    id="phone"
-                    label="Phone Number"
-                    type="tel"
-                    variant="standard"
-                    placeholder="(888) 888-8888"
-                    sx={{ width: "75%" }}
-                  />
-                </div>
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "flex-end",
-                  }}
-                >
-                  <TextFieldElement
-                    name={"address"}
-                    id="address"
-                    label="Address"
-                    type="string"
-                    variant="standard"
-                    multiline
-                    rows={3}
-                    placeholder="111 Main St."
-                    sx={{ width: "60%", paddingRight: 1 }}
-                  />
-                  <TextFieldElement
-                    name={"zip"}
-                    id="zip"
-                    label="Zip Code"
-                    type="text"
-                    variant="standard"
-                    placeholder="00000"
-                    inputProps={{
-                      pattern: "[0-9]{5}",
-                      minlength: "5",
-                      maxlength: "5",
-                    }}
-                    required
-                    sx={{ width: "35%" }}
-                  />
-                </div>
-              </FormGroup>
-              <div style={{ display: "flex", alignItems: "flex-end" }}>
-                <FormControl sx={{ width: { sm: "100%", md: "50%" }, my: 1 }}>
-                  <MultiSelectElement
-                    label="What services are you interested in?"
-                    id="services"
-                    name={"services"}
-                    multiple
-                    input={<Input id="select-multiple-chip" />}
-                    options={serviceOptions}
-                    showChips
-                    MenuProps={{
-                      PaperProps: {
-                        style: {
-                          maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
-                          width: 350,
-                        },
-                      },
-                    }}
-                  ></MultiSelectElement>
-                  <FormHelperText>You may select more than one</FormHelperText>
-                </FormControl>
-                <FormControl
-                  sx={{
-                    width: { sm: "100%", md: "50%" },
-                    my: 1,
-                    paddingInline: 3,
-                  }}
-                >
-                  <MultiSelectElement
-                    label="How did you hear about us?"
-                    id="how-did-you-hear-about-us"
-                    name={"referralSource"}
-                    multiple
-                    input={<Input id="select-multiple-chip" />}
-                    options={referralOptions}
-                    showChips
-                    MenuProps={{
-                      PaperProps: {
-                        style: {
-                          maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
-                          width: 350,
-                        },
-                      },
-                    }}
-                  ></MultiSelectElement>
-                  <FormHelperText>You may select more than one</FormHelperText>
-                </FormControl>
-              </div>
+          <CardHeader
+            title="Free Quote"
+            sx={{ display: "center", paddingBottom: 0 }}
+          />
+          <CardContent sx={{ display: "flex", flexDirection: "column" }}>
+            <FormGroup sx={{ marginTop: 0, marginBottom: 3 }}>
               <TextFieldElement
-                name={"message"}
-                id="message"
-                label="Message"
+                name={"name"}
+                id="name"
+                label="Name"
                 type="string"
                 variant="standard"
-                multiline
-                rows="4"
-                placeholder="What can we help you with?"
-                helperText="What can we help you with?"
+                placeholder="Jane Doe"
                 required
-                sx={{ width: "100%" }}
-                inputProps={{ style: { resize: "vertical" } }}
+                sx={{ width: "75%" }}
               />
-              <Typography
-                variant="caption"
-                style={{ alignSelf: "flex-end", color: "rgba(0,0,0,0.6)" }}
-              >
-                * indicates a required field
-              </Typography>
-            </CardContent>
-            <CardActions sx={{ paddingLeft: 2 }}>
-              <Button
-                variant="contained"
-                sx={{
-                  py: 1,
-                  px: 3,
-                  fontSize: ".99rem",
-                  backgroundColor: theme.palette.secondary.dark,
-                  color: theme.palette.primary.main,
-                  "&:hover": {
-                    backgroundColor: theme.palette.secondary.light,
-                  },
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "flex-end",
                 }}
-                type="submit"
               >
-                Submit
-              </Button>
-            </CardActions>
-          </Box>
-        </FormContainer>
-      </Card>
-    </Container>
+                <TextFieldElement
+                  name={"email"}
+                  id="email"
+                  label="Email"
+                  type="string"
+                  variant="standard"
+                  placeholder="janedoe@gmail.com"
+                  sx={{ width: "75%", paddingRight: 1 }}
+                />
+                <TextFieldElement
+                  name={"phone"}
+                  id="phone"
+                  label="Phone Number"
+                  type="tel"
+                  variant="standard"
+                  placeholder="(888) 888-8888"
+                  sx={{ width: "75%" }}
+                />
+              </div>
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "flex-end",
+                }}
+              >
+                <TextFieldElement
+                  name={"address"}
+                  id="address"
+                  label="Address"
+                  type="string"
+                  variant="standard"
+                  multiline
+                  rows={3}
+                  placeholder="111 Main St."
+                  sx={{ width: "60%", paddingRight: 1 }}
+                />
+                <TextFieldElement
+                  name={"zip"}
+                  id="zip"
+                  label="Zip Code"
+                  type="text"
+                  variant="standard"
+                  placeholder="00000"
+                  inputProps={{
+                    pattern: "[0-9]{5}",
+                    minlength: "5",
+                    maxlength: "5",
+                  }}
+                  required
+                  sx={{ width: "35%" }}
+                />
+              </div>
+            </FormGroup>
+            <div style={{ display: "flex", alignItems: "flex-end" }}>
+              <FormControl sx={{ width: { sm: "100%", md: "50%" }, my: 1 }}>
+                <MultiSelectElement
+                  label="What services are you interested in?"
+                  id="services"
+                  name={"services"}
+                  multiple
+                  input={<Input id="select-multiple-chip" />}
+                  options={serviceOptions}
+                  showChips
+                  MenuProps={{
+                    PaperProps: {
+                      style: {
+                        maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
+                        width: 350,
+                      },
+                    },
+                  }}
+                ></MultiSelectElement>
+                <FormHelperText>You may select more than one</FormHelperText>
+              </FormControl>
+              <FormControl
+                sx={{
+                  width: { sm: "100%", md: "50%" },
+                  my: 1,
+                  paddingInline: 3,
+                }}
+              >
+                <MultiSelectElement
+                  label="How did you hear about us?"
+                  id="how-did-you-hear-about-us"
+                  name={"referralSource"}
+                  multiple
+                  input={<Input id="select-multiple-chip" />}
+                  options={referralOptions}
+                  showChips
+                  MenuProps={{
+                    PaperProps: {
+                      style: {
+                        maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
+                        width: 350,
+                      },
+                    },
+                  }}
+                ></MultiSelectElement>
+                <FormHelperText>You may select more than one</FormHelperText>
+              </FormControl>
+            </div>
+            <TextFieldElement
+              name={"message"}
+              id="message"
+              label="Message"
+              type="string"
+              variant="standard"
+              multiline
+              rows="4"
+              placeholder="What can we help you with?"
+              helperText="What can we help you with?"
+              required
+              sx={{ width: "100%" }}
+              inputProps={{ style: { resize: "vertical" } }}
+            />
+            <Typography
+              variant="caption"
+              style={{ alignSelf: "flex-end", color: "rgba(0,0,0,0.6)" }}
+            >
+              * indicates a required field
+            </Typography>
+          </CardContent>
+          <CardActions sx={{ paddingLeft: 2 }}>
+            <Button
+              variant="contained"
+              sx={{
+                py: 1,
+                px: 3,
+                fontSize: ".99rem",
+                backgroundColor: theme.palette.secondary.dark,
+                color: theme.palette.primary.main,
+                "&:hover": {
+                  backgroundColor: theme.palette.secondary.light,
+                },
+              }}
+              type="submit"
+            >
+              Submit
+            </Button>
+          </CardActions>
+        </Box>
+      </FormContainer>
+    </Card>
   );
 }
