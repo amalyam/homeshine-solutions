@@ -18,6 +18,7 @@ import {
   TextFieldElement,
   MultiSelectElement,
 } from "react-hook-form-mui";
+import FormFields from "../types/FormFields";
 
 /* 
 TODO
@@ -58,6 +59,8 @@ const serviceOptions = [
   "Other",
 ];
 
+const ContactFormContainer = FormContainer as typeof FormContainer<FormFields>;
+
 export default function ContactForm() {
   return (
     <Card
@@ -69,7 +72,7 @@ export default function ContactForm() {
         flex: "0 1 40%",
       }}
     >
-      <FormContainer
+      <ContactFormContainer
         defaultValues={{
           name: "",
           email: "",
@@ -78,8 +81,12 @@ export default function ContactForm() {
           zip: "",
           message: "",
         }}
-        onSuccess={(data) => {
-          alert(JSON.stringify(data, undefined, 2));
+        onSuccess={async (data) => {
+          await fetch("/api/contact", {
+            method: "POST",
+            body: JSON.stringify({ data }),
+            headers: { "Content-Type": "application/json" },
+          });
         }}
       >
         <Box
@@ -252,7 +259,7 @@ export default function ContactForm() {
             </Button>
           </CardActions>
         </Box>
-      </FormContainer>
+      </ContactFormContainer>
     </Card>
   );
 }
