@@ -1,15 +1,15 @@
-import TextBox from "./TextBox";
-import MossHand from "/src/images/moss-hand.png";
+import Image from "next/image";
+import MossHand from "/src/images/moss-hand-2.jpg";
+import { calculateSizeAdjustValues } from "next/dist/server/font-utils";
 
 export default function ComingSoon() {
   return (
     <div
       style={{
-        backgroundImage: `url(${MossHand.src})`,
-        height: "100vh",
+        flexDirection: "column",
+        height: "calc(100vh - 84px)",
+        background: `no-repeat top/cover url(${MossHand.src})`,
       }}
-    >
-      <TextBox text={"COMING SOON"} />
-    </div>
+    ></div>
   );
 }
