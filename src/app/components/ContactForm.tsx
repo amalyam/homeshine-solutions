@@ -157,7 +157,7 @@ export default function ContactForm() {
                   inputProps={{
                     pattern: "[0-9]{5}",
                     minlength: "5",
-                    maxlength: "5",
+                    maxlength: "10",
                   }}
                   required
                   sx={{ width: "35%" }}
