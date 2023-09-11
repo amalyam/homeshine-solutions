@@ -2,6 +2,7 @@ import ContactForm from "./components/ContactForm";
 import CleanRoof from "/src/images/clean-roof.jpg";
 import IntroText from "./components/IntroText";
 import Grid from "@mui/material/Unstable_Grid2";
+import { Box } from "@mui/material";
 
 /* 
 TODO 
@@ -27,17 +28,24 @@ export default function Home() {
     <div
       style={{
         backgroundImage: `url(${CleanRoof.src})`,
-        height: "100vh",
+        height: "calc(100vh - 84px)",
       }}
     >
-      <Grid container spacing={2} display={"flex"} m={3}>
-        <Grid xs={12} sm={6}>
-          <IntroText />
-        </Grid>
-        <Grid xs={12} sm={6}>
-          <ContactForm />
-        </Grid>
-      </Grid>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: {
+            xs: "column",
+            lg: "row",
+          },
+          justifyContent: "space-around",
+          height: "100%",
+          alignItems: "center",
+        }}
+      >
+        <IntroText />
+        <ContactForm />
+      </Box>
     </div>
   );
 }
