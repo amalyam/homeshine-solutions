@@ -6,41 +6,42 @@ import Typography from "@mui/material/Typography";
 
 export default function IntroText() {
   return (
-    <Container
-      sx={{
-        m: 1,
-        marginTop: 10,
-        p: 3,
-        display: "flex",
-        blockSize: "fit-content",
-        backgroundColor: "rgba(83, 208, 254, 0.5)",
-        width: { xs: "100%", sm: "60%", lg: "80%" },
-      }}
+    <div
+      style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
     >
-      <Paper
-        sx={{ p: 2, blockSize: "fit-content", backgroundColor: "primary" }}
+      <Box
+        sx={{
+          p: 3,
+          display: "flex",
+          blockSize: "fit-content",
+          backgroundColor: "rgba(83, 208, 254, 0.5)",
+        }}
       >
-        <Typography
-          fontWeight={700}
-          color="inherit"
-          textAlign="center"
-          textTransform={"uppercase"}
+        <Paper
+          sx={{ p: 2, blockSize: "fit-content", backgroundColor: "primary" }}
         >
-          Protect your home with professional routine maintenance!
-        </Typography>
-        <br />
-        <Typography fontWeight={700} color="inherit" textAlign="center">
-          We provide meticulous cleaning, guaranteed to extend the life of your
-          home. We specialize in:
-          <List>
-            <ListItemText>Gutters</ListItemText>
-            <ListItemText>Moss treatment</ListItemText>
-            <ListItemText>Solar panels</ListItemText>
-            <ListItemText>Soft wash</ListItemText>
-            <ListItemText>Window cleaning</ListItemText>
-          </List>
-        </Typography>
-      </Paper>
-    </Container>
+          <Typography
+            fontWeight={700}
+            color="inherit"
+            textAlign="center"
+            textTransform={"uppercase"}
+          >
+            Protect your home with professional routine maintenance!
+          </Typography>
+          <br />
+          <Typography fontWeight={700} color="inherit" textAlign="center">
+            We provide meticulous cleaning, guaranteed to extend the life of
+            your home. We specialize in:
+            <List>
+              <ListItemText>Gutters</ListItemText>
+              <ListItemText>Moss treatment</ListItemText>
+              <ListItemText>Solar panels</ListItemText>
+              <ListItemText>Soft wash</ListItemText>
+              <ListItemText>Window cleaning</ListItemText>
+            </List>
+          </Typography>
+        </Paper>
+      </Box>
+    </div>
   );
 }
