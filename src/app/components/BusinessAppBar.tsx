@@ -5,7 +5,7 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
-import HomeShineLogoTransparent from "src/images/homeshine-llc-transparent.svg";
+import HomeShineLogoTransparent from "src/images/homeshine-solutions-llc-transparent.svg";
 import IconButton from "@mui/material/IconButton";
 import Image from "next/image";
 import Link from "@mui/material/Link";
@@ -20,6 +20,8 @@ import Typography from "@mui/material/Typography";
 // set contact info color from parent Box?
 // show "FREE QUOTE" button in sm
 // free quote button center contact form in viewport
+// fix Toolbar Box margin (right=0, left 20-30px), then increase logo size
+// Free Quote -> pull up contact form in overlay if not on home page
 
 const pages = ["Home", "Services", "Blog", "FAQ", "About Us"];
 
@@ -53,7 +55,13 @@ export default function BusinessAppBar() {
           disableGutters
           sx={{ flexDirection: { xs: "column", md: "row" } }}
         >
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: "flex", md: "none" },
+              marginRight: "0px",
+            }}
+          >
             <IconButton
               size="large"
               aria-label="menu items"
@@ -115,11 +123,13 @@ export default function BusinessAppBar() {
               textDecoration: "none",
             }}
           ></Typography>
-          <Image
-            src={HomeShineLogoTransparent}
-            alt="HomeShine logo"
-            style={{ objectFit: "contain", height: "80px" }}
-          />
+          <Link href="/" underline="none">
+            <Image
+              src={HomeShineLogoTransparent}
+              alt="HomeShine logo"
+              style={{ objectFit: "contain", height: "80px", marginLeft: 10 }}
+            />
+          </Link>
           <Box
             sx={{
               flexGrow: 1,
