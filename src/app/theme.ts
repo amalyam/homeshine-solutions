@@ -13,6 +13,15 @@ const theme = createTheme({
       main: cyan[500],
     },
   },
+  typography: {
+    h6: {
+      height: 2,
+      width: 28,
+      display: "block",
+      marginTop: 0.5,
+      background: "currentColor",
+    },
+  },
 });
 
 export default theme;
