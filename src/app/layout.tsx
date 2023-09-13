@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import BusinessAppBar from "./components/BusinessAppBar";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "./theme";
+import Footer from "./components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,6 +26,7 @@ export default function RootLayout({
         <ThemeProvider theme={theme}>
           <BusinessAppBar />
           {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
