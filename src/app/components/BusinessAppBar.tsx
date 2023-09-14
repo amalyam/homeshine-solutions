@@ -4,6 +4,7 @@ import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
+import ContactForm from "./ContactForm";
 import Container from "@mui/material/Container";
 import HomeShineLogoTransparent from "src/images/homeshine-solutions-llc-transparent.svg";
 import IconButton from "@mui/material/IconButton";
@@ -12,9 +13,12 @@ import Link from "@mui/material/Link";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import MenuItem from "@mui/material/MenuItem";
+import Modal from "@mui/material/Modal";
 import theme from "../theme";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
+import Backdrop from "@mui/material/Backdrop";
+import { useState } from "react";
 
 // TODO: get contact info to align center in sm
 // set contact info color from parent Box?
@@ -26,12 +30,8 @@ import Typography from "@mui/material/Typography";
 const pages = ["Home", "Services", "Blog", "FAQ", "About Us"];
 
 export default function BusinessAppBar() {
-  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
-    null
-  );
-  const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(
-    null
-  );
+  const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
+  const [anchorElUser, setAnchorElUser] = useState<null | HTMLElement>(null);
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
@@ -48,8 +48,25 @@ export default function BusinessAppBar() {
     setAnchorElUser(null);
   };
 
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => {
+    setOpen(true);
+  };
+  const handleClose = () => {
+    return setOpen(false);
+  };
+
   return (
     <AppBar position="sticky">
+      <Modal
+        open={open}
+        onClose={handleClose}
+        style={{ display: "flex", alignItems: "center" }}
+      >
+        <Container maxWidth="sm">
+          <ContactForm />
+        </Container>
+      </Modal>
       <Container maxWidth="xl">
         <Toolbar
           disableGutters
@@ -169,7 +186,11 @@ export default function BusinessAppBar() {
                   backgroundColor: theme.palette.secondary.light,
                 },
               }}
-              onClick={() => document.getElementById("name")?.focus()}
+              onClick={() => {
+                window.location.pathname === "/"
+                  ? document.getElementById("name")?.focus()
+                  : setOpen(true);
+              }}
             >
               FREE QUOTE
             </Button>
