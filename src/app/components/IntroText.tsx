@@ -15,6 +15,7 @@ export default function IntroText() {
           display: "flex",
           blockSize: "fit-content",
           backgroundColor: "rgba(83, 208, 254, 0.5)",
+          borderRadius: 2,
         }}
       >
         <Paper
