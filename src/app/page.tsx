@@ -1,8 +1,7 @@
+import Box from "@mui/material/Box";
 import ContactForm from "./components/ContactForm";
 import CleanRoof from "/src/images/clean-roof.jpg";
 import IntroText from "./components/IntroText";
-import Grid from "@mui/material/Unstable_Grid2";
-import { Box } from "@mui/material";
 
 /* 
 TODO 
@@ -25,14 +24,11 @@ placeholder="blur"
 
 export default function Home() {
   return (
-    <div
-      style={{
-        backgroundImage: `url(${CleanRoof.src})`,
-        height: "calc(100vh - 84px)",
-      }}
-    >
+    <div>
       <Box
         sx={{
+          backgroundImage: `url(${CleanRoof.src})`,
+          backgroundSize: "stretch",
           display: "flex",
           flexDirection: {
             xs: "column",
@@ -41,6 +37,7 @@ export default function Home() {
           justifyContent: "space-around",
           height: "100%",
           alignItems: "center",
+          zIndex: "1000",
         }}
       >
         <IntroText />
