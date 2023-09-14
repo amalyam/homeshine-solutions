@@ -45,7 +45,7 @@ const referralOptions = [
   "Yelp",
   "Google",
   "Word of mouth",
-  "Saw a RoofPro serving another location",
+  "Saw HomeShine serving another location",
   "Other - tell us more below!",
 ];
 
@@ -173,7 +173,7 @@ export default function ContactForm() {
             <div style={{ display: "flex", alignItems: "flex-end" }}>
               <FormControl sx={{ width: { sm: "100%", md: "50%" }, my: 1 }}>
                 <MultiSelectElement
-                  label="What services are you interested in?"
+                  label="Services of interest?"
                   id="services"
                   name={"services"}
                   multiple
@@ -199,8 +199,8 @@ export default function ContactForm() {
                 }}
               >
                 <MultiSelectElement
-                  label="How did you hear about us?"
-                  id="how-did-you-hear-about-us"
+                  label="Referral source?"
+                  id="referral-source"
                   name={"referralSource"}
                   multiple
                   input={<Input id="select-multiple-chip" />}
