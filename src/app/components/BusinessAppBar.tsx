@@ -17,7 +17,6 @@ import Modal from "@mui/material/Modal";
 import theme from "../theme";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import Backdrop from "@mui/material/Backdrop";
 import { useState } from "react";
 
 // TODO: get contact info to align center in sm
@@ -109,7 +108,13 @@ export default function BusinessAppBar() {
             >
               {pages.map((page) => (
                 <Link
-                  href={page === "Home" ? "/" : `/${page}`}
+                  href={
+                    page === "Home"
+                      ? "/"
+                      : page === "About Us"
+                      ? "/About"
+                      : `/${page}`
+                  }
                   underline="none"
                 >
                   <MenuItem key={page} onClick={handleCloseNavMenu}>
@@ -157,7 +162,16 @@ export default function BusinessAppBar() {
             }}
           >
             {pages.map((page) => (
-              <Link href={page === "Home" ? "/" : `/${page}`} underline="none">
+              <Link
+                href={
+                  page === "Home"
+                    ? "/"
+                    : page === "About Us"
+                    ? "/About"
+                    : `/${page}`
+                }
+                underline="none"
+              >
                 <MenuItem
                   key={page}
                   onClick={handleCloseNavMenu}
