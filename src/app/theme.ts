@@ -1,9 +1,19 @@
 "use client";
 
 import { createTheme } from "@mui/material/styles";
-import { yellow, cyan } from "@mui/material/colors";
+import { blueGrey, cyan, grey } from "@mui/material/colors";
 
-const theme = createTheme({
+declare module "@mui/material/styles" {
+  interface Palette {
+    footer: Palette["primary"];
+  }
+
+  interface PaletteOptions {
+    footer?: PaletteOptions["primary"];
+  }
+}
+
+let theme = createTheme({
   palette: {
     primary: {
       main: "#ffffff",
@@ -11,6 +21,9 @@ const theme = createTheme({
     },
     secondary: {
       main: cyan[500],
+    },
+    info: {
+      main: grey[600],
     },
   },
   typography: {
@@ -21,6 +34,19 @@ const theme = createTheme({
       marginTop: 0.5,
       background: "currentColor",
     },
+  },
+});
+
+theme = createTheme(theme, {
+  palette: {
+    footer: theme.palette.augmentColor({
+      color: {
+        light: blueGrey[50],
+        main: theme.palette.secondary.dark,
+        dark: grey[900],
+      },
+      name: "footer",
+    }),
   },
 });
 
