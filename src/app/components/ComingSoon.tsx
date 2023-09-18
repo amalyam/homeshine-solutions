@@ -1,7 +1,7 @@
 "use client";
 
 import Box from "@mui/material/Box";
-import MossHand from "/src/images/moss-hand-2.jpg";
+import MossHand from "/src/images/moss-hand-3.jpg";
 import Typography from "@mui/material/Typography";
 import { alpha } from "@mui/material";
 import theme from "../theme";
@@ -14,7 +14,7 @@ export default function ComingSoon() {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        height: "calc(100vh - 84px)",
+        height: "100vh",
         background: `no-repeat top/cover url(${MossHand.src})`,
       }}
     >
