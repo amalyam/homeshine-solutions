@@ -21,7 +21,12 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={inter.className}
-        style={{ margin: 0, display: "flex", flexDirection: "column" }}
+        style={{
+          margin: 0,
+          display: "flex",
+          flexDirection: "column",
+          height: "100vh",
+        }}
       >
         <ThemeProvider theme={theme}>
           <BusinessAppBar />
