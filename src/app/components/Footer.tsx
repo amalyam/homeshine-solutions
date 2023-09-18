@@ -1,107 +1,94 @@
+"use client";
+
 import * as React from "react";
 import Box from "@mui/material/Box";
-import Grid from "@mui/material/Grid";
+import Grid from "@mui/material/Unstable_Grid2";
+import Icon from "@mui/material/Icon";
 import Link from "@mui/material/Link";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
+import theme from "../theme";
 
 function Copyright() {
   return (
     <div>
-      <Link color="inherit" href="https://www.homeshinesolutions.com/">
-        HomeShine Solutions, LLC.
-      </Link>{" "}
-      {new Date().getFullYear()}
+      ©{new Date().getFullYear()} HomeShine Solutions, LLC. All rights reserved.
     </div>
   );
 }
-
-const iconStyle = {
-  width: 48,
-  height: 48,
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  backgroundColor: "warning.main",
-  mr: 1,
-  "&:hover": {
-    bgcolor: "warning.dark",
-  },
-};
-
-const FooterTitle = ({ children }: { children: string }) => (
-  <Typography
-    gutterBottom
-    sx={{
-      my: 2,
-      display: "block",
-      marginTop: 0.5,
-      fontWeight: 700,
-      fontSize: "1em",
-      textTransform: "uppercase",
-    }}
-  >
-    {children}
-    <span
-      style={{
-        height: 2,
-        width: 28,
-        display: "block",
-        marginTop: 0.5,
-        background: "currentColor",
-      }}
-    ></span>
-  </Typography>
-);
 
 export default function AppFooter() {
   return (
     <Typography
       component="footer"
       sx={{
-        bgcolor: "secondary.light",
+        bgcolor: theme.palette.footer.light,
         py: 2,
       }}
     >
-      <Container
+      <Grid
+        container
         sx={{
           display: "flex",
-          gap: 3,
           justifyContent: "space-between",
         }}
       >
-        <Box>
-          <FooterTitle>Socials</FooterTitle>
+        <Grid xs={4}></Grid>
+        <Grid xs={4} sx={{ display: "flex", justifyContent: "center", gap: 3 }}>
           <Link
+            color={theme.palette.footer.dark}
             href="https://www.yelp.com/biz/home-shine-solutions-somerville"
             rel="noopener noreferrer"
             target="_blank"
+            sx={{
+              "&:hover": {
+                color: theme.palette.footer.main,
+              },
+            }}
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="1.5em"
-              viewBox="0 0 384 512"
-            >
-              <path d="M42.9 240.32l99.62 48.61c19.2 9.4 16.2 37.51-4.5 42.71L30.5 358.45a22.79 22.79 0 0 1-28.21-19.6 197.16 197.16 0 0 1 9-85.32 22.8 22.8 0 0 1 31.61-13.21zm44 239.25a199.45 199.45 0 0 0 79.42 32.11A22.78 22.78 0 0 0 192.94 490l3.9-110.82c.7-21.3-25.5-31.91-39.81-16.1l-74.21 82.4a22.82 22.82 0 0 0 4.09 34.09zm145.34-109.92l58.81 94a22.93 22.93 0 0 0 34 5.5 198.36 198.36 0 0 0 52.71-67.61A23 23 0 0 0 364.17 370l-105.42-34.26c-20.31-6.5-37.81 15.8-26.51 33.91zm148.33-132.23a197.44 197.44 0 0 0-50.41-69.31 22.85 22.85 0 0 0-34 4.4l-62 91.92c-11.9 17.7 4.7 40.61 25.2 34.71L366 268.63a23 23 0 0 0 14.61-31.21zM62.11 30.18a22.86 22.86 0 0 0-9.9 32l104.12 180.44c11.7 20.2 42.61 11.9 42.61-11.4V22.88a22.67 22.67 0 0 0-24.5-22.8 320.37 320.37 0 0 0-112.33 30.1z" />
-            </svg>
+            <Icon
+              baseClassName="fa-brands"
+              className="fa-yelp"
+              sx={{
+                color: theme.palette.footer.dark,
+                "&:hover": {
+                  color: theme.palette.footer.main,
+                },
+              }}
+            />
           </Link>
-        </Box>
-        <Box>
-          <FooterTitle>Legal</FooterTitle>
-          <Box component="ul" sx={{ m: 0, listStyle: "none", p: 0 }}>
-            <Box component="li">
-              <Link href="/Privacy/">Privacy</Link>
-            </Box>
-            <Box component="li">
-              <Link href="/Privacy/">Terms & Conditions</Link>
-            </Box>
-          </Box>
-        </Box>
-        <div>
-          <FooterTitle>Copyright</FooterTitle>
+          <Link
+            href="/Privacy/"
+            color={theme.palette.footer.dark}
+            underline="none"
+            sx={{
+              "&:hover": {
+                color: theme.palette.footer.main,
+              },
+            }}
+          >
+            Privacy
+          </Link>
+          <Link
+            href="/Privacy/"
+            color={theme.palette.footer.dark}
+            underline="none"
+            sx={{
+              "&:hover": {
+                color: theme.palette.footer.main,
+              },
+            }}
+          >
+            Terms & Conditions
+          </Link>
+        </Grid>
+        <Grid
+          xs={4}
+          sx={{ display: "flex", justifyContent: "flex-end", pr: 3 }}
+        >
           <Copyright />
-        </div>
-      </Container>
+        </Grid>
+      </Grid>
     </Typography>
   );
 }
