@@ -32,6 +32,34 @@ export async function POST(request: NextRequest) {
     },
   } = (await request.json()) as { data: FormFields };
 
+  const emailBody = {
+    recipients: [
+      {
+        address: {
+          email: `${email}`,
+          name: `${name}`,
+        },
+      },
+    ],
+    content: {
+      from: "HomeShine Solutions, LLC.",
+      email: "homeshinesolutionsllc@gmail.com",
+      subject: "Free Quote - Copy of Your Responses",
+      reply_to: "Michael Elias <michael.homeshinesolutions@gmail.com>",
+      html: "<p>Hi {{address.name}}, \nThank you for contacting HomeShine Solutions, LLC.. A member of our team will be in touch shortly to provide you with your FREE QUOTE! Below is a copy of your responses: \n</p>",
+    },
+  };
+
+  await fetch("https://api.sparkpost.com/api/v1/transmissions", {
+    method: "POST",
+    body: JSON.stringify(emailBody),
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+      Authorization: process.env.SPARK_POST_API_KEY!,
+    },
+  });
+
   // const result = await sql`
   // INSERT INTO contact (name, email, phone, address, zip, services, referral_source, message)
   // VALUES (${name}, ${email}, ${phone}, ${address}, ${zip}, ${JSON.stringify(
