@@ -2,6 +2,7 @@
 import React from "react";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
+import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardHeader from "@mui/material/CardHeader";
 import CardContent from "@mui/material/CardContent";
@@ -10,6 +11,7 @@ import FormControl from "@mui/material/FormControl";
 import FormGroup from "@mui/material/FormGroup";
 import FormFields from "../types/FormFields";
 import FormHelperText from "@mui/material/FormHelperText";
+import Grid from "@mui/material/Unstable_Grid2";
 import Input from "@mui/material/Input";
 import Typography from "@mui/material/Typography";
 import theme from "../theme";
@@ -18,7 +20,6 @@ import {
   TextFieldElement,
   MultiSelectElement,
 } from "react-hook-form-mui";
-import Card from "@mui/material/Card";
 
 /* 
 TODO
@@ -68,7 +69,7 @@ export default function ContactForm() {
         borderRadius: "10px",
         p: 2,
         m: 3,
-        flex: "0 1 40%",
+        flex: "0 1 30%",
       }}
     >
       <ContactFormContainer
@@ -100,59 +101,20 @@ export default function ContactForm() {
             sx={{ display: "center", paddingBottom: 0 }}
           />
           <CardContent sx={{ display: "flex", flexDirection: "column" }}>
-            <FormGroup sx={{ marginTop: 0, marginBottom: 3 }}>
-              <TextFieldElement
-                name={"name"}
-                id="name"
-                label="Name"
-                type="string"
-                variant="standard"
-                placeholder="Jane Doe"
-                required
-                sx={{ width: "75%" }}
-              />
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "flex-end",
-                }}
-              >
+            <Grid container spacing={1} justifyContent="flex-end">
+              <Grid xs={6}>
                 <TextFieldElement
-                  name={"email"}
-                  id="email"
-                  label="Email"
+                  name={"name"}
+                  id="name"
+                  label="Name"
                   type="string"
                   variant="standard"
-                  placeholder="janedoe@gmail.com"
-                  sx={{ width: "75%", paddingRight: 1 }}
+                  placeholder="Jane Doe"
+                  required
+                  sx={{ width: "100%" }}
                 />
-                <TextFieldElement
-                  name={"phone"}
-                  id="phone"
-                  label="Phone Number"
-                  type="tel"
-                  variant="standard"
-                  placeholder="(888) 888-8888"
-                  sx={{ width: "75%" }}
-                />
-              </div>
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "flex-end",
-                }}
-              >
-                <TextFieldElement
-                  name={"address"}
-                  id="address"
-                  label="Address"
-                  type="string"
-                  variant="standard"
-                  multiline
-                  rows={3}
-                  placeholder="111 Main St."
-                  sx={{ width: "60%", paddingRight: 1 }}
-                />
+              </Grid>
+              <Grid xs={6}>
                 <TextFieldElement
                   name={"zip"}
                   id="zip"
@@ -166,12 +128,55 @@ export default function ContactForm() {
                     maxlength: "10",
                   }}
                   required
-                  sx={{ width: "35%" }}
+                  sx={{ width: "100%" }}
                 />
-              </div>
-            </FormGroup>
-            <div style={{ display: "flex", alignItems: "flex-end" }}>
-              <FormControl sx={{ width: { sm: "100%", md: "50%" }, my: 1 }}>
+              </Grid>
+              <Grid xs={6}>
+                <TextFieldElement
+                  name={"email"}
+                  id="email"
+                  label="Email"
+                  type="string"
+                  variant="standard"
+                  placeholder="janedoe@gmail.com"
+                  sx={{ width: "100%" }}
+                />
+              </Grid>
+              <Grid xs={6}>
+                <TextFieldElement
+                  name={"phone"}
+                  id="phone"
+                  label="Phone Number"
+                  type="tel"
+                  variant="standard"
+                  placeholder="(888) 888-8888"
+                  sx={{ width: "100%" }}
+                />
+              </Grid>
+              <Typography
+                variant="caption"
+                style={{
+                  alignSelf: "flex-end",
+                  color: "rgba(0,0,0,0.6)",
+                }}
+                sx={{ marginTop: 1 }}
+              >
+                * Please provide at least one contact method
+              </Typography>
+              <Grid xs={12}>
+                <TextFieldElement
+                  name={"address"}
+                  id="address"
+                  label="Address"
+                  type="string"
+                  variant="standard"
+                  multiline
+                  rows={3}
+                  placeholder="111 Main St."
+                  sx={{ width: "100%" }}
+                />
+              </Grid>
+              <Grid xs={6}>
                 <MultiSelectElement
                   label="Services of interest?"
                   id="services"
@@ -188,16 +193,15 @@ export default function ContactForm() {
                       },
                     },
                   }}
+                  formControlProps={{
+                    style: {
+                      width: "100%",
+                    },
+                  }}
                 ></MultiSelectElement>
                 <FormHelperText>You may select more than one</FormHelperText>
-              </FormControl>
-              <FormControl
-                sx={{
-                  width: { sm: "100%", md: "50%" },
-                  my: 1,
-                  paddingInline: 3,
-                }}
-              >
+              </Grid>
+              <Grid xs={6}>
                 <MultiSelectElement
                   label="Referral source?"
                   id="referral-source"
@@ -214,30 +218,35 @@ export default function ContactForm() {
                       },
                     },
                   }}
+                  formControlProps={{
+                    style: {
+                      width: "100%",
+                    },
+                  }}
                 ></MultiSelectElement>
                 <FormHelperText>You may select more than one</FormHelperText>
-              </FormControl>
-            </div>
-            <TextFieldElement
-              name={"message"}
-              id="message"
-              label="Message"
-              type="string"
-              variant="standard"
-              multiline
-              rows="4"
-              placeholder="What can we help you with?"
-              helperText="What can we help you with?"
-              required
-              sx={{ width: "100%" }}
-              inputProps={{ style: { resize: "vertical" } }}
-            />
-            <Typography
-              variant="caption"
-              style={{ alignSelf: "flex-end", color: "rgba(0,0,0,0.6)" }}
-            >
-              * indicates a required field
-            </Typography>
+              </Grid>
+              <TextFieldElement
+                name={"message"}
+                id="message"
+                label="Message"
+                type="string"
+                variant="standard"
+                multiline
+                rows="4"
+                placeholder="What can we help you with?"
+                helperText="What can we help you with?"
+                required
+                sx={{ width: "100%" }}
+                inputProps={{ style: { resize: "vertical" } }}
+              />
+              <Typography
+                variant="caption"
+                style={{ alignSelf: "flex-end", color: "rgba(0,0,0,0.6)" }}
+              >
+                * indicates a required field
+              </Typography>
+            </Grid>
           </CardContent>
           <CardActions sx={{ paddingLeft: 2 }}>
             <Button
