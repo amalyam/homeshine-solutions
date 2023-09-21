@@ -1,7 +1,7 @@
 import Box from "@mui/material/Box";
 import ContactForm from "./components/ContactForm";
 import CleanRoof from "/src/images/clean-roof.jpg";
-import IntroText from "./components/IntroText";
+import IntroText2 from "./components/IntroText2";
 
 /* 
 TODO 
@@ -40,7 +40,7 @@ export default function Home() {
         flexGrow: "1",
       }}
     >
-      <IntroText />
+      <IntroText2 />
       <ContactForm />
     </Box>
   );
