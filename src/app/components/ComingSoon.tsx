@@ -5,6 +5,7 @@ import MossHand from "/src/images/moss-hand-3.jpg";
 import Typography from "@mui/material/Typography";
 import { alpha } from "@mui/material";
 import theme from "../theme";
+import CleanSteps from "/src/images/clean-steps.jpg";
 
 export default function ComingSoon() {
   return (
@@ -15,7 +16,7 @@ export default function ComingSoon() {
         alignItems: "center",
         justifyContent: "center",
         height: "100vh",
-        background: `no-repeat top/cover url(${MossHand.src})`,
+        background: `no-repeat center/cover url(${CleanSteps.src})`,
       }}
     >
       <Box
@@ -23,7 +24,7 @@ export default function ComingSoon() {
           backgroundColor: alpha(theme.palette.grey[500], 0.5),
         }}
       >
-        <Typography fontSize="8rem" color="white">
+        <Typography fontSize="8rem" color={theme.palette.primary.main}>
           COMING SOON
         </Typography>
       </Box>
