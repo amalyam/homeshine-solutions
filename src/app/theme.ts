@@ -2,6 +2,9 @@
 
 import { createTheme } from "@mui/material/styles";
 import { blueGrey, cyan, grey } from "@mui/material/colors";
+import { Lexend_Giga } from "next/font/google";
+
+const lexendGiga = Lexend_Giga({ subsets: ["latin"] });
 
 declare module "@mui/material/styles" {
   interface Palette {
@@ -27,12 +30,8 @@ let theme = createTheme({
     },
   },
   typography: {
-    h6: {
-      height: 2,
-      width: 28,
-      display: "block",
-      marginTop: 0.5,
-      background: "currentColor",
+    allVariants: {
+      ...lexendGiga.style,
     },
   },
 });
