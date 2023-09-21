@@ -211,9 +211,9 @@ export default function BusinessAppBar() {
           </Box>
           <Box
             sx={{
-              typography: {
-                sm: { textAlign: "center", display: "center" },
-                md: { textAlign: "right" },
+              textAlign: {
+                sm: "center",
+                md: "right",
               },
             }}
           >
