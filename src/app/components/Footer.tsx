@@ -24,6 +24,7 @@ export default function AppFooter() {
       sx={{
         bgcolor: theme.palette.footer.light,
         py: 2,
+        fontSize: ".75rem",
       }}
     >
       <Grid
