@@ -46,7 +46,7 @@ export async function POST(request: NextRequest) {
       email: "homeshinesolutionsllc@gmail.com",
       subject: "Free Quote - Copy of Your Responses",
       reply_to: "Michael Elias <michael.homeshinesolutions@gmail.com>",
-      html: "<p>Hi {{address.name}}, \nThank you for contacting HomeShine Solutions, LLC.. A member of our team will be in touch shortly to provide you with your FREE QUOTE! Below is a copy of your responses: \n</p>",
+      html: "<p>Hi {{address.name}}, \nThank you for contacting HomeShine Solutions, LLC.. A member of our team will be in touch shortly to provide you with your FREE QUOTE! Below is a copy of your responses: \nName: {{name}}\nEmail: {{email}}\nPhone: {{phone}}\nAddress: {{address}}\nZip code: {{zip}}\nMessage: {{message}}\nServices of interest: {{services}}\nReferral Source(s): {{referralSource}}\nWe do our best to respond within 24 hours. If you would like to update or change any of the information you provided, please reply to this email.\nHave an excellent day!\n-- The HomeShine Team\nCall:(508) 921-0275\nemail: homeshinesolutionsllc@gmail.com</p>",
     },
   };
 
