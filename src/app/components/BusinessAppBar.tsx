@@ -16,7 +16,6 @@ import MenuItem from "@mui/material/MenuItem";
 import Modal from "@mui/material/Modal";
 import theme from "../theme";
 import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
 import { useState } from "react";
 
 // TODO: get contact info to align center in sm
@@ -117,34 +116,20 @@ export default function BusinessAppBar() {
                   }
                   underline="none"
                 >
-                  <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <Typography
-                      textAlign="center"
-                      color={theme.palette.primary.dark}
-                    >
-                      {page}
-                    </Typography>
+                  <MenuItem
+                    key={page}
+                    onClick={handleCloseNavMenu}
+                    sx={{
+                      textAlign: "center",
+                      color: theme.palette.primary.dark,
+                    }}
+                  >
+                    {page}
                   </MenuItem>
                 </Link>
               ))}
             </Menu>
           </Box>
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: "flex", md: "none" },
-              flexGrow: 1,
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "inherit",
-              textDecoration: "none",
-            }}
-          ></Typography>
           <Link href="/" underline="none">
             <Image
               src={HomeShineLogoTransparent}
