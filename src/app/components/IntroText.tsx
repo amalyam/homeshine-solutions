@@ -28,7 +28,7 @@ export default function IntroText() {
             textAlign="center"
             textTransform={"uppercase"}
           >
-            Protect your home with professional routine maintenance!
+            Protect your home with routine professional maintenance!
           </Typography>
           <br />
           <Typography fontWeight={700} color="inherit" textAlign="center">
