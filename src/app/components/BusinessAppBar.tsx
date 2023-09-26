@@ -21,9 +21,8 @@ import { useState } from "react";
 // TODO: get contact info to align center in sm
 // set contact info color from parent Box?
 // show "FREE QUOTE" button in sm
-// free quote button center contact form in viewport
+// if on Home, free quote button centers contact form in viewport
 // fix Toolbar Box margin (right=0, left 20-30px), then increase logo size
-// Free Quote -> pull up contact form in overlay if not on home page
 
 const pages = ["Home", "Services", "Blog", "FAQ", "About Us"];
 
