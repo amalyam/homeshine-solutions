@@ -210,6 +210,8 @@ export default function BusinessAppBar() {
                   <Link
                     href="mailto:HomeShineSolutionsLLC@gmail.com"
                     color={theme.palette.primary.dark}
+                    variant="body1"
+                    fontSize=".9rem"
                   >
                     HomeShineRoofPro@gmail.com
                   </Link>
