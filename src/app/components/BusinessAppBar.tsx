@@ -143,7 +143,7 @@ export default function BusinessAppBar() {
             sx={{
               flexGrow: 1,
               display: { xs: "none", md: "flex" },
-              mx: 9,
+              mx: 4,
               paddingTop: 2,
               alignItems: "center",
             }}
