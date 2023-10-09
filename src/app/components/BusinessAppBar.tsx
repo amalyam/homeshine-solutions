@@ -223,6 +223,8 @@ export default function BusinessAppBar() {
                     href="tel:5089210275"
                     color={theme.palette.primary.dark}
                     underline="none"
+                    variant="body1"
+                    fontSize=".9rem"
                   >
                     (508) 921-0275
                   </Link>
