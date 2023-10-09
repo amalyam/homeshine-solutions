@@ -1,6 +1,7 @@
 import Box from "@mui/material/Box";
 import ContactForm from "./components/ContactForm";
 import CleanRoof from "/src/images/clean-roof.jpg";
+import Grid from "@mui/material/Unstable_Grid2";
 import IntroText2 from "./components/IntroText2";
 
 /* 
@@ -40,8 +41,20 @@ export default function Home() {
         flexGrow: "1",
       }}
     >
-      <IntroText2 />
-      <ContactForm />
+      <Grid
+        container
+        sx={{
+          display: "flex",
+          justifyContent: "space-between",
+        }}
+      >
+        <Grid xs={6.5}>
+          <IntroText2 />
+        </Grid>
+        <Grid xs={5.5}>
+          <ContactForm />
+        </Grid>
+      </Grid>
     </Box>
   );
 }
