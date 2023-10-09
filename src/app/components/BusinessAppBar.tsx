@@ -208,7 +208,7 @@ export default function BusinessAppBar() {
               <div>
                 <Box>
                   <Link
-                    href="mailto:HomeShineRoofPro@gmail.com"
+                    href="mailto:HomeShineSolutionsLLC@gmail.com"
                     color={theme.palette.primary.dark}
                   >
                     HomeShineRoofPro@gmail.com
