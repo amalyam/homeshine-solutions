@@ -213,7 +213,7 @@ export default function BusinessAppBar() {
                     variant="body1"
                     fontSize=".9rem"
                   >
-                    HomeShineRoofPro@gmail.com
+                    HomeShineSolutionsLLC@gmail.com
                   </Link>
                 </Box>
               </div>
