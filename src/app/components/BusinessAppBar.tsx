@@ -17,6 +17,9 @@ import Modal from "@mui/material/Modal";
 import theme from "../theme";
 import Toolbar from "@mui/material/Toolbar";
 import { useState } from "react";
+import { Lexend_Giga } from "next/font/google";
+
+const lexendGiga = Lexend_Giga({ subsets: ["latin"] });
 
 // TODO: get contact info to align center in sm
 // set contact info color from parent Box?
