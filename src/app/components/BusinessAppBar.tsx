@@ -16,6 +16,7 @@ import MenuItem from "@mui/material/MenuItem";
 import Modal from "@mui/material/Modal";
 import theme from "../theme";
 import Toolbar from "@mui/material/Toolbar";
+
 import { useState } from "react";
 import { Lexend_Giga } from "next/font/google";
 
@@ -196,14 +197,7 @@ export default function BusinessAppBar() {
               FREE QUOTE
             </Button>
           </Box>
-          <Box
-            sx={{
-              textAlign: {
-                sm: "center",
-                md: "right",
-              },
-            }}
-          >
+          <Box>
             <div>
               <div>
                 <Box>
