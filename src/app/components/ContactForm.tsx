@@ -139,6 +139,7 @@ export default function ContactForm() {
                   type="string"
                   variant="standard"
                   placeholder="janedoe@gmail.com"
+                  required
                   sx={{ width: "100%" }}
                 />
               </Grid>
