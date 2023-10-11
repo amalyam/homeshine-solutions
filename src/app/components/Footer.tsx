@@ -71,7 +71,7 @@ export default function AppFooter() {
             Privacy
           </Link>
           <Link
-            href="/Privacy/"
+            href="/Terms/"
             color={theme.palette.footer.dark}
             underline="none"
             sx={{
