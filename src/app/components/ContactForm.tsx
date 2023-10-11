@@ -6,9 +6,6 @@ import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardHeader from "@mui/material/CardHeader";
 import CardContent from "@mui/material/CardContent";
-import DialogTitle from "@mui/material/DialogTitle";
-import FormControl from "@mui/material/FormControl";
-import FormGroup from "@mui/material/FormGroup";
 import FormFields from "../types/FormFields";
 import FormHelperText from "@mui/material/FormHelperText";
 import Grid from "@mui/material/Unstable_Grid2";
@@ -154,16 +151,6 @@ export default function ContactForm() {
                   sx={{ width: "100%" }}
                 />
               </Grid>
-              <Typography
-                variant="caption"
-                style={{
-                  alignSelf: "flex-end",
-                  color: "rgba(0,0,0,0.6)",
-                }}
-                sx={{ marginTop: 1 }}
-              >
-                * Please provide at least one contact method
-              </Typography>
               <Grid xs={12}>
                 <TextFieldElement
                   name={"address"}
