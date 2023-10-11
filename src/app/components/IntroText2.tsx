@@ -1,4 +1,5 @@
-import { List, ListItemText } from "@mui/material";
+import List from "@mui/material/List";
+import ListItemText from "@mui/material/ListItemText";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Paper from "@mui/material/Paper";
