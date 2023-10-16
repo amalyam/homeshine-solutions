@@ -60,22 +60,30 @@ export default function BusinessAppBar() {
       <Modal
         open={open}
         onClose={handleClose}
-        style={{ display: "flex", alignItems: "center" }}
+        style={{
+          display: "flex",
+          alignItems: "center",
+        }}
       >
         <Container maxWidth="sm">
           <ContactForm />
         </Container>
       </Modal>
-      <Container maxWidth="xl">
+      <Box sx={{ width: "100%" }}>
         <Toolbar
           disableGutters
-          sx={{ flexDirection: { xs: "column", md: "row" } }}
+          sx={{
+            flexDirection: { sm: "column", md: "row" },
+            justifyContent: "center",
+          }}
         >
           <Box
             sx={{
-              flexGrow: 1,
+              flex: 1,
               display: { xs: "flex", md: "none" },
               marginRight: "0px",
+              maxWidth: "1700px",
+              flexDirection: { md: "row", sm: "column" },
             }}
           >
             <IconButton
@@ -131,101 +139,115 @@ export default function BusinessAppBar() {
               ))}
             </Menu>
           </Box>
-          <Link href="/" underline="none">
-            <Image
-              src={HomeShineLogoTransparent}
-              alt="HomeShine logo"
-              style={{ objectFit: "contain", height: "80px", marginLeft: 10 }}
-            />
-          </Link>
-          <Box
-            sx={{
-              flexGrow: 1,
-              display: { xs: "none", md: "flex" },
-              mx: 4,
-              paddingTop: 2,
-              alignItems: "center",
-            }}
-          >
-            {pages.map((page) => (
-              <Link
-                href={
-                  page === "Home"
-                    ? "/"
-                    : page === "About Us"
-                    ? "/About"
-                    : `/${page}`
-                }
-                underline="none"
+          <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+            <Box>
+              <Link href="/" underline="none">
+                <Image
+                  src={HomeShineLogoTransparent}
+                  alt="HomeShine logo"
+                  style={{
+                    objectFit: "contain",
+                    height: "80px",
+                    marginLeft: 10,
+                  }}
+                />
+              </Link>
+            </Box>
+            <Box sx={{ flex: 1 }}>
+              <Box
+                sx={{
+                  flexGrow: 1,
+                  display: { xs: "none", md: "flex" },
+                  mx: 4,
+                  paddingTop: 2,
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
               >
-                <MenuItem
-                  key={page}
-                  onClick={handleCloseNavMenu}
+                {pages.map((page) => (
+                  <Link
+                    href={
+                      page === "Home"
+                        ? "/"
+                        : page === "About Us"
+                        ? "/About"
+                        : `/${page}`
+                    }
+                    underline="none"
+                  >
+                    <MenuItem
+                      key={page}
+                      onClick={handleCloseNavMenu}
+                      sx={{
+                        my: 2,
+                        color: theme.palette.primary.dark,
+                        display: "block",
+                        fontSize: "1rem",
+                      }}
+                    >
+                      {page}
+                    </MenuItem>
+                  </Link>
+                ))}
+                <Button
+                  variant="contained"
                   sx={{
-                    my: 2,
-                    color: theme.palette.primary.dark,
-                    display: "block",
-                    fontSize: "1rem",
+                    py: 1,
+                    px: 1.25,
+                    mx: 3,
+                    marginBottom: 1.5,
+                    fontSize: "1.15rem",
+                    backgroundColor: theme.palette.secondary.main,
+                    color: theme.palette.primary.main,
+                    "&:hover": {
+                      backgroundColor: theme.palette.secondary.light,
+                    },
+                    flexShrink: 0,
+                  }}
+                  onClick={() => {
+                    window.location.pathname === "/"
+                      ? document.getElementById("name")?.focus()
+                      : setOpen(true);
                   }}
                 >
-                  {page}
-                </MenuItem>
-              </Link>
-            ))}
-            <Button
-              variant="contained"
-              sx={{
-                py: 1,
-                px: 1.25,
-                mx: 3,
-                marginBottom: 1.5,
-                fontSize: "1.15rem",
-                backgroundColor: theme.palette.secondary.main,
-                color: theme.palette.primary.main,
-                "&:hover": {
-                  backgroundColor: theme.palette.secondary.light,
-                },
-              }}
-              onClick={() => {
-                window.location.pathname === "/"
-                  ? document.getElementById("name")?.focus()
-                  : setOpen(true);
+                  FREE QUOTE
+                </Button>
+              </Box>
+            </Box>
+            <Box
+              style={{
+                display: "flex",
+                flexShrink: 0,
+                alignItems: "flex-end",
+                justifyContent: "center",
+                flexDirection: "column",
               }}
             >
-              FREE QUOTE
-            </Button>
-          </Box>
-          <Box>
-            <div>
-              <div>
-                <Box>
-                  <Link
-                    href="mailto:HomeShineSolutionsLLC@gmail.com"
-                    color={theme.palette.primary.dark}
-                    variant="body1"
-                    fontSize=".9rem"
-                  >
-                    HomeShineSolutionsLLC@gmail.com
-                  </Link>
-                </Box>
-              </div>
-              <div>
-                <Box>
-                  <Link
-                    href="tel:5089210275"
-                    color={theme.palette.primary.dark}
-                    underline="none"
-                    variant="body1"
-                    fontSize=".9rem"
-                  >
-                    (508) 921-0275
-                  </Link>
-                </Box>
-              </div>
-            </div>
+              <Box>
+                <Link
+                  href="mailto:HomeShineSolutionsLLC@gmail.com"
+                  color={theme.palette.primary.dark}
+                  variant="body1"
+                  fontSize=".9rem"
+                >
+                  HomeShineSolutionsLLC@gmail.com
+                </Link>
+              </Box>
+              <Box>
+                <Link
+                  href="tel:5089210275"
+                  color={theme.palette.primary.dark}
+                  underline="none"
+                  variant="body1"
+                  fontSize=".9rem"
+                >
+                  (508) 921-0275
+                </Link>
+              </Box>
+            </Box>
           </Box>
         </Toolbar>
-      </Container>
+      </Box>
     </AppBar>
   );
 }
