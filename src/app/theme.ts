@@ -2,9 +2,8 @@
 
 import { createTheme } from "@mui/material/styles";
 import { blueGrey, cyan, grey } from "@mui/material/colors";
-import { Lexend_Giga, Montserrat } from "next/font/google";
+import { Montserrat } from "next/font/google";
 
-const lexendGiga = Lexend_Giga({ subsets: ["latin"] });
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 declare module "@mui/material/styles" {
@@ -32,7 +31,7 @@ let theme = createTheme({
   },
   typography: {
     allVariants: {
-      ...lexendGiga.style,
+      ...montserrat.style,
     },
   },
 });
