@@ -102,7 +102,10 @@ export default function ContactForm() {
           setAlertSeverity("success");
           setAlertOpen(true);
         }}
-        onError={() => setAlertOpen(true)}
+        onError={() => {
+          setAlertSeverity("error");
+          setAlertOpen(true);
+        }}
       >
         <Box
           sx={{
