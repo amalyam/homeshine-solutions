@@ -17,7 +17,7 @@ export default function IntroText() {
           blockSize: "fit-content",
           borderRadius: 2,
           m: 2,
-          backgroundColor: "rgba(83, 208, 254, 0.5)",
+          backgroundColor: "rgba(255, 255, 255, 0.75)",
         }}
       >
         <Typography
