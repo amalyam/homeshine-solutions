@@ -21,13 +21,29 @@ export default function IntroText() {
         }}
       >
         <Typography
-          fontWeight={700}
+          fontWeight={900}
+          fontSize={36}
           color="inherit"
           textAlign="center"
           textTransform={"uppercase"}
+          marginBottom={4}
         >
           Protect your home with routine professional maintenance!
         </Typography>
+        <div style={{ marginLeft: 80 }}>
+          <Typography fontWeight={600} color="inherit" textAlign="left">
+            We provide cleaning and restoration solutions from rooftop to curb,
+            <br />
+            specializing in the following services:
+          </Typography>
+          <Typography fontWeight={800} color="inherit" textAlign="left">
+            <ul>
+              <li>Gutter cleaning</li>
+              <li>Deck restoration</li>
+              <li>Soft wash</li>
+            </ul>
+          </Typography>
+        </div>
       </Box>
     </div>
   );
