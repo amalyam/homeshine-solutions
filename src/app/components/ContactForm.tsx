@@ -1,5 +1,7 @@
 "use client";
 import React from "react";
+import { useState } from "react";
+import Alert, { AlertColor } from "@mui/material/Alert";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Card from "@mui/material/Card";
@@ -12,6 +14,7 @@ import Grid from "@mui/material/Unstable_Grid2";
 import Input from "@mui/material/Input";
 import Typography from "@mui/material/Typography";
 import theme from "../theme";
+import Snackbar from "@mui/material/Snackbar";
 import {
   FormContainer,
   TextFieldElement,
@@ -59,6 +62,17 @@ const serviceOptions = [
 const ContactFormContainer = FormContainer as typeof FormContainer<FormFields>;
 
 export default function ContactForm() {
+  const [openAlert, setAlertOpen] = useState(false);
+  const [alertSeverity, setAlertSeverity] = useState<AlertColor>("error");
+
+  const handleClose = (
+    event?: React.SyntheticEvent | Event,
+    reason?: string
+  ) => {
+    if (reason === "clickaway") return;
+    setAlertOpen(false);
+  };
+
   return (
     <Card
       elevation={24}
@@ -84,7 +98,11 @@ export default function ContactForm() {
             body: JSON.stringify({ data }),
             headers: { "Content-Type": "application/json" },
           });
+
+          setAlertSeverity("success");
+          setAlertOpen(true);
         }}
+        onError={() => setAlertOpen(true)}
       >
         <Box
           sx={{
@@ -254,6 +272,22 @@ export default function ContactForm() {
               Submit
             </Button>
           </CardActions>
+          <Snackbar
+            open={openAlert}
+            autoHideDuration={6000}
+            onClose={handleClose}
+            anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
+          >
+            <Alert
+              onClose={handleClose}
+              severity={alertSeverity}
+              sx={{ width: "100%" }}
+            >
+              {alertSeverity === "success"
+                ? "Success! A confirmation email has been sent to your inbox. If you do not see it within a few minutes, please check your spam folder. We aim to respond within 24 hours."
+                : "Please fill out all fields as required."}
+            </Alert>
+          </Snackbar>
         </Box>
       </ContactFormContainer>
     </Card>
