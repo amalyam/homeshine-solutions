@@ -14,6 +14,7 @@ export default function IntroText() {
         sx={{
           p: 3,
           display: "flex",
+          flexDirection: "column",
           blockSize: "fit-content",
           borderRadius: 2,
           m: 2,
