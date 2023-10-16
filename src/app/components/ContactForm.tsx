@@ -119,6 +119,11 @@ export default function ContactForm() {
             m: 1,
           }}
         >
+          {openAlert && (
+            <Alert severity={alertSeverity}>
+              {submissionAlertText(alertSeverity)}
+            </Alert>
+          )}
           <CardHeader
             title="Free Quote"
             sx={{ display: "center", paddingBottom: 0 }}
@@ -285,12 +290,9 @@ export default function ContactForm() {
             autoHideDuration={6000}
             onClose={handleClose}
             anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
+            sx={{ display: { xs: "", sm: "none" } }}
           >
-            <Alert
-              onClose={handleClose}
-              severity={alertSeverity}
-              sx={{ width: "100%" }}
-            >
+            <Alert onClose={handleClose} severity={alertSeverity}>
               {submissionAlertText(alertSeverity)}
             </Alert>
           </Snackbar>
