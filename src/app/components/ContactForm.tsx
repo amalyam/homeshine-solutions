@@ -8,10 +8,12 @@ import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardHeader from "@mui/material/CardHeader";
 import CardContent from "@mui/material/CardContent";
+import CloseIcon from "@mui/icons-material/Close";
 import FormFields from "../types/FormFields";
 import FormHelperText from "@mui/material/FormHelperText";
 import Grid from "@mui/material/Unstable_Grid2";
 import Input from "@mui/material/Input";
+import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import theme from "../theme";
 import Snackbar from "@mui/material/Snackbar";
@@ -120,7 +122,21 @@ export default function ContactForm() {
           }}
         >
           {openAlert && (
-            <Alert severity={alertSeverity}>
+            <Alert
+              severity={alertSeverity}
+              action={
+                <IconButton
+                  aria-label="close"
+                  color="inherit"
+                  size="small"
+                  onClick={() => {
+                    setAlertOpen(false);
+                  }}
+                >
+                  <CloseIcon fontSize="inherit" />
+                </IconButton>
+              }
+            >
               {submissionAlertText(alertSeverity)}
             </Alert>
           )}
@@ -287,12 +303,15 @@ export default function ContactForm() {
           </CardActions>
           <Snackbar
             open={openAlert}
-            autoHideDuration={6000}
             onClose={handleClose}
             anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
             sx={{ display: { xs: "", sm: "none" } }}
           >
-            <Alert onClose={handleClose} severity={alertSeverity}>
+            <Alert
+              onClose={handleClose}
+              severity={alertSeverity}
+              sx={{ width: "100%" }}
+            >
               {submissionAlertText(alertSeverity)}
             </Alert>
           </Snackbar>
