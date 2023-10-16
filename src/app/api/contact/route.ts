@@ -19,6 +19,8 @@ const googleService = google.sheets({
 
 export async function POST(request: NextRequest) {
   console.log("request to contact route");
+  const { data } = (await request.json()) as { data: FormFields };
+  console.log(`contact: data: ${JSON.stringify(data)}`);
   const {
     data: {
       name,
@@ -50,7 +52,10 @@ export async function POST(request: NextRequest) {
     },
   };
 
-  await fetch("https://api.sparkpost.com/api/v1/transmissions", {
+  console.log(`sending email to ${email}: ${JSON.stringify(emailBody)}`);
+  const response = await fetch(
+    "https://api.sparkpost.com/api/v1/transmissions",
+    {
     method: "POST",
     body: JSON.stringify(emailBody),
     headers: {
@@ -58,7 +63,11 @@ export async function POST(request: NextRequest) {
       Accept: "application/json",
       Authorization: process.env.SPARK_POST_API_KEY!,
     },
-  });
+    }
+  );
+  console.log(
+    `Email send complete, response: ${JSON.stringify(await response.json())}`
+  );
 
   // const result = await sql`
   // INSERT INTO contact (name, email, phone, address, zip, services, referral_source, message)
@@ -67,6 +76,7 @@ export async function POST(request: NextRequest) {
   // )}, ${JSON.stringify(referralSource)}, ${message});
   // `;
 
+  console.log("Adding row to spreadsheet");
   await googleService.spreadsheets.values.append({
     spreadsheetId: "1HpxH5RSSLOrpKdRCwm7h0Ndneo2SSMBB2UOhS0Yl3QM", // from the URL
     range: process.env.CONTACT_SHEET_NAME, // or whatever other sheet name you name it
