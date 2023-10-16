@@ -69,7 +69,7 @@ export default function BusinessAppBar() {
           <ContactForm />
         </Container>
       </Modal>
-      <Box sx={{ width: "100%" }}>
+      <Box>
         <Toolbar
           disableGutters
           sx={{
@@ -82,7 +82,6 @@ export default function BusinessAppBar() {
               flex: 1,
               display: { xs: "flex", md: "none" },
               marginRight: "0px",
-              maxWidth: "1700px",
               flexDirection: { md: "row", sm: "column" },
             }}
           >
@@ -139,7 +138,14 @@ export default function BusinessAppBar() {
               ))}
             </Menu>
           </Box>
-          <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+          <Box
+            sx={{
+              flex: "1",
+              display: "flex",
+              justifyContent: "space-between",
+              maxWidth: "1800px",
+            }}
+          >
             <Box>
               <Link href="/" underline="none">
                 <Image

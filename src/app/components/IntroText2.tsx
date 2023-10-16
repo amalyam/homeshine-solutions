@@ -1,8 +1,6 @@
+import Box from "@mui/material/Box";
 import List from "@mui/material/List";
 import ListItemText from "@mui/material/ListItemText";
-import Box from "@mui/material/Box";
-import Container from "@mui/material/Container";
-import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 
 export default function IntroText() {
@@ -26,7 +24,6 @@ export default function IntroText() {
           fontSize={36}
           color="inherit"
           textAlign="center"
-          textTransform={"uppercase"}
           marginBottom={4}
         >
           Protect your home with routine professional maintenance!
@@ -40,8 +37,12 @@ export default function IntroText() {
           <Typography fontWeight={800} color="inherit" textAlign="left">
             <ul>
               <li>Gutter cleaning</li>
-              <li>Deck restoration</li>
+              <li>Moss, algae, and lichen treatment</li>
+              <li>Deck restoration (clean, seal, stain, paint, replace)</li>
               <li>Soft wash</li>
+              <li>Pressure wash</li>
+              <li>Window cleaning</li>
+              <li>Tree + hedge trimming</li>
             </ul>
           </Typography>
         </div>
