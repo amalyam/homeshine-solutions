@@ -92,8 +92,8 @@ export async function POST(request: NextRequest) {
           phone,
           address,
           zip,
-          services.join(","),
-          referralSource.join(", "),
+          services?.join(",") ?? "",
+          referralSource?.join(", ") ?? "",
           message,
         ],
       ], // fill with the data you're inserting
