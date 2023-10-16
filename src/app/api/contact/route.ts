@@ -2,6 +2,7 @@ import { sql } from "@vercel/postgres";
 import { NextRequest, NextResponse } from "next/server";
 import FormFields from "../../types/FormFields";
 import { google, Auth } from "googleapis";
+import emailBodyHtml from "./emailBodyHtml";
 
 const googleService = google.sheets({
   version: "v4",
@@ -22,17 +23,15 @@ export async function POST(request: NextRequest) {
   const { data } = (await request.json()) as { data: FormFields };
   console.log(`contact: data: ${JSON.stringify(data)}`);
   const {
-    data: {
-      name,
-      email,
-      phone,
-      address,
-      zip,
-      message,
-      services,
-      referralSource,
-    },
-  } = (await request.json()) as { data: FormFields };
+    name,
+    email,
+    phone,
+    address,
+    zip,
+    message,
+    services,
+    referralSource,
+  } = data;
 
   const emailBody = {
     recipients: [
@@ -44,11 +43,13 @@ export async function POST(request: NextRequest) {
       },
     ],
     content: {
-      from: "HomeShine Solutions, LLC.",
-      email: "homeshinesolutionsllc@gmail.com",
+      from: {
+        name: "HomeShine Solutions, LLC.",
+        email: "noreply@mail.homeshinesolutions.com",
+      },
       subject: "Free Quote - Copy of Your Responses",
       reply_to: "Michael Elias <michael.homeshinesolutions@gmail.com>",
-      html: "<p>Hi {{address.name}}, \nThank you for contacting HomeShine Solutions, LLC.. A member of our team will be in touch shortly to provide you with your FREE QUOTE! We do our best to respond within 24 hours. Below is a copy of your responses: \nName: {{name}}\nEmail: {{email}}\nPhone: {{phone}}\nAddress: {{address}}\nZip code: {{zip}}\nMessage: {{message}}\nServices of interest: {{services}}\nReferral Source(s): {{referralSource}}\nIf you would like to update or change any of the information you provided, please reply to this email.\nHave an excellent day!\n-- The HomeShine Team\nCall:(508) 921-0275\nemail: homeshinesolutionsllc@gmail.com</p>",
+      html: emailBodyHtml(data),
     },
   };
 
@@ -56,13 +57,13 @@ export async function POST(request: NextRequest) {
   const response = await fetch(
     "https://api.sparkpost.com/api/v1/transmissions",
     {
-    method: "POST",
-    body: JSON.stringify(emailBody),
-    headers: {
-      "Content-Type": "application/json",
-      Accept: "application/json",
-      Authorization: process.env.SPARK_POST_API_KEY!,
-    },
+      method: "POST",
+      body: JSON.stringify(emailBody),
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+        Authorization: process.env.SPARK_POST_API_KEY!,
+      },
     }
   );
   console.log(
@@ -99,11 +100,7 @@ export async function POST(request: NextRequest) {
       ], // fill with the data you're inserting
     },
   });
-  /*
-
-  */
 
   console.log("success");
-  // console.log(result);
   return NextResponse.json({ success: true });
 }
