@@ -37,6 +37,11 @@ Details you might include as relevant to your project:
 
 */
 
+const submissionAlertText = (alertSeverity: AlertColor) =>
+  alertSeverity === "success"
+    ? "Success! A confirmation email has been sent to your inbox. If you do not see it within a few minutes, please check your spam folder. We aim to respond within 24 hours."
+    : "Please fill out all fields as required.";
+
 const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;
 
@@ -286,9 +291,7 @@ export default function ContactForm() {
               severity={alertSeverity}
               sx={{ width: "100%" }}
             >
-              {alertSeverity === "success"
-                ? "Success! A confirmation email has been sent to your inbox. If you do not see it within a few minutes, please check your spam folder. We aim to respond within 24 hours."
-                : "Please fill out all fields as required."}
+              {submissionAlertText(alertSeverity)}
             </Alert>
           </Snackbar>
         </Box>
