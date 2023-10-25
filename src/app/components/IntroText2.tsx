@@ -26,7 +26,7 @@ export default function IntroText() {
           fontWeight={900}
           fontSize={36}
           textAlign="center"
-          marginBottom={4}
+          marginBottom={3}
           //style={{ color: theme.palette.primary.main }}
           color="white"
         >
