@@ -33,7 +33,12 @@ export default function IntroText() {
           Protect your home with routine professional maintenance!
         </Typography>
         <div style={{ marginLeft: 40 }}>
-          <Typography fontWeight={600} color="white" textAlign="left">
+          <Typography
+            fontWeight={600}
+            color="white"
+            textAlign="left"
+            lineHeight={1.7}
+          >
             We provide cleaning and restoration solutions from rooftop to curb,
             <br />
             specializing in the following services:
