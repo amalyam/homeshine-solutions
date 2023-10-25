@@ -32,6 +32,7 @@ export default function AppFooter() {
         sx={{
           display: "flex",
           justifyContent: "space-between",
+          alignItems: "center",
         }}
       >
         <Grid xs={4}></Grid>
