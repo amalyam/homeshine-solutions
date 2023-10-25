@@ -1,6 +1,8 @@
 import Box from "@mui/material/Box";
+import ConstructionIcon from "@mui/icons-material/Construction";
 import List from "@mui/material/List";
 import ListItemText from "@mui/material/ListItemText";
+import RoofingIcon from "@mui/icons-material/Roofing";
 import Typography from "@mui/material/Typography";
 
 export default function IntroText() {
@@ -35,16 +37,36 @@ export default function IntroText() {
             <br />
             specializing in the following services:
           </Typography>
-          <Typography fontWeight={800} color="inherit" textAlign="left">
-            <ul>
-              <li>Gutter cleaning</li>
-              <li>Moss, algae, and lichen treatment</li>
-              <li>Deck restoration (clean, seal, stain, paint, replace)</li>
-              <li>Soft wash</li>
-              <li>Pressure wash</li>
-              <li>Window cleaning</li>
-              <li>Tree + hedge trimming</li>
-            </ul>
+            <List>
+              <ListItemText>
+                <RoofingIcon sx={{ marginRight: 1 }} />
+                Gutter cleaning
+              </ListItemText>
+              <ListItemText>
+                <ConstructionIcon sx={{ marginRight: 1 }} />
+                Moss, algae, and ListItemTextchen treatment
+              </ListItemText>
+              <ListItemText>
+                <RoofingIcon sx={{ marginRight: 1 }} />
+                Deck restoration (clean, seal, stain, paint, replace)
+              </ListItemText>
+              <ListItemText>
+                <ConstructionIcon sx={{ marginRight: 1 }} />
+                Soft wash
+              </ListItemText>
+              <ListItemText>
+                <RoofingIcon sx={{ marginRight: 1 }} />
+                Pressure wash
+              </ListItemText>
+              <ListItemText>
+                <ConstructionIcon sx={{ marginRight: 1 }} />
+                Window cleaning
+              </ListItemText>
+              <ListItemText>
+                <RoofingIcon sx={{ marginRight: 1 }} />
+                Tree + hedge trimming
+              </ListItemText>
+            </List>
           </Typography>
         </div>
       </Box>
