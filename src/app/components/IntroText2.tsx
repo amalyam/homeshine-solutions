@@ -17,7 +17,7 @@ export default function IntroText() {
           borderRadius: 2,
           m: 2,
           marginLeft: 4,
-          backgroundColor: "rgba(255, 255, 255, 0.75)",
+          backgroundColor: "rgba(33, 53, 55, 0.84)",
         }}
       >
         <Typography
