@@ -75,6 +75,7 @@ export default function BusinessAppBar() {
           sx={{
             flexDirection: { sm: "column", md: "row" },
             justifyContent: "center",
+            mx: 4,
           }}
         >
           <Box
