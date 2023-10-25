@@ -51,46 +51,46 @@ export default function IntroText() {
           >
             <List>
               <div style={{ display: "flex", alignItems: "center" }}>
-              <ListItemText>
-                <RoofingIcon sx={{ marginRight: 1 }} />
-                Gutter cleaning
-              </ListItemText>
+                <ListItemText>
+                  <RoofingIcon sx={{ marginRight: 1 }} />
+                  Gutter cleaning
+                </ListItemText>
               </div>
               <div style={{ display: "flex", alignItems: "center" }}>
-              <ListItemText>
-                <ConstructionIcon sx={{ marginRight: 1 }} />
+                <ListItemText>
+                  <ConstructionIcon sx={{ marginRight: 1 }} />
                   Moss, algae, and lichen treatment
-              </ListItemText>
+                </ListItemText>
               </div>
               <div style={{ display: "flex", alignItems: "center" }}>
-              <ListItemText>
-                <RoofingIcon sx={{ marginRight: 1 }} />
-                Deck restoration (clean, seal, stain, paint, replace)
-              </ListItemText>
+                <ListItemText>
+                  <RoofingIcon sx={{ marginRight: 1 }} />
+                  Deck restoration (clean, seal, stain, paint, replace)
+                </ListItemText>
               </div>
               <div style={{ display: "flex", alignItems: "center" }}>
-              <ListItemText>
-                <ConstructionIcon sx={{ marginRight: 1 }} />
-                Soft wash
-              </ListItemText>
+                <ListItemText>
+                  <ConstructionIcon sx={{ marginRight: 1 }} />
+                  Soft wash
+                </ListItemText>
               </div>
               <div style={{ display: "flex", alignItems: "center" }}>
-              <ListItemText>
-                <RoofingIcon sx={{ marginRight: 1 }} />
-                Pressure wash
-              </ListItemText>
+                <ListItemText>
+                  <RoofingIcon sx={{ marginRight: 1 }} />
+                  Pressure wash
+                </ListItemText>
               </div>
               <div style={{ display: "flex", alignItems: "center" }}>
-              <ListItemText>
-                <ConstructionIcon sx={{ marginRight: 1 }} />
-                Window cleaning
-              </ListItemText>
+                <ListItemText>
+                  <ConstructionIcon sx={{ marginRight: 1 }} />
+                  Window cleaning
+                </ListItemText>
               </div>
               <div style={{ display: "flex", alignItems: "center" }}>
-              <ListItemText>
-                <RoofingIcon sx={{ marginRight: 1 }} />
-                Tree + hedge trimming
-              </ListItemText>
+                <ListItemText>
+                  <RoofingIcon sx={{ marginRight: 1 }} />
+                  Tree + hedge trimming
+                </ListItemText>
               </div>
             </List>
           </Typography>
