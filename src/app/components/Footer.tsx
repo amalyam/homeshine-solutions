@@ -23,7 +23,7 @@ export default function AppFooter() {
       component="footer"
       sx={{
         bgcolor: theme.palette.footer.light,
-        py: 2,
+        py: 1.5,
         fontSize: ".75rem",
       }}
     >
