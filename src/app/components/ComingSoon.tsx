@@ -24,7 +24,14 @@ export default function ComingSoon() {
           backgroundColor: "rgba(33, 53, 55, 0.84)",
         }}
       >
-        <Typography fontSize="8rem" color={theme.palette.primary.main}>
+        <Typography
+          fontWeight={600}
+          fontSize="8rem"
+          color={theme.palette.primary.main}
+          lineHeight={1.2}
+          letterSpacing="0.01em"
+          sx={{ mx: 3 }}
+        >
           COMING SOON
         </Typography>
       </Box>
