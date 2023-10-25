@@ -36,7 +36,15 @@ export default function AppFooter() {
         }}
       >
         <Grid xs={4}></Grid>
-        <Grid xs={4} sx={{ display: "flex", justifyContent: "center", gap: 3 }}>
+        <Grid
+          xs={4}
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: 3,
+          }}
+        >
           <Link
             color={theme.palette.footer.dark}
             href="https://www.yelp.com/biz/home-shine-solutions-somerville"
