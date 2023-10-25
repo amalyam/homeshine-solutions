@@ -28,15 +28,17 @@ export default function IntroText() {
           color="inherit"
           textAlign="center"
           marginBottom={4}
+          color="white"
         >
           Protect your home with routine professional maintenance!
         </Typography>
         <div style={{ marginLeft: 80 }}>
-          <Typography fontWeight={600} color="inherit" textAlign="left">
+          <Typography fontWeight={600} color="white" textAlign="left">
             We provide cleaning and restoration solutions from rooftop to curb,
             <br />
             specializing in the following services:
           </Typography>
+            color="white"
             <List>
               <ListItemText>
                 <RoofingIcon sx={{ marginRight: 1 }} />
