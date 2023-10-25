@@ -21,7 +21,7 @@ export default function ComingSoon() {
     >
       <Box
         sx={{
-          backgroundColor: alpha(theme.palette.grey[500], 0.5),
+          backgroundColor: "rgba(33, 53, 55, 0.84)",
         }}
       >
         <Typography fontSize="8rem" color={theme.palette.primary.main}>
