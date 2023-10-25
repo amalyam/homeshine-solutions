@@ -25,20 +25,25 @@ export default function IntroText() {
         <Typography
           fontWeight={900}
           fontSize={36}
-          color="inherit"
           textAlign="center"
           marginBottom={4}
+          //style={{ color: theme.palette.primary.main }}
           color="white"
         >
           Protect your home with routine professional maintenance!
         </Typography>
-        <div style={{ marginLeft: 80 }}>
+        <div style={{ marginLeft: 40 }}>
           <Typography fontWeight={600} color="white" textAlign="left">
             We provide cleaning and restoration solutions from rooftop to curb,
             <br />
             specializing in the following services:
           </Typography>
+          <Typography
+            fontWeight={800}
             color="white"
+            textAlign="left"
+            sx={{ display: "flex", marginLeft: 4 }}
+          >
             <List>
               <ListItemText>
                 <RoofingIcon sx={{ marginRight: 1 }} />
