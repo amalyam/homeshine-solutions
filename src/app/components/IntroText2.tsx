@@ -50,34 +50,48 @@ export default function IntroText() {
             sx={{ display: "flex", marginLeft: 4 }}
           >
             <List>
+              <div style={{ display: "flex", alignItems: "center" }}>
               <ListItemText>
                 <RoofingIcon sx={{ marginRight: 1 }} />
                 Gutter cleaning
               </ListItemText>
+              </div>
+              <div style={{ display: "flex", alignItems: "center" }}>
               <ListItemText>
                 <ConstructionIcon sx={{ marginRight: 1 }} />
-                Moss, algae, and ListItemTextchen treatment
+                  Moss, algae, and lichen treatment
               </ListItemText>
+              </div>
+              <div style={{ display: "flex", alignItems: "center" }}>
               <ListItemText>
                 <RoofingIcon sx={{ marginRight: 1 }} />
                 Deck restoration (clean, seal, stain, paint, replace)
               </ListItemText>
+              </div>
+              <div style={{ display: "flex", alignItems: "center" }}>
               <ListItemText>
                 <ConstructionIcon sx={{ marginRight: 1 }} />
                 Soft wash
               </ListItemText>
+              </div>
+              <div style={{ display: "flex", alignItems: "center" }}>
               <ListItemText>
                 <RoofingIcon sx={{ marginRight: 1 }} />
                 Pressure wash
               </ListItemText>
+              </div>
+              <div style={{ display: "flex", alignItems: "center" }}>
               <ListItemText>
                 <ConstructionIcon sx={{ marginRight: 1 }} />
                 Window cleaning
               </ListItemText>
+              </div>
+              <div style={{ display: "flex", alignItems: "center" }}>
               <ListItemText>
                 <RoofingIcon sx={{ marginRight: 1 }} />
                 Tree + hedge trimming
               </ListItemText>
+              </div>
             </List>
           </Typography>
         </div>
