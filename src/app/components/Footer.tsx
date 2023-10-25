@@ -94,7 +94,12 @@ export default function AppFooter() {
         </Grid>
         <Grid
           xs={4}
-          sx={{ display: "flex", justifyContent: "flex-end", pr: 3 }}
+          sx={{
+            display: "flex",
+            justifyContent: "flex-end",
+            alignItems: "center",
+            pr: 3,
+          }}
         >
           <Copyright />
         </Grid>
