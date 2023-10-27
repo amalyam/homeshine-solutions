@@ -80,7 +80,7 @@ export default function BusinessAppBar() {
               flex: 1,
               display: { xs: "flex", md: "none" },
               marginRight: "0px",
-              flexDirection: { md: "row", sm: "column" },
+              flexDirection: { sm: "column", md: "row" },
             }}
           >
             <IconButton
