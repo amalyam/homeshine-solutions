@@ -48,12 +48,12 @@ const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;
 
 const referralOptions = [
+  "Yelp",
   "Leaflet",
   "Facebook",
-  "Yelp",
   "Google",
   "Word of mouth",
-  "Saw HomeShine serving another location",
+  "Saw HomeShine at work",
   "Other - tell us more below!",
 ];
 
