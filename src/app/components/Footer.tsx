@@ -65,7 +65,7 @@ export default function AppFooter() {
               },
             }}
           >
-            Privacy
+            Privacy Policy
           </Link>
           <Typography sx={{ mx: 1 }}>|</Typography>
           <Link
@@ -85,6 +85,61 @@ export default function AppFooter() {
           xs={4}
           sx={{
             display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: 1.5,
+          }}
+        >
+          <Typography
+            fontWeight={500}
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            CONNECT WITH US
+          </Typography>
+          <Link
+            color={theme.palette.footer.dark}
+            href="https://www.yelp.com/biz/home-shine-solutions-somerville"
+            rel="noopener noreferrer"
+            target="_blank"
+            sx={{
+              "&:hover": {
+                color: theme.palette.footer.main,
+              },
+            }}
+          >
+            <Icon
+              baseClassName="fa-brands"
+              className="fa-yelp"
+              sx={{
+                color: theme.palette.footer.dark,
+                "&:hover": {
+                  color: theme.palette.footer.main,
+                },
+              }}
+            />
+          </Link>
+          <Link
+            color={theme.palette.footer.dark}
+            href="https://www.yelp.com/biz/home-shine-solutions-somerville"
+            rel="noopener noreferrer"
+            target="_blank"
+            sx={{
+              "&:hover": {
+                color: theme.palette.footer.main,
+              },
+            }}
+          >
+            <FacebookOutlinedIcon />
+          </Link>
+        </Grid>
+        <Grid
+          xs={4}
+          sx={{
+            display: "flex",
             justifyContent: "flex-end",
             alignItems: "center",
             pr: 3,
@@ -92,61 +147,6 @@ export default function AppFooter() {
         >
           <Copyright />
         </Grid>
-      </Grid>
-      <Grid
-        xs={4}
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          gap: 3,
-        }}
-      >
-        <Typography
-          fontWeight={500}
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          CONNECT WITH US
-        </Typography>
-        <Link
-          color={theme.palette.footer.dark}
-          href="https://www.yelp.com/biz/home-shine-solutions-somerville"
-          rel="noopener noreferrer"
-          target="_blank"
-          sx={{
-            "&:hover": {
-              color: theme.palette.footer.main,
-            },
-          }}
-        >
-          <Icon
-            baseClassName="fa-brands"
-            className="fa-yelp"
-            sx={{
-              color: theme.palette.footer.dark,
-              "&:hover": {
-                color: theme.palette.footer.main,
-              },
-            }}
-          />
-        </Link>
-        <Link
-          color={theme.palette.footer.dark}
-          href="https://www.yelp.com/biz/home-shine-solutions-somerville"
-          rel="noopener noreferrer"
-          target="_blank"
-          sx={{
-            "&:hover": {
-              color: theme.palette.footer.main,
-            },
-          }}
-        >
-          <FacebookOutlinedIcon />
-        </Link>
       </Grid>
     </Typography>
   );
