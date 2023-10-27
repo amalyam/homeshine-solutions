@@ -27,7 +27,7 @@ export default function ComingSoon() {
       >
         <Typography
           fontWeight={600}
-          fontSize="6.5rem"
+          fontSize="6rem"
           color={theme.palette.primary.main}
           lineHeight={1.2}
           letterSpacing="0.01em"
