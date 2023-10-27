@@ -30,7 +30,9 @@ export default function IntroText() {
           //style={{ color: theme.palette.primary.main }}
           color="white"
         >
-          Protect your home with routine professional maintenance!
+          Cleaning, Restoration, & Repair
+          <br />
+          Rooftop to Curb!
         </Typography>
         <div style={{ marginLeft: 40 }}>
           <Typography
