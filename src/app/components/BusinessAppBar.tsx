@@ -14,6 +14,7 @@ import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import Modal from "@mui/material/Modal";
+import Stack from "@mui/material/Stack";
 import theme from "../theme";
 import Toolbar from "@mui/material/Toolbar";
 
@@ -74,6 +75,116 @@ export default function BusinessAppBar() {
             justifyContent: "center",
             mx: 4,
           }}
+        >
+          <Stack
+            justifyContent="center"
+            sx={{ display: { xs: "flex", md: "none" } }}
+          >
+            <Box
+              sx={{
+                flex: 1,
+                display: { xs: "flex", md: "none" },
+                marginRight: "0px",
+                flexDirection: "column",
+              }}
+            >
+              <IconButton
+                size="large"
+                aria-label="menu items"
+                aria-controls="menu-appbar"
+                aria-haspopup="true"
+                onClick={handleOpenNavMenu}
+                color="inherit"
+              >
+                <MenuIcon />
+              </IconButton>
+              <Menu
+                id="menu-appbar"
+                anchorEl={anchorElNav}
+                anchorOrigin={{
+                  vertical: "bottom",
+                  horizontal: "left",
+                }}
+                keepMounted
+                transformOrigin={{
+                  vertical: "top",
+                  horizontal: "left",
+                }}
+                open={Boolean(anchorElNav)}
+                onClose={handleCloseNavMenu}
+                sx={{
+                  display: { xs: "block", md: "none" },
+                }}
+              >
+                {pages.map((page) => (
+                  <Link
+                    href={
+                      page === "Home"
+                        ? "/"
+                        : page === "About Us"
+                        ? "/About"
+                        : `/${page}`
+                    }
+                    underline="none"
+                  >
+                    <MenuItem
+                      key={page}
+                      onClick={handleCloseNavMenu}
+                      sx={{
+                        textAlign: "center",
+                        color: theme.palette.primary.dark,
+                      }}
+                    >
+                      {page}
+                    </MenuItem>
+                  </Link>
+                ))}
+              </Menu>
+            </Box>
+            <Box>
+              <Link href="/" underline="none">
+                <Image
+                  src={HomeShineLogoTransparent}
+                  alt="HomeShine logo"
+                  style={{
+                    objectFit: "contain",
+                    height: "80px",
+                    marginLeft: 10,
+                  }}
+                />
+              </Link>
+            </Box>
+            <Box
+              style={{
+                display: "flex",
+                flexShrink: 0,
+                alignItems: "center",
+                justifyContent: "center",
+                flexDirection: "column",
+              }}
+            >
+              <Box>
+                <Link
+                  href="mailto:HomeShineSolutionsLLC@gmail.com"
+                  color={theme.palette.primary.dark}
+                  variant="body1"
+                  fontSize=".9rem"
+                >
+                  HomeShineSolutionsLLC@gmail.com
+                </Link>
+              </Box>
+              <Box>
+                <Link
+                  href="tel:5089210275"
+                  color={theme.palette.primary.dark}
+                  underline="none"
+                  variant="body1"
+                  fontSize=".9rem"
+                >
+                  (508) 921-0275
+                </Link>
+              </Box>
+            </Box>
             <Button
               variant="contained"
               sx={{
@@ -97,6 +208,7 @@ export default function BusinessAppBar() {
             >
               FREE QUOTE
             </Button>
+          </Stack>
           <Box
             sx={{
               flex: "1",
