@@ -19,3 +19,5 @@
     - use theme font for both
     - align formatting
     - change background color?
+- Contact form
+    - add popover on message box with suggestions of what to include
