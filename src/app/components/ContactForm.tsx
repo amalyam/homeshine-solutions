@@ -58,12 +58,16 @@ const referralOptions = [
 ];
 
 const serviceOptions = [
-  "Gutters",
-  "Moss Treatment",
-  "Soft Wash",
+  "Gutter Cleaning",
+  "Gutter Repair",
+  "Downspout Installation",
+  "Roof Cleaning",
+  "Siding Wash",
   "Pressure Wash",
-  "Solar Panels",
-  "Other",
+  "Window Washing",
+  "Deck Restoration",
+  "Tree Trimming",
+  "Other - explain below",
 ];
 
 const ContactFormContainer = FormContainer as typeof FormContainer<FormFields>;
