@@ -74,68 +74,29 @@ export default function BusinessAppBar() {
             justifyContent: "center",
             mx: 4,
           }}
-        >
-          <Box
-            sx={{
-              flex: 1,
-              display: { xs: "flex", md: "none" },
-              marginRight: "0px",
-              flexDirection: "column",
-            }}
-          >
-            <IconButton
-              size="large"
-              aria-label="menu items"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="inherit"
-            >
-              <MenuIcon />
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "left",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "left",
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
+            <Button
+              variant="contained"
               sx={{
-                display: { xs: "block", md: "none" },
+                py: 1,
+                px: 1.25,
+                mx: 3,
+                marginBottom: 1.5,
+                fontSize: "1.15rem",
+                backgroundColor: theme.palette.secondary.main,
+                color: theme.palette.primary.main,
+                "&:hover": {
+                  backgroundColor: theme.palette.secondary.light,
+                },
+                flex: 0,
+              }}
+              onClick={() => {
+                window.location.pathname === "/"
+                  ? document.getElementById("name")?.focus()
+                  : setOpen(true);
               }}
             >
-              {pages.map((page) => (
-                <Link
-                  href={
-                    page === "Home"
-                      ? "/"
-                      : page === "About Us"
-                      ? "/About"
-                      : `/${page}`
-                  }
-                  underline="none"
-                >
-                  <MenuItem
-                    key={page}
-                    onClick={handleCloseNavMenu}
-                    sx={{
-                      textAlign: "center",
-                      color: theme.palette.primary.dark,
-                    }}
-                  >
-                    {page}
-                  </MenuItem>
-                </Link>
-              ))}
-            </Menu>
-          </Box>
+              FREE QUOTE
+            </Button>
           <Box
             sx={{
               flex: "1",
