@@ -4,25 +4,6 @@ import CleanRoof from "/src/images/clean-roof.jpg";
 import Grid from "@mui/material/Unstable_Grid2";
 import IntroText2 from "./components/IntroText2";
 
-/* 
-TODO 
-get  background image to cover full length of contact form
-
-create color theme based on Homeshine logo
-primary white
-teal
-yellow
-text black
-
-
-<Image
-src={LogoAndServices}
-width={781.5}
-height={374}
-alt="logo-and-services"
-placeholder="blur"
-/> */
-
 export default function Home() {
   return (
     <Box
