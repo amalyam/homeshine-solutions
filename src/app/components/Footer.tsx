@@ -48,7 +48,7 @@ export default function AppFooter() {
           <Image
             src={SudsHome}
             alt={"Suds Home Logo"}
-            height={30}
+            height={40}
             style={{
               display: "flex",
               alignItems: "center",
