@@ -52,9 +52,7 @@ export default function IntroText() {
             textAlign="left"
             lineHeight={1.7}
           >
-            We provide cleaning and restoration solutions from rooftop to curb,
-            <br />
-            specializing in the following services:
+            Specializing in the following services:
           </Typography>
           <Typography
             fontWeight={800}
