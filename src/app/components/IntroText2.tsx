@@ -63,44 +63,38 @@ export default function IntroText() {
             <List>
               <div style={{ display: "flex", alignItems: "center" }}>
                 <ListItemText>
-                  <RoofingIcon sx={{ marginRight: 1 }} />
-                  Gutter cleaning
+                  <HouseSidingIcon sx={{ marginRight: 1 }} />
+                  Gutter cleaning + repair
                 </ListItemText>
               </div>
               <div style={{ display: "flex", alignItems: "center" }}>
                 <ListItemText>
-                  <ConstructionIcon sx={{ marginRight: 1 }} />
-                  Moss, algae, and lichen treatment
+                  <WaterDamageOutlinedIcon sx={{ marginRight: 1 }} />
+                  Siding soft wash
                 </ListItemText>
               </div>
               <div style={{ display: "flex", alignItems: "center" }}>
                 <ListItemText>
-                  <RoofingIcon sx={{ marginRight: 1 }} />
-                  Deck restoration (clean, seal, stain, paint, replace)
-                </ListItemText>
-              </div>
-              <div style={{ display: "flex", alignItems: "center" }}>
-                <ListItemText>
-                  <ConstructionIcon sx={{ marginRight: 1 }} />
-                  Soft wash
-                </ListItemText>
-              </div>
-              <div style={{ display: "flex", alignItems: "center" }}>
-                <ListItemText>
-                  <RoofingIcon sx={{ marginRight: 1 }} />
+                  <WaterDropOutlinedIcon sx={{ marginRight: 1 }} />
                   Pressure wash
                 </ListItemText>
               </div>
               <div style={{ display: "flex", alignItems: "center" }}>
                 <ListItemText>
-                  <ConstructionIcon sx={{ marginRight: 1 }} />
-                  Window cleaning
+                  <WindowOutlinedIcon sx={{ marginRight: 1 }} />
+                  Window washing
                 </ListItemText>
               </div>
               <div style={{ display: "flex", alignItems: "center" }}>
                 <ListItemText>
                   <RoofingIcon sx={{ marginRight: 1 }} />
-                  Tree + hedge trimming
+                  Roof cleaning (moss, algae, and lichen treatment)
+                </ListItemText>
+              </div>
+              <div style={{ display: "flex", alignItems: "center" }}>
+                <ListItemText>
+                  <FoundationIcon sx={{ marginRight: 1 }} />
+                  Deck restoration (clean, seal, stain, paint, replace)
                 </ListItemText>
               </div>
             </List>
