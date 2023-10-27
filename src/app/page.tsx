@@ -3,6 +3,7 @@ import ContactForm from "./components/ContactForm";
 import CleanRoof from "/src/images/clean-roof.jpg";
 import Grid from "@mui/material/Unstable_Grid2";
 import IntroText from "./components/IntroText";
+import { Stack } from "@mui/material";
 
 export default function Home() {
   return (
@@ -25,7 +26,7 @@ export default function Home() {
       <Grid
         container
         sx={{
-          display: "flex",
+          display: { xs: "none", md: "flex" },
           justifyContent: "space-between",
         }}
       >
@@ -36,6 +37,11 @@ export default function Home() {
           <ContactForm />
         </Grid>
       </Grid>
+      <Stack sx={{ display: { xs: "flex", md: "none" } }}>
+        <Box display="flex" flexGrow={1} py="25rem"></Box>
+        <IntroText />
+        <ContactForm />
+      </Stack>
     </Box>
   );
 }
