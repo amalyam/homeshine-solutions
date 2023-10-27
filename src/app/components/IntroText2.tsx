@@ -36,20 +36,14 @@ export default function IntroText() {
           //style={{ color: theme.palette.primary.main }}
           color="white"
         >
-          Cleaning, Restoration, & Repair
-          <br />
-          Rooftop to Curb!
-          <hr
-            style={{
-              display: "block",
-              height: "1px",
-              border: 0,
-              borderTop: "1px solid #ccc",
-              margin: "1em 0",
-              padding: 0,
-            }}
-          />
-          <Image src={SudsHome} alt={"Suds Home Logo"} height={100} />
+          <Image src={SudsHome} alt={"Suds Home Logo"} height={130} />
+          <Box>
+            <div>
+              Cleaning, Restoration, & Repair
+              <br />
+              Rooftop to Curb!
+            </div>
+          </Box>
         </Typography>
         <div style={{ marginLeft: 40 }}>
           <Typography
