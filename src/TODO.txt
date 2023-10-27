@@ -1,0 +1,19 @@
+- fix formatting issues in mobile
+- fix FB link in connect with us
+- BusinessAppBar:
+    - get contact info to align center in sm
+    - show "FREE QUOTE" button in sm
+    - if on Home, free quote button centers contact form in viewport
+- About Us
+    - get picture of Michael in uniform
+- Services
+- flip through before/after image gallery
+- review gallery (flip through?)
+- Blog
+- FAQ
+- add sections to home page for:
+    - sample images
+    - reviews
+- fix night mode issues
+- align formatting between privacy page and terms page
+- 
