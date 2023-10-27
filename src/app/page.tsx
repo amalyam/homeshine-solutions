@@ -2,7 +2,7 @@ import Box from "@mui/material/Box";
 import ContactForm from "./components/ContactForm";
 import CleanRoof from "/src/images/clean-roof.jpg";
 import Grid from "@mui/material/Unstable_Grid2";
-import IntroText2 from "./components/IntroText2";
+import IntroText from "./components/IntroText";
 
 export default function Home() {
   return (
@@ -30,7 +30,7 @@ export default function Home() {
         }}
       >
         <Grid xs={6.5} sx={{ display: "flex", alignItems: "center" }}>
-          <IntroText2 />
+          <IntroText />
         </Grid>
         <Grid xs={5.5}>
           <ContactForm />
