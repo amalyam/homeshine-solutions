@@ -1,9 +1,15 @@
 import Box from "@mui/material/Box";
-import ConstructionIcon from "@mui/icons-material/Construction";
+import FoundationIcon from "@mui/icons-material/Foundation";
+import HouseSidingIcon from "@mui/icons-material/HouseSiding";
+import Image from "next/image";
 import List from "@mui/material/List";
 import ListItemText from "@mui/material/ListItemText";
 import RoofingIcon from "@mui/icons-material/Roofing";
+import SudsHome from "/src/images/suds-home-transparent.svg";
 import Typography from "@mui/material/Typography";
+import WaterDamageOutlinedIcon from "@mui/icons-material/WaterDamageOutlined";
+import WaterDropOutlinedIcon from "@mui/icons-material/WaterDropOutlined";
+import WindowOutlinedIcon from "@mui/icons-material/WindowOutlined";
 
 export default function IntroText() {
   return (
