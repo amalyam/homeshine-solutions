@@ -1,6 +1,7 @@
 "use client";
 
 import Box from "@mui/material/Box";
+import GutterClean3 from "/src/images/Gutter_Clean_3.jpg";
 import MossHand from "/src/images/moss-hand-3.jpg";
 import Typography from "@mui/material/Typography";
 import { alpha } from "@mui/material";
@@ -16,7 +17,7 @@ export default function ComingSoon() {
         alignItems: "center",
         justifyContent: "center",
         height: "100vh",
-        background: `no-repeat center/cover url(${CleanSteps.src})`,
+        background: `no-repeat center/cover url(${GutterClean3.src})`,
       }}
     >
       <Box
@@ -26,7 +27,7 @@ export default function ComingSoon() {
       >
         <Typography
           fontWeight={600}
-          fontSize="8rem"
+          fontSize="6.5rem"
           color={theme.palette.primary.main}
           lineHeight={1.2}
           letterSpacing="0.01em"
