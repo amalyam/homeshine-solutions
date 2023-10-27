@@ -43,6 +43,7 @@ export default function IntroText() {
               padding: 0,
             }}
           />
+          <Image src={SudsHome} alt={"Suds Home Logo"} height={100} />
         </Typography>
         <div style={{ marginLeft: 40 }}>
           <Typography
