@@ -33,7 +33,6 @@ export default function IntroText() {
           fontSize={36}
           textAlign="center"
           marginBottom={3}
-          //style={{ color: theme.palette.primary.main }}
           color="white"
         >
           <Image src={SudsHome} alt={"Suds Home Logo"} height={130} />
