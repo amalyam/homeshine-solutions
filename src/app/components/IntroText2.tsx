@@ -33,6 +33,16 @@ export default function IntroText() {
           Cleaning, Restoration, & Repair
           <br />
           Rooftop to Curb!
+          <hr
+            style={{
+              display: "block",
+              height: "1px",
+              border: 0,
+              borderTop: "1px solid #ccc",
+              margin: "1em 0",
+              padding: 0,
+            }}
+          />
         </Typography>
         <div style={{ marginLeft: 40 }}>
           <Typography
