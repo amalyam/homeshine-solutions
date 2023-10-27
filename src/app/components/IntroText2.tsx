@@ -52,7 +52,7 @@ export default function IntroText() {
             textAlign="left"
             lineHeight={1.7}
           >
-            Specializing in the following services:
+            We specialize in the following services:
           </Typography>
           <Typography
             fontWeight={800}
