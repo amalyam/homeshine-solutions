@@ -1,11 +1,12 @@
 "use client";
 
 import * as React from "react";
-import Box from "@mui/material/Box";
+import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
 import Grid from "@mui/material/Unstable_Grid2";
 import Icon from "@mui/material/Icon";
+import Image from "next/image";
 import Link from "@mui/material/Link";
-import Container from "@mui/material/Container";
+import SudsHome from "/src/images/suds-home-transparent.svg";
 import Typography from "@mui/material/Typography";
 import theme from "../theme";
 
@@ -35,38 +36,25 @@ export default function AppFooter() {
           alignItems: "center",
         }}
       >
-        <Grid xs={4}></Grid>
         <Grid
           xs={4}
           sx={{
             display: "flex",
-            justifyContent: "center",
+            justifyContent: "flex-start",
             alignItems: "center",
-            gap: 3,
+            px: 3,
           }}
         >
-          <Link
-            color={theme.palette.footer.dark}
-            href="https://www.yelp.com/biz/home-shine-solutions-somerville"
-            rel="noopener noreferrer"
-            target="_blank"
-            sx={{
-              "&:hover": {
-                color: theme.palette.footer.main,
-              },
+          <Image
+            src={SudsHome}
+            alt={"Suds Home Logo"}
+            height={30}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              marginRight: "10px",
             }}
-          >
-            <Icon
-              baseClassName="fa-brands"
-              className="fa-yelp"
-              sx={{
-                color: theme.palette.footer.dark,
-                "&:hover": {
-                  color: theme.palette.footer.main,
-                },
-              }}
-            />
-          </Link>
+          />
           <Link
             href="/Privacy/"
             color={theme.palette.footer.dark}
@@ -79,6 +67,7 @@ export default function AppFooter() {
           >
             Privacy
           </Link>
+          <Typography sx={{ mx: 1 }}>|</Typography>
           <Link
             href="/Terms/"
             color={theme.palette.footer.dark}
@@ -103,6 +92,61 @@ export default function AppFooter() {
         >
           <Copyright />
         </Grid>
+      </Grid>
+      <Grid
+        xs={4}
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          gap: 3,
+        }}
+      >
+        <Typography
+          fontWeight={500}
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          CONNECT WITH US
+        </Typography>
+        <Link
+          color={theme.palette.footer.dark}
+          href="https://www.yelp.com/biz/home-shine-solutions-somerville"
+          rel="noopener noreferrer"
+          target="_blank"
+          sx={{
+            "&:hover": {
+              color: theme.palette.footer.main,
+            },
+          }}
+        >
+          <Icon
+            baseClassName="fa-brands"
+            className="fa-yelp"
+            sx={{
+              color: theme.palette.footer.dark,
+              "&:hover": {
+                color: theme.palette.footer.main,
+              },
+            }}
+          />
+        </Link>
+        <Link
+          color={theme.palette.footer.dark}
+          href="https://www.yelp.com/biz/home-shine-solutions-somerville"
+          rel="noopener noreferrer"
+          target="_blank"
+          sx={{
+            "&:hover": {
+              color: theme.palette.footer.main,
+            },
+          }}
+        >
+          <FacebookOutlinedIcon />
+        </Link>
       </Grid>
     </Typography>
   );
