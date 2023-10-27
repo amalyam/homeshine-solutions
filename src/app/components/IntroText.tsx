@@ -1,8 +1,15 @@
-import { List, ListItemText } from "@mui/material";
 import Box from "@mui/material/Box";
-import Container from "@mui/material/Container";
-import Paper from "@mui/material/Paper";
+import FoundationIcon from "@mui/icons-material/Foundation";
+import HouseSidingIcon from "@mui/icons-material/HouseSiding";
+import Image from "next/image";
+import List from "@mui/material/List";
+import ListItemText from "@mui/material/ListItemText";
+import RoofingIcon from "@mui/icons-material/Roofing";
+import SudsHome from "/src/images/suds-home-transparent.svg";
 import Typography from "@mui/material/Typography";
+import WaterDamageOutlinedIcon from "@mui/icons-material/WaterDamageOutlined";
+import WaterDropOutlinedIcon from "@mui/icons-material/WaterDropOutlined";
+import WindowOutlinedIcon from "@mui/icons-material/WindowOutlined";
 
 export default function IntroText() {
   return (
@@ -13,36 +20,115 @@ export default function IntroText() {
         sx={{
           p: 3,
           display: "flex",
+          flexDirection: "column",
           blockSize: "fit-content",
-          backgroundColor: "rgba(83, 208, 254, 0.5)",
           borderRadius: 2,
           m: 2,
+          marginLeft: 4,
+          backgroundColor: "rgba(33, 53, 55, 0.84)",
         }}
       >
-        <Paper
-          sx={{ p: 2, blockSize: "fit-content", backgroundColor: "primary" }}
+        <Typography
+          fontWeight={900}
+          fontSize={36}
+          textAlign="center"
+          marginBottom={3}
+          color="white"
         >
+          <Image src={SudsHome} alt={"Suds Home Logo"} height={130} />
+          <Box>
+            <div>
+              Cleaning, Restoration, & Repair
+              <br />
+              Rooftop to Curb!
+            </div>
+          </Box>
+        </Typography>
+        <div style={{ marginLeft: 40 }}>
           <Typography
-            fontWeight={700}
-            color="inherit"
-            textAlign="center"
-            textTransform={"uppercase"}
+            fontWeight={600}
+            color="white"
+            textAlign="left"
+            lineHeight={1.7}
           >
-            Protect your home with routine professional maintenance!
+            We specialize in the following services:
           </Typography>
-          <br />
-          <Typography fontWeight={700} color="inherit" textAlign="center">
-            We provide meticulous cleaning, guaranteed to extend the life of
-            your home. We specialize in:
+          <Typography
+            fontWeight={800}
+            color="white"
+            textAlign="left"
+            sx={{ display: "flex", marginLeft: 4 }}
+          >
             <List>
-              <ListItemText>Gutters</ListItemText>
-              <ListItemText>Moss treatment</ListItemText>
-              <ListItemText>Solar panels</ListItemText>
-              <ListItemText>Soft wash</ListItemText>
-              <ListItemText>Window cleaning</ListItemText>
+              <div style={{ display: "flex", alignItems: "center" }}>
+                <ListItemText
+                  primaryTypographyProps={{
+                    display: "flex",
+                    alignItems: "center",
+                  }}
+                >
+                  <HouseSidingIcon sx={{ marginRight: 1 }} />
+                  Gutter cleaning + repair
+                </ListItemText>
+              </div>
+              <div style={{ display: "flex", alignItems: "center" }}>
+                <ListItemText
+                  primaryTypographyProps={{
+                    display: "flex",
+                    alignItems: "center",
+                  }}
+                >
+                  <WaterDamageOutlinedIcon sx={{ marginRight: 1 }} />
+                  Siding soft wash
+                </ListItemText>
+              </div>
+              <div style={{ display: "flex", alignItems: "center" }}>
+                <ListItemText
+                  primaryTypographyProps={{
+                    display: "flex",
+                    alignItems: "center",
+                  }}
+                >
+                  <WaterDropOutlinedIcon sx={{ marginRight: 1 }} />
+                  Pressure wash
+                </ListItemText>
+              </div>
+              <div style={{ display: "flex", alignItems: "center" }}>
+                <ListItemText
+                  primaryTypographyProps={{
+                    display: "flex",
+                    alignItems: "center",
+                  }}
+                >
+                  <WindowOutlinedIcon sx={{ marginRight: 1 }} />
+                  Window washing
+                </ListItemText>
+              </div>
+              <div style={{ display: "flex", alignItems: "center" }}>
+                <ListItemText
+                  primaryTypographyProps={{
+                    display: "flex",
+                    alignItems: "center",
+                  }}
+                >
+                  <RoofingIcon sx={{ marginRight: 1 }} />
+                  Roof cleaning (moss, algae, and lichen treatment)
+                </ListItemText>
+              </div>
+              <div style={{ display: "flex", alignItems: "center" }}>
+                <ListItemText
+                  primaryTypographyProps={{
+                    display: "flex",
+                    alignItems: "center",
+                  }}
+                >
+                  <FoundationIcon sx={{ marginRight: 1 }} />
+                  Deck restoration (clean, seal, stain, paint, replace)
+                </ListItemText>
+              </div>
             </List>
           </Typography>
-        </Paper>
+        </div>
       </Box>
     </div>
   );
