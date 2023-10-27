@@ -124,7 +124,7 @@ export default function AppFooter() {
           </Link>
           <Link
             color={theme.palette.footer.dark}
-            href="https://www.yelp.com/biz/home-shine-solutions-somerville"
+            href="https://www.facebook.com/profile.php?id=100095591493494&mibextid=LQQJ4d"
             rel="noopener noreferrer"
             target="_blank"
             sx={{
