@@ -217,7 +217,7 @@ export default function BusinessAppBar() {
               maxWidth: "1800px",
             }}
           >
-            <Box>
+            <Box sx={{ display: { xs: "none", md: "flex" } }}>
               <Link href="/" underline="none">
                 <Image
                   src={HomeShineLogoTransparent}
@@ -291,33 +291,9 @@ export default function BusinessAppBar() {
                 </Button>
               </Box>
             </Box>
-            <Button
-              variant="contained"
-              sx={{
-                display: { xs: "flex", md: "none" },
-                py: 1,
-                px: 1.25,
-                mx: 3,
-                marginBottom: 1.5,
-                fontSize: "1.15rem",
-                backgroundColor: theme.palette.secondary.main,
-                color: theme.palette.primary.main,
-                "&:hover": {
-                  backgroundColor: theme.palette.secondary.light,
-                },
-                flexShrink: 0,
-              }}
-              onClick={() => {
-                window.location.pathname === "/"
-                  ? document.getElementById("name")?.focus()
-                  : setOpen(true);
-              }}
-            >
-              FREE QUOTE
-            </Button>
             <Box
-              style={{
-                display: "flex",
+              sx={{
+                display: { xs: "none", md: "flex" },
                 flexShrink: 0,
                 alignItems: "flex-end",
                 justifyContent: "center",
