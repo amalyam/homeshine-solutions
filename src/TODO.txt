@@ -1,8 +1,7 @@
 - fix formatting issues in mobile
-- fix FB link in connect with us
+    - Footer: reformat for xs view
 - BusinessAppBar:
-    - get contact info to align center in sm
-    - show "FREE QUOTE" button in sm
+    - get rid of large whitespace gap right on xs
     - if on Home, free quote button centers contact form in viewport
 - About Us
     - get picture of Michael in uniform
