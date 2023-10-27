@@ -15,5 +15,7 @@
     - sample images
     - reviews
 - fix night mode issues
-- align formatting between privacy page and terms page
-- 
+- Privacy & Terms
+    - use theme font for both
+    - align formatting
+    - change background color?
