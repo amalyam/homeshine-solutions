@@ -30,10 +30,17 @@ export default function Home() {
           justifyContent: "space-between",
         }}
       >
-        <Grid xs={6.5} sx={{ display: "flex", alignItems: "center" }}>
+        <Grid
+          xs={6}
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
           <IntroText />
         </Grid>
-        <Grid xs={5.5}>
+        <Grid xs={6} sx={{ display: "flex", justifyContent: "center" }}>
           <ContactForm />
         </Grid>
       </Grid>
