@@ -169,6 +169,7 @@ export default function BusinessAppBar() {
                   color={theme.palette.primary.dark}
                   variant="body1"
                   fontSize=".9rem"
+                  underline="hover"
                 >
                   HomeShineSolutionsLLC@gmail.com
                 </Link>
@@ -306,6 +307,7 @@ export default function BusinessAppBar() {
                   color={theme.palette.primary.dark}
                   variant="body1"
                   fontSize=".9rem"
+                  underline="hover"
                 >
                   HomeShineSolutionsLLC@gmail.com
                 </Link>
