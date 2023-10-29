@@ -24,7 +24,6 @@ export default function IntroText() {
           blockSize: "fit-content",
           borderRadius: 2,
           m: 2,
-          marginLeft: 4,
           backgroundColor: "rgba(33, 53, 55, 0.84)",
         }}
       >
