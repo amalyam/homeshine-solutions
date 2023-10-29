@@ -24,7 +24,7 @@ import { useState } from "react";
 // show "FREE QUOTE" button in sm
 // if on Home, free quote button centers contact form in viewport
 
-const pages = ["Home", "Services", "Blog", "FAQ", "About Us"];
+const pages = ["Home", "Services", "FAQ", "Reviews", "About Us"];
 
 export default function BusinessAppBar() {
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
