@@ -105,6 +105,24 @@ function ConnectWithUs() {
   );
 }
 
+function Copyright() {
+  return (
+    <div>
+      ©{new Date().getFullYear()} HomeShine Solutions, LLC. All rights reserved.
+    </div>
+  );
+}
+
+export default function AppFooter() {
+  return (
+    <Typography
+      component="footer"
+      sx={{
+        bgcolor: theme.palette.footer.light,
+        py: 1.5,
+        fontSize: ".75rem",
+      }}
+    >
       <Stack
         justifyContent="left"
         spacing={1}
@@ -123,9 +141,28 @@ function ConnectWithUs() {
           alignItems: "center",
         }}
       >
+        <Grid
+          xs={4}
+          sx={{
+            display: "flex",
+            justifyContent: "flex-start",
+            alignItems: "center",
+            px: 3,
+          }}
+        >
           <LogoPrivacyTerms />
         </Grid>
+        <Grid
+          xs={4}
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: 1.5,
+          }}
+        >
           <ConnectWithUs />
+        </Grid>
         <Grid
           xs={4}
           sx={{
