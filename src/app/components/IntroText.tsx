@@ -56,11 +56,13 @@ export default function IntroText() {
             color="white"
             textAlign="left"
             lineHeight={1.7}
+            fontSize={20}
           >
             We specialize in the following services:
           </Typography>
           <Typography
             fontWeight={800}
+            fontSize={19}
             color="white"
             textAlign="left"
             sx={{ display: "flex", marginLeft: 4 }}
