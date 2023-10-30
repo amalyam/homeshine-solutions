@@ -17,7 +17,7 @@ export default function Home() {
           lg: "row",
         },
         justifyContent: "space-around",
-        height: "100%",
+        height: "300%",
         alignItems: "center",
         zIndex: "1000",
         flexGrow: "1",
