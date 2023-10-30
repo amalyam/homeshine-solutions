@@ -58,7 +58,7 @@ export default function IntroText() {
             lineHeight={1.7}
             fontSize={20}
           >
-            We specialize in the following services:
+            Serving Greater Boston and the surronding areas, we specialize in:
           </Typography>
           <Typography
             fontWeight={800}
