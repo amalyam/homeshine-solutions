@@ -51,8 +51,62 @@ function LogoPrivacyTerms() {
     </>
   );
 }
+
+function ConnectWithUs() {
+  return (
+    <>
+      <Typography
+        fontWeight={500}
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        CONNECT WITH US
+      </Typography>
+      <Link
+        color={theme.palette.footer.dark}
+        href="https://www.yelp.com/biz/home-shine-solutions-somerville"
+        rel="noopener noreferrer"
+        target="_blank"
+        sx={{
+          "&:hover": {
+            color: theme.palette.footer.main,
+          },
+        }}
+      >
+        <Icon
+          baseClassName="fa-brands"
+          className="fa-yelp"
+          sx={{
+            color: theme.palette.footer.dark,
+            "&:hover": {
+              color: theme.palette.footer.main,
+            },
+          }}
+        />
+      </Link>
+      <Link
+        color={theme.palette.footer.dark}
+        href="https://www.facebook.com/profile.php?id=100095591493494&mibextid=LQQJ4d"
+        rel="noopener noreferrer"
+        target="_blank"
+        sx={{
+          "&:hover": {
+            color: theme.palette.footer.main,
+          },
+        }}
+      >
+        <FacebookOutlinedIcon />
+      </Link>
+    </>
+  );
+}
+
           <LogoPrivacyTerms />
         </Grid>
+          <ConnectWithUs />
         <Grid
           xs={4}
           sx={{
