@@ -91,7 +91,7 @@ export default function ContactForm() {
         borderRadius: "10px",
         p: 2,
         m: 3,
-        flex: "0 1 30%",
+        flex: "0 1 50%",
       }}
     >
       <ContactFormContainer
