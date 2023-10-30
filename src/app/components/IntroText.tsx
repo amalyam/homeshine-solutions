@@ -136,7 +136,7 @@ export default function IntroText() {
               </div>
             </List>
           </Typography>
-        </div>
+        </Box>
       </Box>
     </div>
   );
