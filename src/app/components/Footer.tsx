@@ -127,8 +127,8 @@ export default function AppFooter() {
       <Stack
         justifyContent="left"
         spacing={1}
-        marginBottom={0.75}
-        sx={{ display: { xs: "flex", s: "none" } }}
+        mx={3}
+        my={0.75}
       >
         <LogoPrivacyTerms />
         <ConnectWithUs />
