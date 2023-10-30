@@ -45,7 +45,7 @@ export default function Home() {
         </Grid>
       </Grid>
       <Stack sx={{ display: { xs: "flex", md: "none" } }}>
-        <Box display="flex" flexGrow={1} py="25rem"></Box>
+        <Box display="flex" flexGrow={1} m={2}></Box>
         <IntroText />
         <ContactForm />
       </Stack>
