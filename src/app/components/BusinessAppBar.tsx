@@ -78,7 +78,9 @@ export default function BusinessAppBar() {
         >
           <Stack
             justifyContent="center"
+            spacing={1}
             sx={{ display: { xs: "flex", md: "none" } }}
+            marginBottom={2}
           >
             <Box
               sx={{
