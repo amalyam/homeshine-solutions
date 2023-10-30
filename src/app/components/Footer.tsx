@@ -56,7 +56,7 @@ function LogoPrivacyTerms() {
 
 function ConnectWithUs() {
   return (
-    <>
+    <Stack direction="row" alignItems="center" spacing={1}>
       <Typography
         fontWeight={500}
         sx={{
@@ -102,7 +102,7 @@ function ConnectWithUs() {
       >
         <FacebookOutlinedIcon />
       </Link>
-    </>
+    </Stack>
   );
 }
 
