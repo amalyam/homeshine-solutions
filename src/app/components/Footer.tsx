@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import Box from "@mui/material/Box";
 import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
 import Grid from "@mui/material/Unstable_Grid2";
 import Icon from "@mui/material/Icon";
@@ -13,7 +14,7 @@ import theme from "../theme";
 
 function LogoPrivacyTerms() {
   return (
-    <>
+    <Box sx={{ display: "flex", alignItems: "center" }}>
       <Image
         src={SudsHome}
         alt={"Suds Home Logo"}
@@ -49,7 +50,7 @@ function LogoPrivacyTerms() {
       >
         Terms & Conditions
       </Link>
-    </>
+    </Box>
   );
 }
 
