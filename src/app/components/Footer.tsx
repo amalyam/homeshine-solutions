@@ -129,6 +129,7 @@ export default function AppFooter() {
         spacing={1}
         mx={3}
         my={0.75}
+        sx={{ display: { xs: "flex", sm: "none" } }}
       >
         <LogoPrivacyTerms />
         <ConnectWithUs />
