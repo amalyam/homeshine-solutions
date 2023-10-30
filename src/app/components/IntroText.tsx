@@ -44,7 +44,13 @@ export default function IntroText() {
             </div>
           </Box>
         </Typography>
-        <div style={{ marginLeft: 40 }}>
+        <Box
+          sx={{
+            display: "block",
+            mx: "auto",
+            maxWidth: "80%",
+          }}
+        >
           <Typography
             fontWeight={600}
             color="white"
