@@ -23,8 +23,8 @@ export default function IntroText() {
           flexDirection: "column",
           blockSize: "fit-content",
           borderRadius: 2,
-          m: { m: 5, xl: 2 },
-          marginLeft: { s: "none", m: "40px" },
+          m: { md: 5, xl: 2 },
+          marginLeft: { sm: "none", md: "40px" },
           backgroundColor: "rgba(33, 53, 55, 0.84)",
         }}
       >
