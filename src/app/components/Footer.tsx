@@ -6,6 +6,7 @@ import Grid from "@mui/material/Unstable_Grid2";
 import Icon from "@mui/material/Icon";
 import Image from "next/image";
 import Link from "@mui/material/Link";
+import Stack from "@mui/material/Stack";
 import SudsHome from "/src/images/suds-home-transparent.svg";
 import Typography from "@mui/material/Typography";
 import theme from "../theme";
@@ -104,6 +105,16 @@ function ConnectWithUs() {
   );
 }
 
+      <Stack
+        justifyContent="left"
+        spacing={1}
+        marginBottom={0.75}
+        sx={{ display: { xs: "flex", s: "none" } }}
+      >
+        <LogoPrivacyTerms />
+        <ConnectWithUs />
+        <Copyright />
+      </Stack>
           <LogoPrivacyTerms />
         </Grid>
           <ConnectWithUs />
