@@ -115,6 +115,14 @@ function ConnectWithUs() {
         <ConnectWithUs />
         <Copyright />
       </Stack>
+      <Grid
+        container
+        sx={{
+          display: { xs: "none", s: "flex" },
+          justifyContent: "space-between",
+          alignItems: "center",
+        }}
+      >
           <LogoPrivacyTerms />
         </Grid>
           <ConnectWithUs />
