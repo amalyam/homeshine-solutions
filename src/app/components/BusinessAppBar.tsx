@@ -73,7 +73,8 @@ export default function BusinessAppBar() {
           sx={{
             flexDirection: { sm: "column", md: "row" },
             justifyContent: "center",
-            mx: 4,
+            marginLeft: { xs: "50px", s: 4 },
+            marginRight: 4,
           }}
         >
           <Stack
