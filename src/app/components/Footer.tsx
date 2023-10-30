@@ -138,7 +138,7 @@ export default function AppFooter() {
       <Grid
         container
         sx={{
-          display: { xs: "none", s: "flex" },
+          display: { xs: "none", sm: "flex" },
           justifyContent: "space-between",
           alignItems: "center",
         }}
