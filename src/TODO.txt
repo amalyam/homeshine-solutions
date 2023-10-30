@@ -3,6 +3,7 @@
 - BusinessAppBar:
     - get rid of large whitespace gap right on xs
     - if on Home, free quote button centers contact form in viewport
+    - add gap between stack items on xs view
 - About Us
     - get picture of Michael in uniform
 - Services
@@ -20,3 +21,4 @@
     - change background color?
 - Contact form
     - add popover on message box with suggestions of what to include
+- make custom breakpoints to set better spacing of Home page IntroText and ContactForm
