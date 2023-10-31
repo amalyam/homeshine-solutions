@@ -1,4 +1,11 @@
 "use client";
+import Accordion from "@mui/joy/Accordion";
+import AccordionDetails from "@mui/joy/AccordionDetails";
+import AccordionGroup from "@mui/joy/AccordionGroup";
+import AccordionSummary, {
+  accordionSummaryClasses,
+} from "@mui/joy/AccordionSummary";
+import AddIcon from "@mui/icons-material/Add";
 import BackgroundImage from "/src/images/Gutter_Clean_3.jpg";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
@@ -45,7 +52,25 @@ export default function FAQPage() {
             padding: 4,
           }}
         >
-          [Q+A]
+          <AccordionGroup
+            sx={{
+              maxWidth: 400,
+              [`& .${accordionSummaryClasses.indicator}`]: {
+                transition: "0.2s",
+              },
+              [`& [aria-expanded="true"] .${accordionSummaryClasses.indicator}`]:
+                {
+                  transform: "rotate(45deg)",
+                },
+            }}
+          >
+            <Accordion>
+              <AccordionSummary indicator={<AddIcon />}>
+                Question 1
+              </AccordionSummary>
+              <AccordionDetails>Answer</AccordionDetails>
+            </Accordion>
+          </AccordionGroup>
         </Paper>
       </div>
     </Box>
