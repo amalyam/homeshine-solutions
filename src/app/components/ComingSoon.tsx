@@ -26,12 +26,16 @@ export default function ComingSoon() {
         }}
       >
         <Typography
-          fontWeight={600}
-          fontSize="6rem"
+          display="flex"
+          textAlign="center"
+          fontSize={{ xs: "4rem", sm: "6rem" }}
+          fontWeight={{ xs: 500, sm: 600 }}
           color={theme.palette.primary.main}
           lineHeight={1.2}
           letterSpacing="0.01em"
-          sx={{ mx: 3 }}
+          sx={{
+            mx: 3,
+          }}
         >
           COMING SOON
         </Typography>
