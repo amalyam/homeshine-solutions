@@ -20,5 +20,6 @@
     - align formatting
     - change background color?
 - Contact form
+    - in xs, make modal form full width, add exit/cancel button
     - add popover on message box with suggestions of what to include
 - make custom breakpoints to set better spacing of Home page IntroText and ContactForm
