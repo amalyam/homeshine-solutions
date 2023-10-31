@@ -20,8 +20,6 @@ import Toolbar from "@mui/material/Toolbar";
 
 import { useState } from "react";
 
-// TODO: get contact info to align center in sm
-// show "FREE QUOTE" button in sm
 // if on Home, free quote button centers contact form in viewport
 
 const pages = ["Home", "Services", "FAQ", "Reviews", "About Us"];
