@@ -8,11 +8,7 @@ import AccordionSummary, {
 import AddIcon from "@mui/icons-material/Add";
 import BackgroundImage from "/src/images/Gutter_Clean_3.jpg";
 import Box from "@mui/material/Box";
-import Container from "@mui/material/Container";
 import Paper from "@mui/material/Paper";
-import styles from "../styles.module.css";
-import theme from "../theme";
-import Link from "next/link";
 
 export default function FAQPage() {
   return (
@@ -20,7 +16,7 @@ export default function FAQPage() {
       sx={{
         display: "flex",
         justifyContent: "center",
-        backgroundImage: `url(${BackgroundImage.src})`,
+        background: `no-repeat center/cover url(${BackgroundImage.src})`,
         backgroundSize: "cover",
         height: "100%",
         alignItems: "center",
