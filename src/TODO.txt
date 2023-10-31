@@ -1,9 +1,6 @@
-- fix formatting issues in mobile
-    - Footer: reformat for xs view
 - BusinessAppBar:
-    - get rid of large whitespace gap right on xs
+    - get rid of large whitespace gap right on xs - done, but not centered properly
     - if on Home, free quote button centers contact form in viewport
-    - add gap between stack items on xs view
 - About Us
     - get picture of Michael in uniform
 - Services
@@ -14,12 +11,18 @@
 - add sections to home page for:
     - sample images
     - reviews
-- fix night mode issues
 - Privacy & Terms
     - use theme font for both
     - align formatting
     - change background color?
+    - in mobile, remove borders
 - Contact form
     - in xs, make modal form full width, add exit/cancel button
     - add popover on message box with suggestions of what to include
+    - chips get cut off in mobile view
+Other:
+- fix night mode issues
 - make custom breakpoints to set better spacing of Home page IntroText and ContactForm
+- broken on width 900px-1200px
+- does coming soon page break when menu is open?
+- image starts tiling on very wide screen (e.g. 4k)
