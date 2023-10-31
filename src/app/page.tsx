@@ -10,8 +10,10 @@ export default function Home() {
     <Box
       sx={{
         backgroundImage: `url(${CleanRoof.src})`,
-        backgroundSize: "stretch",
+        backgroundSize: { xs: "cover", sm: "stretch" },
         display: "flex",
+        backgroundPosition: { xs: "top", sm: "top" },
+        backgroundPositionX: { xs: "center", sm: "left" },
         flexDirection: {
           xs: "column",
           lg: "row",
