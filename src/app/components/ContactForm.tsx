@@ -93,7 +93,7 @@ export default function ContactForm() {
         m: 3,
         flex: { lg: "0 1 70%", xl: "0 1 50%" },
       }}
-      id="contactForm"
+      id="contact-form"
     >
       <ContactFormContainer
         defaultValues={{

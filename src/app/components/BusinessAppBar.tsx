@@ -188,7 +188,7 @@ export default function BusinessAppBar() {
               </Box>
             </Box>
             <Button
-              href="#contactForm"
+              href="#contact-form"
               variant="contained"
               sx={{
                 py: 1,
@@ -270,7 +270,7 @@ export default function BusinessAppBar() {
                   </Link>
                 ))}
                 <Button
-                  href="#contactForm"
+                  href="#contact-form"
                   variant="contained"
                   sx={{
                     py: 1,
