@@ -216,7 +216,7 @@ export default function ContactForm() {
                   sx={{ width: "100%" }}
                 />
               </Grid>
-              <Grid xs={6}>
+              <Grid xs={12} sm={6}>
                 <MultiSelectElement
                   label="Services of interest?"
                   id="services"
@@ -241,7 +241,7 @@ export default function ContactForm() {
                 ></MultiSelectElement>
                 <FormHelperText>You may select more than one</FormHelperText>
               </Grid>
-              <Grid xs={6}>
+              <Grid xs={12} sm={6}>
                 <MultiSelectElement
                   label="Referral source?"
                   id="referral-source"
