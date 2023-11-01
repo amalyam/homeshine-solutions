@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/react";
 import BusinessAppBar from "./components/BusinessAppBar";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "./theme";
@@ -35,6 +36,7 @@ export default function RootLayout({
           {children}
           <Footer />
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
