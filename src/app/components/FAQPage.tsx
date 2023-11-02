@@ -1,14 +1,14 @@
 "use client";
-import Accordion from "@mui/joy/Accordion";
-import AccordionDetails from "@mui/joy/AccordionDetails";
-import AccordionGroup from "@mui/joy/AccordionGroup";
-import AccordionSummary, {
-  accordionSummaryClasses,
-} from "@mui/joy/AccordionSummary";
-import AddIcon from "@mui/icons-material/Add";
+import Accordion from "@mui/material/Accordion";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
 import BackgroundImage from "/src/images/Gutter_Clean_3.jpg";
 import Box from "@mui/material/Box";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Paper from "@mui/material/Paper";
+import Stack from "@mui/material/Stack";
+import styles from "../styles.module.css";
+import Typography from "@mui/material/Typography";
 
 export default function FAQPage() {
   return (
