@@ -18,6 +18,7 @@ export default function ComingSoon() {
         justifyContent: "center",
         height: "100vh",
         background: `no-repeat center/cover url(${GutterClean3.src})`,
+        backgroundPosition: "top",
       }}
     >
       <Box
