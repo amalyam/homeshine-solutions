@@ -26,49 +26,90 @@ export default function FAQPage() {
         backgroundPosition: "top",
       }}
     >
-      <div>
-        <Paper
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            fontSize: "2.5rem",
-            backgroundColor: "white",
-            margin: 8,
-            padding: 4,
-          }}
-        >
-          Frequently Asked Questions
-        </Paper>
-        <Paper
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            fontSize: "2.5rem",
-            backgroundColor: "white",
-            margin: 8,
-            padding: 4,
-          }}
-        >
-          <AccordionGroup
-            sx={{
-              maxWidth: 400,
-              [`& .${accordionSummaryClasses.indicator}`]: {
-                transition: "0.2s",
-              },
-              [`& [aria-expanded="true"] .${accordionSummaryClasses.indicator}`]:
-                {
-                  transform: "rotate(45deg)",
-                },
-            }}
-          >
-            <Accordion>
-              <AccordionSummary indicator={<AddIcon />}>
-                Question 1
-              </AccordionSummary>
-              <AccordionDetails>Answer</AccordionDetails>
-            </Accordion>
-          </AccordionGroup>
-        </Paper>
+            <div>
+              <Accordion>
+                <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                  <Typography className={styles.faqText}>
+                    Why should I choose HomeShine Solutions?
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Typography className={styles.faqText}>Answer</Typography>
+                </AccordionDetails>
+              </Accordion>
+              <Accordion>
+                <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                  <Typography className={styles.faqText}>
+                    How does the Free Quote work?
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Typography>Answer</Typography>
+                </AccordionDetails>
+              </Accordion>
+              <Accordion>
+                <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                  <Typography className={styles.faqText}>
+                    How do you determine your estimates?
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Typography>Answer</Typography>
+                </AccordionDetails>
+              </Accordion>
+              <Accordion>
+                <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                  <Typography className={styles.faqText}>
+                    Are you insured?
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Typography>Answer</Typography>
+                </AccordionDetails>
+              </Accordion>
+              <Accordion>
+                <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                  <Typography className={styles.faqText}>
+                    Will you pressure wash my roof and siding?
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Typography>Answer</Typography>
+                </AccordionDetails>
+              </Accordion>
+              <Accordion>
+                <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                  <Typography className={styles.faqText}>
+                    What chemicals do you use?
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Typography>Answer</Typography>
+                </AccordionDetails>
+              </Accordion>
+              <Accordion>
+                <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                  <Typography className={styles.faqText}>
+                    Why does my roof still look dirty after treatment?
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Typography>Answer</Typography>
+                </AccordionDetails>
+              </Accordion>
+              <Accordion>
+                <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                  <Typography className={styles.faqText}>
+                    Do I need to be home while you work on my home?
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Typography>Answer</Typography>
+                </AccordionDetails>
+              </Accordion>
+            </div>
+          </Paper>
+        </Stack>
       </div>
     </Box>
   );
