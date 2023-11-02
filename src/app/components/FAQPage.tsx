@@ -9,6 +9,7 @@ import Paper from "@mui/material/Paper";
 import Stack from "@mui/material/Stack";
 import styles from "../styles.module.css";
 import Typography from "@mui/material/Typography";
+
 const offsetColor = "rgba(0, 162, 212, 0.24)";
 
 export default function FAQPage() {
@@ -26,6 +27,40 @@ export default function FAQPage() {
         backgroundPosition: "top",
       }}
     >
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <Stack xs={{ display: "flex", justifyContent: "center" }}>
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              backgroundColor: offsetColor,
+              maxWidth: "max-content",
+            }}
+          >
+            <Paper
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                backgroundColor: "white",
+                margin: 3,
+                padding: 2,
+              }}
+            >
+              <Typography fontWeight={500} lineHeight={1} fontSize="2.5rem">
+                Frequently Asked Questions
+              </Typography>
+            </Paper>
+          </Box>
+          <Paper
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              fontSize: "2.5rem",
+              backgroundColor: offsetColor,
+              margin: 8,
+              padding: 4,
+            }}
+          >
             <div>
               <Accordion>
                 <AccordionSummary expandIcon={<ExpandMoreIcon />}>
