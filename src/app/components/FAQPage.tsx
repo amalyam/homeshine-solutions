@@ -9,6 +9,7 @@ import Paper from "@mui/material/Paper";
 import Stack from "@mui/material/Stack";
 import styles from "../styles.module.css";
 import Typography from "@mui/material/Typography";
+const offsetColor = "rgba(0, 162, 212, 0.24)";
 
 export default function FAQPage() {
   return (
