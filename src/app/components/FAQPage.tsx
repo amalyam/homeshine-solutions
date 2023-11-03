@@ -136,7 +136,7 @@ export default function FAQPage() {
             <Accordion>
               <AccordionSummary expandIcon={<ExpandMoreIcon />}>
                 <Typography className={styles.faqText}>
-                  Do I need to be home while you work on my home?
+                  Do I need to be home while you provide service?
                 </Typography>
               </AccordionSummary>
               <AccordionDetails>
