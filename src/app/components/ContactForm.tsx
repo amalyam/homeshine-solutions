@@ -151,7 +151,7 @@ export default function ContactForm() {
           />
           <CardContent sx={{ display: "flex", flexDirection: "column" }}>
             <Grid container spacing={1} justifyContent="flex-end">
-              <Grid xs={6}>
+              <Grid xs={12} md={6}>
                 <TextFieldElement
                   name={"name"}
                   id="name"
@@ -163,7 +163,7 @@ export default function ContactForm() {
                   sx={{ width: "100%" }}
                 />
               </Grid>
-              <Grid xs={6}>
+              <Grid xs={12} md={6}>
                 <TextFieldElement
                   name={"zip"}
                   id="zip"
@@ -180,7 +180,7 @@ export default function ContactForm() {
                   sx={{ width: "100%" }}
                 />
               </Grid>
-              <Grid xs={6}>
+              <Grid xs={12} md={6}>
                 <TextFieldElement
                   name={"email"}
                   id="email"
@@ -192,7 +192,7 @@ export default function ContactForm() {
                   sx={{ width: "100%" }}
                 />
               </Grid>
-              <Grid xs={6}>
+              <Grid xs={12} md={6}>
                 <TextFieldElement
                   name={"phone"}
                   id="phone"
@@ -216,7 +216,7 @@ export default function ContactForm() {
                   sx={{ width: "100%" }}
                 />
               </Grid>
-              <Grid xs={12} sm={6}>
+              <Grid xs={12} md={6}>
                 <MultiSelectElement
                   label="Services of interest?"
                   id="services"
@@ -241,7 +241,7 @@ export default function ContactForm() {
                 ></MultiSelectElement>
                 <FormHelperText>You may select more than one</FormHelperText>
               </Grid>
-              <Grid xs={12} sm={6}>
+              <Grid xs={12} md={6}>
                 <MultiSelectElement
                   label="Referral source?"
                   id="referral-source"
