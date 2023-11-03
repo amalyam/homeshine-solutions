@@ -56,7 +56,6 @@ export default function FAQPage() {
           sx={{
             display: "flex",
             justifyContent: "center",
-            fontSize: "2.5rem",
             backgroundColor: offsetColor,
             margin: 4,
             padding: 2,
