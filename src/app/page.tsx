@@ -24,7 +24,11 @@ export default function Home() {
         flexGrow: "1",
       }}
     >
-      <Box display={{ xs: "flex", sm: "none" }} flexGrow={1} m={2}></Box>
+      <Box
+        display={{ xs: "flex", sm: "none" }}
+        flexGrow={1}
+        m={{ xs: "none", sm: 2 }}
+      ></Box>
       <Grid
         container
         sx={{
