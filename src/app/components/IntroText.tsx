@@ -22,7 +22,7 @@ export default function IntroText() {
           display: "flex",
           flexDirection: "column",
           blockSize: "fit-content",
-          borderRadius: 2,
+          borderRadius: { xs: "none", sm: 2 },
           m: { md: 5, xl: 2 },
           marginLeft: { sm: "none", md: "40px" },
           backgroundColor: "rgba(33, 53, 55, 0.84)",
