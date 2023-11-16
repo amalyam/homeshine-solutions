@@ -157,6 +157,24 @@ export default function ServicesPage() {
                     </li>
                   </ul>
                 </Typography>
+              </TabPanel>
+              <TabPanel value={value} index={1}>
+                <Typography></Typography>
+              </TabPanel>
+              <TabPanel value={value} index={2}>
+                <Typography></Typography>
+              </TabPanel>
+              <TabPanel value={value} index={3}>
+                <Typography></Typography>
+              </TabPanel>
+              <TabPanel value={value} index={4}>
+                <Typography></Typography>
+              </TabPanel>
+              <TabPanel value={value} index={5}>
+                <Typography></Typography>
+              </TabPanel>
+            </Box>
+          </Stack>
         </Paper>
       </div>
     </Box>
