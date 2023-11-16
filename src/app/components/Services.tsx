@@ -127,7 +127,35 @@ export default function ServicesPage() {
                 <Tab label="Deck Restoration" {...a11yProps(5)} />
               </Tabs>
             </Box>
-          </Stack>
+              <TabPanel value={value} index={0}>
+                <Typography>
+                  <ul>
+                    <li>
+                      Removal of leaves, sticks and soil from the gutter lines
+                    </li>
+                    <br />
+                    <li>
+                      Full flush of lines and downspouts
+                      <ul>
+                        <li>
+                          removes debris that otherwise catches additional
+                          debris and causes premature blockage
+                        </li>
+                      </ul>
+                    </li>
+                    <br />
+                    <li>
+                      When needed, I also perform repairs on all gutter types,
+                      including:
+                      <ul>
+                        <li>gutter/downspout reattachment</li>
+                        <li>downspout replacement</li>
+                        <li>replacement of gutter line sections</li>
+                        <li>leak repair</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </Typography>
         </Paper>
       </div>
     </Box>
