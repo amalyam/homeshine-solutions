@@ -125,6 +125,7 @@ export default function ServicesPage() {
                 <Tab label="Window Washing" {...a11yProps(3)} />
                 <Tab label="Roof Cleaning" {...a11yProps(4)} />
                 <Tab label="Deck Restoration" {...a11yProps(5)} />
+                <Tab label="Tree Trimming" {...a11yProps(6)} />
               </Tabs>
             </Box>
             <Box sx={{ width: 600 }}>
