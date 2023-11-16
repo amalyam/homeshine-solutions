@@ -17,7 +17,6 @@ import WaterDamageOutlinedIcon from "@mui/icons-material/WaterDamageOutlined";
 import WaterDropOutlinedIcon from "@mui/icons-material/WaterDropOutlined";
 import WindowOutlinedIcon from "@mui/icons-material/WindowOutlined";
 
-
 interface TabPanelProps {
   children?: ReactNode;
   index: number;
