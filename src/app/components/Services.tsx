@@ -9,6 +9,14 @@ import Tab from "@mui/material/Tab";
 import Tabs from "@mui/material/Tabs";
 import theme from "../theme";
 import Typography from "@mui/material/Typography";
+import FoundationIcon from "@mui/icons-material/Foundation";
+import HouseSidingIcon from "@mui/icons-material/HouseSiding";
+import ParkOutlinedIcon from "@mui/icons-material/ParkOutlined";
+import RoofingIcon from "@mui/icons-material/Roofing";
+import WaterDamageOutlinedIcon from "@mui/icons-material/WaterDamageOutlined";
+import WaterDropOutlinedIcon from "@mui/icons-material/WaterDropOutlined";
+import WindowOutlinedIcon from "@mui/icons-material/WindowOutlined";
+
 
 interface TabPanelProps {
   children?: ReactNode;
@@ -120,13 +128,60 @@ export default function ServicesPage() {
                 textColor="secondary"
                 selectionFollowsFocus
               >
-                <Tab label="Gutter Cleaning + Repair" {...a11yProps(0)} />
-                <Tab label="Siding Soft Wash" {...a11yProps(1)} />
-                <Tab label="Pressure Wash" {...a11yProps(2)} />
-                <Tab label="Window Washing" {...a11yProps(3)} />
-                <Tab label="Roof Cleaning" {...a11yProps(4)} />
-                <Tab label="Deck Restoration" {...a11yProps(5)} />
-                <Tab label="Tree Trimming" {...a11yProps(6)} />
+                <Tab
+                  label="Gutter Cleaning + Repair"
+                  icon={<HouseSidingIcon />}
+                  iconPosition="start"
+                  {...a11yProps(0)}
+                  sx={{ alignSelf: "start" }}
+                />
+
+                <Tab
+                  label="Siding Soft Wash"
+                  icon={<WaterDamageOutlinedIcon />}
+                  iconPosition="start"
+                  {...a11yProps(1)}
+                  sx={{ alignSelf: "start" }}
+                />
+
+                <Tab
+                  label="Pressure Wash"
+                  icon={<WaterDropOutlinedIcon />}
+                  iconPosition="start"
+                  {...a11yProps(2)}
+                  sx={{ alignSelf: "start" }}
+                />
+                <Tab
+                  label="Window Washing"
+                  icon={<WindowOutlinedIcon />}
+                  iconPosition="start"
+                  {...a11yProps(3)}
+                  sx={{ alignSelf: "start" }}
+                />
+
+                <Tab
+                  label="Roof Cleaning"
+                  icon={<RoofingIcon />}
+                  iconPosition="start"
+                  {...a11yProps(4)}
+                  sx={{ alignSelf: "start" }}
+                />
+
+                <Tab
+                  label="Deck Restoration"
+                  icon={<FoundationIcon />}
+                  iconPosition="start"
+                  {...a11yProps(5)}
+                  sx={{ alignSelf: "start" }}
+                />
+
+                <Tab
+                  label="Tree Trimming"
+                  icon={<ParkOutlinedIcon />}
+                  iconPosition="start"
+                  {...a11yProps(6)}
+                  sx={{ alignSelf: "start" }}
+                />
               </Tabs>
             </Box>
             <Box sx={{ width: 600 }}>
