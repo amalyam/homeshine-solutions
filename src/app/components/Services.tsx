@@ -92,6 +92,7 @@ export default function ServicesPage() {
             </Typography>
           </div>
         </Paper>
+
         <Paper
           sx={{
             display: "flex",
@@ -119,6 +120,14 @@ export default function ServicesPage() {
                 indicatorColor="secondary"
                 textColor="secondary"
               >
+                <Tab label="Gutter Cleaning + Repair" {...a11yProps(0)} />
+                <Tab label="Siding Soft Wash" {...a11yProps(1)} />
+                <Tab label="Pressure Wash" {...a11yProps(2)} />
+                <Tab label="Window Washing" {...a11yProps(3)} />
+                <Tab label="Roof Cleaning" {...a11yProps(4)} />
+                <Tab label="Deck Restoration" {...a11yProps(5)} />
+              </Tabs>
+            </Box>
             <TabPanel value={value} index={0}>
               Gutter and Downspout Cleaning -Beyond just removing leaves, sticks
               and soil from the gutter lines, every gutter cleaning also
