@@ -1,12 +1,14 @@
 "use client";
 
+import { ReactNode, useState, SyntheticEvent } from "react";
 import BackgroundImage from "/src/images/Gutter_Clean_3.jpg";
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import Tab from "@mui/material/Tab";
 import Tabs from "@mui/material/Tabs";
-import { SyntheticEvent, useState } from "react";
 import theme from "../theme";
+import Typography from "@mui/material/Typography";
+
 interface TabPanelProps {
   children?: ReactNode;
   index: number;
