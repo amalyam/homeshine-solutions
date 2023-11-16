@@ -71,7 +71,7 @@ export default function ServicesPage() {
             fontSize: "2.5rem",
             backgroundColor: "white",
             margin: 8,
-            padding: 4,
+            padding: 3,
           }}
         >
           <div>
