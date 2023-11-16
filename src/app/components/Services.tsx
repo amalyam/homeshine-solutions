@@ -40,7 +40,23 @@ export default function ServicesPage() {
             padding: 4,
           }}
         >
-          Services
+          <div>
+            <Typography fontSize="2.5rem" textAlign="center">
+              Services
+            </Typography>
+            <Typography padding={4}>
+              Every service begins with a conversation about your needs and a
+              quote.
+              <br />
+              <br />
+              Along with your price quote, we provide detailed photos or video
+              of your home, and a list of options to meet your needs and budget.
+              <br />
+              <br />
+              At conclusion, you’ll receive photo/video confirmation of the
+              before and after to ensure the quality of our work.
+            </Typography>
+          </div>
         </Paper>
         <Paper
           sx={{
