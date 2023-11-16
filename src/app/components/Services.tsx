@@ -118,6 +118,7 @@ export default function ServicesPage() {
                 aria-label="services"
                 indicatorColor="secondary"
                 textColor="secondary"
+                selectionFollowsFocus
               >
                 <Tab label="Gutter Cleaning + Repair" {...a11yProps(0)} />
                 <Tab label="Siding Soft Wash" {...a11yProps(1)} />
