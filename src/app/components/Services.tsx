@@ -92,7 +92,6 @@ export default function ServicesPage() {
             </Typography>
           </div>
         </Paper>
-
         <Paper
           sx={{
             display: "flex",
@@ -103,7 +102,7 @@ export default function ServicesPage() {
             padding: 4,
           }}
         >
-          <div>
+          <Stack direction="row">
             <Box
               sx={{
                 borderRight: 1,
