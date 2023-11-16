@@ -43,7 +43,7 @@ function a11yProps(index: number) {
 }
 
 export default function ServicesPage() {
-  const [value, setValue] = useState("one");
+  const [value, setValue] = useState(0);
 
   const handleChange = (event: SyntheticEvent, newValue: number) => {
     setValue(newValue);
