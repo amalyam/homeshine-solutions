@@ -119,6 +119,28 @@ export default function ServicesPage() {
                 indicatorColor="secondary"
                 textColor="secondary"
               >
+            <TabPanel value={value} index={0}>
+              Gutter and Downspout Cleaning -Beyond just removing leaves, sticks
+              and soil from the gutter lines, every gutter cleaning also
+              includes a full flush of lines and downspouts to remove debris
+              that otherwise catches more and causes a premature blockage.
+            </TabPanel>
+            <TabPanel value={value} index={1}>
+              <Typography></Typography>
+            </TabPanel>
+            <TabPanel value={value} index={2}>
+              <Typography></Typography>
+            </TabPanel>
+            <TabPanel value={value} index={3}>
+              <Typography></Typography>
+            </TabPanel>
+            <TabPanel value={value} index={4}>
+              <Typography></Typography>
+            </TabPanel>
+            <TabPanel value={value} index={5}>
+              <Typography></Typography>
+            </TabPanel>
+          </div>
         </Paper>
       </div>
     </Box>
