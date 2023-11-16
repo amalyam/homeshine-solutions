@@ -78,7 +78,7 @@ export default function ServicesPage() {
             <Typography fontSize="2.5rem" textAlign="center">
               Services
             </Typography>
-            <Typography padding={4}>
+            <Typography padding={4} width={600}>
               Every service begins with a conversation about your needs and a
               quote.
               <br />
