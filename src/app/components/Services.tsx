@@ -102,21 +102,23 @@ export default function ServicesPage() {
             padding: 4,
           }}
         >
-          <Tabs
-            value={value}
-            onChange={handleChange}
-            aria-label="services"
-            orientation="vertical"
-            indicatorColor="secondary"
-            textColor="secondary"
-          >
-            <Tab value="gutters" label="Gutter Cleaning + Repair" />
-            <Tab value="siding" label="Siding Soft Wash" />
-            <Tab value="pressure" label="Pressure Wash" />
-            <Tab value="window" label="Window Washing" />
-            <Tab value="roof" label="Roof Cleaning" />
-            <Tab value="deck" label="Deck Restoration" />
-          </Tabs>
+          <div>
+            <Box
+              sx={{
+                borderRight: 1,
+                borderColor: "divider",
+                display: "flex",
+                justifyContent: "left",
+              }}
+            >
+              <Tabs
+                orientation="vertical"
+                value={value}
+                onChange={handleChange}
+                aria-label="services"
+                indicatorColor="secondary"
+                textColor="secondary"
+              >
         </Paper>
       </div>
     </Box>
