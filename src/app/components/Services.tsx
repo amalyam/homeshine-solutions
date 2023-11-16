@@ -45,7 +45,7 @@ function a11yProps(index: number) {
 export default function ServicesPage() {
   const [value, setValue] = useState("one");
 
-  const handleChange = (event: SyntheticEvent, newValue: string) => {
+  const handleChange = (event: SyntheticEvent, newValue: number) => {
     setValue(newValue);
   };
 
