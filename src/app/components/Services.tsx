@@ -127,6 +127,7 @@ export default function ServicesPage() {
                 <Tab label="Deck Restoration" {...a11yProps(5)} />
               </Tabs>
             </Box>
+            <Box sx={{ width: 600 }}>
               <TabPanel value={value} index={0}>
                 <Typography>
                   <ul>
