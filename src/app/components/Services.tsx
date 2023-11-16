@@ -160,19 +160,149 @@ export default function ServicesPage() {
                 </Typography>
               </TabPanel>
               <TabPanel value={value} index={1}>
-                <Typography></Typography>
+                <Typography>
+                  <ul>
+                    <li>
+                      Soft washing is often the choice when high pressure
+                      cleaning might damage or mar the surface in question. This
+                      is usually the case with most types of siding.
+                    </li>
+                    <br />
+                    <li>
+                      It can be used on
+                      <ul>
+                        <li>wood shake</li>
+                        <li>vinyl</li>
+                        <li>painted wood</li>
+                        <li>brick</li>
+                        <li>concrete</li>
+                        <li>stucco</li>
+                        <li>... and more</li>
+                      </ul>
+                    </li>
+                    <br />
+                    <li>
+                      We use low pressure and a gentle solution of rapidly
+                      bio-degradable surfactants and PH adjusters to kill
+                      growths like moss, algae, lichen, mildew and mold, remove
+                      dirt and grime, leave the surface inhospitable to new
+                      growth, and avoid damage to the siding.
+                    </li>
+                    <br />
+                    <li>
+                      With a siding wash, gutters, fascia, soffit, window
+                      frames, and doors will also get a full wash.
+                    </li>
+                    <br />
+                    <li>
+                      Plants of all types and sizes can be protected in a
+                      variety of ways.
+                    </li>
+                  </ul>
+                </Typography>
               </TabPanel>
               <TabPanel value={value} index={2}>
-                <Typography></Typography>
+                <Typography>
+                  <ul>
+                    <li>
+                      With or without the aid of cleaning solutions, we expertly
+                      select the appropriate power to deep clean hard surfaces,
+                      remove paint, or blast away deep soiled grime and oil
+                      stains.
+                    </li>
+                    <br />
+                    <li>
+                      Pressure washing can be used on:
+                      <ul>
+                        <li>brick</li>
+                        <li>stone</li>
+                        <li>concrete</li>
+                        <li>wood</li>
+                        <li>... and more</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </Typography>
               </TabPanel>
               <TabPanel value={value} index={3}>
-                <Typography></Typography>
+                <Typography>
+                  <ul>
+                    <li>
+                      We go the extra mile to remove stubborn marks,
+                      construction mess, and stuck-on grime.
+                    </li>
+                    <br />
+                    <li>
+                      We will clean:
+                      <ul>
+                        <li>panes</li>
+                        <li>frames</li>
+                        <li>sills</li>
+                        <li>tracks</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </Typography>
               </TabPanel>
               <TabPanel value={value} index={4}>
-                <Typography></Typography>
+                <Typography>
+                  <ul>
+                    <li>
+                      Like siding, roof shingles do not hold up to pressure
+                      washing. In fact, all major shingle manufacturers and
+                      insurance companies will void warrantees or drop coverage
+                      for pressure washing a shingled roof. As such, we only use
+                      soft washing to clean roofs.
+                    </li>
+                    <br />
+                    <li>
+                      We use low pressure and a gentle solution of rapidly
+                      bio-degradable surfactants and PH adjusters to kill
+                      growths like moss, algae, lichen, mildew and mold, remove
+                      dirt and grime, leave the surface inhospitable to new
+                      growth, and avoid damage to the siding.
+                    </li>
+                  </ul>
+                </Typography>
               </TabPanel>
               <TabPanel value={value} index={5}>
-                <Typography></Typography>
+                <Typography>
+                  <ul>
+                    <li>
+                      Depending on the state of the wood, we can:
+                      <ul>
+                        <li>clean</li>
+                        <li>treat</li>
+                        <li>sand</li>
+                        <li>fill</li>
+                        <li>brighten</li>
+                        <li>stain</li>
+                        <li>paint</li>
+                        <li>or replace boards</li>
+                      </ul>
+                    </li>
+                    <br />
+                    <li>
+                      Along with renewing the boards, we take care to fix rust
+                      marks, reset fasteners, and refasten boards as needed.
+                    </li>
+                  </ul>
+                </Typography>
+              </TabPanel>
+              <TabPanel value={value} index={6}>
+                <Typography>
+                  <ul>
+                    <li>
+                      We generally provide tree trimming as an add-on service,
+                      when trees are affecting parts of the home.
+                    </li>
+                    <br />
+                    <li>
+                      We will trim small to medium sized branches on trees up to
+                      30 feet from the ground.
+                    </li>
+                  </ul>
+                </Typography>
               </TabPanel>
             </Box>
           </Stack>
