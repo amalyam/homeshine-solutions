@@ -82,6 +82,7 @@ export default function ServicesPage() {
           sx={{
             display: "flex",
             flexDirection: "column",
+            blocksize: "fit-content",
             justifyContent: "center",
             backgroundColor: "white",
             margin: 8,
