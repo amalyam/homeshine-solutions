@@ -191,7 +191,7 @@ export default function ServicesPage() {
                 />
               </Tabs>
             </Box>
-            <Box sx={{ width: 600 }}>
+            <Box sx={{ width: "100%" }}>
               <TabPanel value={value} index={0}>
                 <Typography
                   display={{ xs: "none", sm: "flex" }}
