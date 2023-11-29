@@ -69,7 +69,7 @@ export default function FAQPage() {
                 </Typography>
               </AccordionSummary>
               <AccordionDetails>
-                <Typography className={styles.faqText}>Answer</Typography>
+                <Typography>Answer coming soon</Typography>
               </AccordionDetails>
             </Accordion>
             <Accordion>
