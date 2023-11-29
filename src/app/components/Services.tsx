@@ -221,6 +221,29 @@ export default function ServicesPage() {
                     </li>
                   </ul>
                 </Typography>
+                <Typography
+                  display={{ xs: "flex", sm: "none" }}
+                  flexDirection="column"
+                >
+                  Removal of leaves, sticks and soil from the gutter lines
+                  <br />
+                  Full flush of lines and downspouts
+                  <ul>
+                    <li>
+                      removes debris that otherwise catches additional debris
+                      and causes premature blockage
+                    </li>
+                  </ul>
+                  <br />
+                  When needed, I also perform repairs on all gutter types,
+                  including:
+                  <ul>
+                    <li>gutter/downspout reattachment</li>
+                    <li>downspout replacement</li>
+                    <li>replacement of gutter line sections</li>
+                    <li>leak repair</li>
+                  </ul>
+                </Typography>
               </TabPanel>
               <TabPanel value={value} index={1}>
                 <Typography>
