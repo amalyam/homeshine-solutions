@@ -78,35 +78,19 @@ export default function ServicesPage() {
           maxWidth: "90%",
         }}
       >
-        <Paper
+        <Box
           sx={{
             display: "flex",
-            flexDirection: "column",
-            blocksize: "fit-content",
             justifyContent: "center",
-            backgroundColor: "white",
+            backgroundColor: "rgba(33, 53, 55, 0.60)",
+            maxWidth: "max-content",
+            borderRadius: 2,
+
             margin: 8,
             padding: 3,
           }}
         >
-          <Box>
-            <Typography fontSize="2.5rem" textAlign="center">
-              Services
-            </Typography>
-            <Typography padding={4} width={{ md: "auto", lg: 600 }}>
-              Every service begins with a conversation about your needs and a
-              quote.
-              <br />
-              <br />
-              Along with your price quote, we provide detailed photos or video
-              of your home, and a list of options to meet your needs and budget.
-              <br />
-              <br />
-              At conclusion, you’ll receive photo/video confirmation of the
-              before and after to ensure the quality of our work.
-            </Typography>
-          </Box>
-        </Paper>
+        </Box>
         <Paper
           sx={{
             display: "flex",
