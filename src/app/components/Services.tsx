@@ -139,55 +139,54 @@ export default function ServicesPage() {
                   label="Gutter Cleaning + Repair"
                   icon={<HouseSidingIcon />}
                   iconPosition="start"
+                  wrapped
                   {...a11yProps(0)}
-                  sx={{ alignSelf: "start" }}
                 />
 
                 <Tab
                   label="Siding Soft Wash"
                   icon={<WaterDamageOutlinedIcon />}
                   iconPosition="start"
+                  wrapped
                   {...a11yProps(1)}
-                  sx={{ alignSelf: "start" }}
                 />
 
                 <Tab
                   label="Pressure Wash"
                   icon={<WaterDropOutlinedIcon />}
                   iconPosition="start"
+                  wrapped
                   {...a11yProps(2)}
-                  sx={{ alignSelf: "start" }}
                 />
                 <Tab
                   label="Window Washing"
                   icon={<WindowOutlinedIcon />}
                   iconPosition="start"
+                  wrapped
                   {...a11yProps(3)}
-                  sx={{ alignSelf: "start" }}
                 />
 
                 <Tab
                   label="Roof Cleaning"
                   icon={<RoofingIcon />}
                   iconPosition="start"
+                  wrapped
                   {...a11yProps(4)}
-                  sx={{ alignSelf: "start" }}
                 />
 
                 <Tab
                   label="Deck Restoration"
                   icon={<FoundationIcon />}
                   iconPosition="start"
+                  wrapped
                   {...a11yProps(5)}
-                  sx={{ alignSelf: "start" }}
                 />
-
                 <Tab
                   label="Tree Trimming"
                   icon={<ParkOutlinedIcon />}
                   iconPosition="start"
+                  wrapped
                   {...a11yProps(6)}
-                  sx={{ alignSelf: "start" }}
                 />
               </Tabs>
             </Box>
