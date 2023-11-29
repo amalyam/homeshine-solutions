@@ -116,67 +116,71 @@ function Copyright() {
 
 export default function AppFooter() {
   return (
-    <Typography
-      component="footer"
-      sx={{
-        bgcolor: theme.palette.footer.light,
-        py: 1.5,
-        fontSize: ".75rem",
-      }}
+    <Box
+      sx={{ position: "sticky", bottom: 0, zIndex: 1000, marginTop: "auto" }}
     >
-      <Stack
-        justifyContent="left"
-        spacing={1}
-        mx={3}
-        my={0.75}
-        sx={{ display: { xs: "flex", sm: "none" } }}
-      >
-        <LogoPrivacyTerms />
-        <ConnectWithUs />
-        <Copyright />
-      </Stack>
-      <Grid
-        container
+      <Typography
+        component="footer"
         sx={{
-          display: { xs: "none", sm: "flex" },
-          justifyContent: "space-between",
-          alignItems: "center",
+          bgcolor: theme.palette.footer.light,
+          py: 1.5,
+          fontSize: ".75rem",
         }}
       >
-        <Grid
-          xs={4}
-          sx={{
-            display: "flex",
-            justifyContent: "flex-start",
-            alignItems: "center",
-            px: 3,
-          }}
+        <Stack
+          justifyContent="left"
+          spacing={1}
+          mx={3}
+          my={0.75}
+          sx={{ display: { xs: "flex", sm: "none" } }}
         >
           <LogoPrivacyTerms />
-        </Grid>
-        <Grid
-          xs={4}
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            gap: 1.5,
-          }}
-        >
           <ConnectWithUs />
-        </Grid>
+          <Copyright />
+        </Stack>
         <Grid
-          xs={4}
+          container
           sx={{
-            display: "flex",
-            justifyContent: "flex-end",
+            display: { xs: "none", sm: "flex" },
+            justifyContent: "space-between",
             alignItems: "center",
-            pr: 3,
           }}
         >
-          <Copyright />
+          <Grid
+            xs={4}
+            sx={{
+              display: "flex",
+              justifyContent: "flex-start",
+              alignItems: "center",
+              px: 3,
+            }}
+          >
+            <LogoPrivacyTerms />
+          </Grid>
+          <Grid
+            xs={4}
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              gap: 1.5,
+            }}
+          >
+            <ConnectWithUs />
+          </Grid>
+          <Grid
+            xs={4}
+            sx={{
+              display: "flex",
+              justifyContent: "flex-end",
+              alignItems: "center",
+              pr: 3,
+            }}
+          >
+            <Copyright />
+          </Grid>
         </Grid>
-      </Grid>
-    </Typography>
+      </Typography>
+    </Box>
   );
 }
