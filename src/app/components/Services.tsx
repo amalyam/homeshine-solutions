@@ -70,7 +70,14 @@ export default function ServicesPage() {
         backgroundPosition: "top",
       }}
     >
-      <div>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          blocksize: "fit-content",
+          maxWidth: "90%",
+        }}
+      >
         <Paper
           sx={{
             display: "flex",
