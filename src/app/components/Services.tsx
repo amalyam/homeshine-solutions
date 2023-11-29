@@ -76,6 +76,7 @@ export default function ServicesPage() {
           flexDirection: "column",
           blocksize: "fit-content",
           maxWidth: "90%",
+          alignItems: "center",
         }}
       >
         <Box
@@ -90,6 +91,42 @@ export default function ServicesPage() {
             padding: 3,
           }}
         >
+          <Paper
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              blocksize: "fit-content",
+              justifyContent: "center",
+              backgroundColor: "white",
+              margin: -1.2,
+              padding: 2,
+            }}
+          >
+            <Box display="flex" flexDirection="column" alignItems="center">
+              <Typography fontSize="2.5rem" textAlign="center">
+                Services
+              </Typography>
+              <Box display="flex" justifyContent="center">
+                <Typography
+                  padding={4}
+                  width={{ md: "auto", lg: 600 }}
+                  textAlign="left"
+                >
+                  Every service begins with a conversation about your needs and
+                  a quote.
+                  <br />
+                  <br />
+                  Along with your price quote, we provide detailed photos or
+                  video of your home, and a list of options to meet your needs
+                  and budget.
+                  <br />
+                  <br />
+                  At conclusion, you’ll receive photo/video confirmation of the
+                  before and after to ensure the quality of our work.
+                </Typography>
+              </Box>
+            </Box>
+          </Paper>
         </Box>
         <Paper
           sx={{
