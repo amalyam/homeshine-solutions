@@ -99,7 +99,7 @@ export default function FAQPage() {
                 </Typography>
               </AccordionSummary>
               <AccordionDetails>
-                <Typography>Answer coming soon</Typography>
+                <Typography>Yes!</Typography>
               </AccordionDetails>
             </Accordion>
             <Accordion>
