@@ -193,7 +193,10 @@ export default function ServicesPage() {
             </Box>
             <Box sx={{ width: 600 }}>
               <TabPanel value={value} index={0}>
-                <Typography>
+                <Typography
+                  display={{ xs: "none", sm: "flex" }}
+                  flexDirection="column"
+                >
                   <ul>
                     <li>
                       Removal of leaves, sticks and soil from the gutter lines
