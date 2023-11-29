@@ -88,7 +88,7 @@ export default function ServicesPage() {
             padding: 3,
           }}
         >
-          <div>
+          <Box>
             <Typography fontSize="2.5rem" textAlign="center">
               Services
             </Typography>
@@ -104,7 +104,7 @@ export default function ServicesPage() {
               At conclusion, you’ll receive photo/video confirmation of the
               before and after to ensure the quality of our work.
             </Typography>
-          </div>
+          </Box>
         </Paper>
         <Paper
           sx={{
