@@ -393,7 +393,7 @@ export default function ServicesPage() {
             </Box>
           </Stack>
         </Paper>
-      </div>
+      </Box>
     </Box>
   );
 }
