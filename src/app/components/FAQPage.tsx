@@ -23,7 +23,7 @@ export default function FAQPage() {
         justifyContent: "center",
         background: `no-repeat center/cover url(${BackgroundImage.src})`,
         backgroundSize: "cover",
-        height: "100%",
+        minHeight: "100% 100%",
         alignItems: "center",
         zIndex: "1000",
         flexGrow: "1",
