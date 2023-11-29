@@ -117,23 +117,33 @@ export default function ServicesPage() {
             padding: 4,
           }}
         >
-          <Stack direction="row">
+          <Stack
+            sx={{
+              maxWidth: "100%",
+            }}
+          >
             <Box
               sx={{
-                borderRight: 1,
+                borderBottom: 1,
                 borderColor: "divider",
                 display: "flex",
+                flexDirection: "column",
                 justifyContent: "left",
               }}
             >
               <Tabs
-                orientation="vertical"
+                variant="scrollable"
+                scrollButtons="auto"
                 value={value}
                 onChange={handleChange}
                 aria-label="services"
                 indicatorColor="secondary"
                 textColor="secondary"
                 selectionFollowsFocus
+                centered
+                sx={{
+                  maxWidth: "100%",
+                }}
               >
                 <Tab
                   label="Gutter Cleaning + Repair"
