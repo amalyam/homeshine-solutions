@@ -81,6 +81,7 @@ export default function ServicesPage() {
         <Paper
           sx={{
             display: "flex",
+            flexDirection: "column",
             justifyContent: "center",
             backgroundColor: "white",
             margin: 8,
