@@ -109,6 +109,7 @@ export default function ServicesPage() {
         <Paper
           sx={{
             display: "flex",
+            flexGrow: 1,
             justifyContent: "center",
             fontSize: "2.5rem",
             backgroundColor: "white",
