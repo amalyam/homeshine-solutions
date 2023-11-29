@@ -98,7 +98,7 @@ export default function ServicesPage() {
             justifyContent: "center",
             fontSize: "2.5rem",
             backgroundColor: "white",
-            margin: 8,
+            marginBottom: 7,
             padding: 4,
           }}
         >
