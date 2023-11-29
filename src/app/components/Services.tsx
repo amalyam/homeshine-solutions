@@ -86,7 +86,6 @@ export default function ServicesPage() {
             backgroundColor: "rgba(33, 53, 55, 0.60)",
             maxWidth: "max-content",
             borderRadius: 2,
-
             margin: 8,
             padding: 3,
           }}
@@ -128,305 +127,317 @@ export default function ServicesPage() {
             </Box>
           </Paper>
         </Box>
-        <Paper
+        <Box
           sx={{
             display: "flex",
-            flexGrow: 1,
             justifyContent: "center",
-            fontSize: "2.5rem",
-            backgroundColor: "white",
+            backgroundColor: "rgba(33, 53, 55, 0.60)",
+            maxWidth: "max-content",
+            borderRadius: 2,
             marginBottom: 7,
-            padding: 4,
+            padding: 2.5,
           }}
         >
-          <Stack
+          <Paper
             sx={{
-              maxWidth: "100%",
+              display: "flex",
+              flexGrow: 1,
+              justifyContent: "center",
+              fontSize: "2.5rem",
+              backgroundColor: "white",
+
+              padding: 4,
             }}
           >
-            <Box
+            <Stack
               sx={{
-                borderBottom: 1,
-                borderColor: "divider",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "left",
+                maxWidth: "100%",
               }}
             >
-              <Tabs
-                variant="scrollable"
-                scrollButtons="auto"
-                value={value}
-                onChange={handleChange}
-                aria-label="services"
-                indicatorColor="secondary"
-                textColor="secondary"
-                selectionFollowsFocus
-                centered
+              <Box
                 sx={{
-                  maxWidth: "100%",
+                  borderBottom: 1,
+                  borderColor: "divider",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "left",
                 }}
               >
-                <Tab
-                  label="Gutter Cleaning + Repair"
-                  icon={<HouseSidingIcon />}
-                  iconPosition="start"
-                  wrapped
-                  {...a11yProps(0)}
-                />
-
-                <Tab
-                  label="Siding Soft Wash"
-                  icon={<WaterDamageOutlinedIcon />}
-                  iconPosition="start"
-                  wrapped
-                  {...a11yProps(1)}
-                />
-
-                <Tab
-                  label="Pressure Wash"
-                  icon={<WaterDropOutlinedIcon />}
-                  iconPosition="start"
-                  wrapped
-                  {...a11yProps(2)}
-                />
-                <Tab
-                  label="Window Washing"
-                  icon={<WindowOutlinedIcon />}
-                  iconPosition="start"
-                  wrapped
-                  {...a11yProps(3)}
-                />
-
-                <Tab
-                  label="Roof Cleaning"
-                  icon={<RoofingIcon />}
-                  iconPosition="start"
-                  wrapped
-                  {...a11yProps(4)}
-                />
-
-                <Tab
-                  label="Deck Restoration"
-                  icon={<FoundationIcon />}
-                  iconPosition="start"
-                  wrapped
-                  {...a11yProps(5)}
-                />
-                <Tab
-                  label="Tree Trimming"
-                  icon={<ParkOutlinedIcon />}
-                  iconPosition="start"
-                  wrapped
-                  {...a11yProps(6)}
-                />
-              </Tabs>
-            </Box>
-            <Box sx={{ width: "100%" }}>
-              <TabPanel value={value} index={0}>
-                <Typography
-                  display={{ xs: "none", sm: "flex" }}
-                  flexDirection="column"
+                <Tabs
+                  variant="scrollable"
+                  scrollButtons="auto"
+                  value={value}
+                  onChange={handleChange}
+                  aria-label="services"
+                  indicatorColor="secondary"
+                  textColor="secondary"
+                  selectionFollowsFocus
+                  centered
+                  sx={{
+                    maxWidth: "100%",
+                  }}
                 >
-                  <ul>
-                    <li>
-                      Removal of leaves, sticks and soil from the gutter lines
-                    </li>
+                  <Tab
+                    label="Gutter Cleaning + Repair"
+                    icon={<HouseSidingIcon />}
+                    iconPosition="start"
+                    wrapped
+                    {...a11yProps(0)}
+                  />
+
+                  <Tab
+                    label="Siding Soft Wash"
+                    icon={<WaterDamageOutlinedIcon />}
+                    iconPosition="start"
+                    wrapped
+                    {...a11yProps(1)}
+                  />
+
+                  <Tab
+                    label="Pressure Wash"
+                    icon={<WaterDropOutlinedIcon />}
+                    iconPosition="start"
+                    wrapped
+                    {...a11yProps(2)}
+                  />
+                  <Tab
+                    label="Window Washing"
+                    icon={<WindowOutlinedIcon />}
+                    iconPosition="start"
+                    wrapped
+                    {...a11yProps(3)}
+                  />
+
+                  <Tab
+                    label="Roof Cleaning"
+                    icon={<RoofingIcon />}
+                    iconPosition="start"
+                    wrapped
+                    {...a11yProps(4)}
+                  />
+
+                  <Tab
+                    label="Deck Restoration"
+                    icon={<FoundationIcon />}
+                    iconPosition="start"
+                    wrapped
+                    {...a11yProps(5)}
+                  />
+                  <Tab
+                    label="Tree Trimming"
+                    icon={<ParkOutlinedIcon />}
+                    iconPosition="start"
+                    wrapped
+                    {...a11yProps(6)}
+                  />
+                </Tabs>
+              </Box>
+              <Box sx={{ width: "100%" }}>
+                <TabPanel value={value} index={0}>
+                  <Typography
+                    display={{ xs: "none", sm: "flex" }}
+                    flexDirection="column"
+                  >
+                    <ul>
+                      <li>
+                        Removal of leaves, sticks and soil from the gutter lines
+                      </li>
+                      <br />
+                      <li>
+                        Full flush of lines and downspouts
+                        <ul>
+                          <li>
+                            removes debris that otherwise catches additional
+                            debris and causes premature blockage
+                          </li>
+                        </ul>
+                      </li>
+                      <br />
+                      <li>
+                        When needed, I also perform repairs on all gutter types,
+                        including:
+                        <ul>
+                          <li>gutter/downspout reattachment</li>
+                          <li>downspout replacement</li>
+                          <li>replacement of gutter line sections</li>
+                          <li>leak repair</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </Typography>
+                  <Typography
+                    display={{ xs: "flex", sm: "none" }}
+                    flexDirection="column"
+                  >
+                    Removal of leaves, sticks and soil from the gutter lines
                     <br />
-                    <li>
-                      Full flush of lines and downspouts
-                      <ul>
-                        <li>
-                          removes debris that otherwise catches additional
-                          debris and causes premature blockage
-                        </li>
-                      </ul>
-                    </li>
+                    Full flush of lines and downspouts
+                    <ul>
+                      <li>
+                        removes debris that otherwise catches additional debris
+                        and causes premature blockage
+                      </li>
+                    </ul>
                     <br />
-                    <li>
-                      When needed, I also perform repairs on all gutter types,
-                      including:
-                      <ul>
-                        <li>gutter/downspout reattachment</li>
-                        <li>downspout replacement</li>
-                        <li>replacement of gutter line sections</li>
-                        <li>leak repair</li>
-                      </ul>
-                    </li>
-                  </ul>
-                </Typography>
-                <Typography
-                  display={{ xs: "flex", sm: "none" }}
-                  flexDirection="column"
-                >
-                  Removal of leaves, sticks and soil from the gutter lines
-                  <br />
-                  Full flush of lines and downspouts
-                  <ul>
-                    <li>
-                      removes debris that otherwise catches additional debris
-                      and causes premature blockage
-                    </li>
-                  </ul>
-                  <br />
-                  When needed, I also perform repairs on all gutter types,
-                  including:
-                  <ul>
-                    <li>gutter/downspout reattachment</li>
-                    <li>downspout replacement</li>
-                    <li>replacement of gutter line sections</li>
-                    <li>leak repair</li>
-                  </ul>
-                </Typography>
-              </TabPanel>
-              <TabPanel value={value} index={1}>
-                <Typography>
-                  <ul>
-                    <li>
-                      Soft washing is often the choice when high pressure
-                      cleaning might damage or mar the surface in question. This
-                      is usually the case with most types of siding.
-                    </li>
-                    <br />
-                    <li>
-                      It can be used on
-                      <ul>
-                        <li>wood shake</li>
-                        <li>vinyl</li>
-                        <li>painted wood</li>
-                        <li>brick</li>
-                        <li>concrete</li>
-                        <li>stucco</li>
-                        <li>... and more</li>
-                      </ul>
-                    </li>
-                    <br />
-                    <li>
-                      We use low pressure and a gentle solution of rapidly
-                      bio-degradable surfactants and PH adjusters to kill
-                      growths like moss, algae, lichen, mildew and mold, remove
-                      dirt and grime, leave the surface inhospitable to new
-                      growth, and avoid damage to the siding.
-                    </li>
-                    <br />
-                    <li>
-                      With a siding wash, gutters, fascia, soffit, window
-                      frames, and doors will also get a full wash.
-                    </li>
-                    <br />
-                    <li>
-                      Plants of all types and sizes can be protected in a
-                      variety of ways.
-                    </li>
-                  </ul>
-                </Typography>
-              </TabPanel>
-              <TabPanel value={value} index={2}>
-                <Typography>
-                  <ul>
-                    <li>
-                      With or without the aid of cleaning solutions, we expertly
-                      select the appropriate power to deep clean hard surfaces,
-                      remove paint, or blast away deep soiled grime and oil
-                      stains.
-                    </li>
-                    <br />
-                    <li>
-                      Pressure washing can be used on:
-                      <ul>
-                        <li>brick</li>
-                        <li>stone</li>
-                        <li>concrete</li>
-                        <li>wood</li>
-                        <li>... and more</li>
-                      </ul>
-                    </li>
-                  </ul>
-                </Typography>
-              </TabPanel>
-              <TabPanel value={value} index={3}>
-                <Typography>
-                  <ul>
-                    <li>
-                      We go the extra mile to remove stubborn marks,
-                      construction mess, and stuck-on grime.
-                    </li>
-                    <br />
-                    <li>
-                      We will clean:
-                      <ul>
-                        <li>panes</li>
-                        <li>frames</li>
-                        <li>sills</li>
-                        <li>tracks</li>
-                      </ul>
-                    </li>
-                  </ul>
-                </Typography>
-              </TabPanel>
-              <TabPanel value={value} index={4}>
-                <Typography>
-                  <ul>
-                    <li>
-                      Like siding, roof shingles do not hold up to pressure
-                      washing. In fact, all major shingle manufacturers and
-                      insurance companies will void warrantees or drop coverage
-                      for pressure washing a shingled roof. As such, we only use
-                      soft washing to clean roofs.
-                    </li>
-                    <br />
-                    <li>
-                      We use low pressure and a gentle solution of rapidly
-                      bio-degradable surfactants and PH adjusters to kill
-                      growths like moss, algae, lichen, mildew and mold, remove
-                      dirt and grime, leave the surface inhospitable to new
-                      growth, and avoid damage to the siding.
-                    </li>
-                  </ul>
-                </Typography>
-              </TabPanel>
-              <TabPanel value={value} index={5}>
-                <Typography>
-                  <ul>
-                    <li>
-                      Depending on the state of the wood, we can:
-                      <ul>
-                        <li>clean</li>
-                        <li>treat</li>
-                        <li>sand</li>
-                        <li>fill</li>
-                        <li>brighten</li>
-                        <li>stain</li>
-                        <li>paint</li>
-                        <li>or replace boards</li>
-                      </ul>
-                    </li>
-                    <br />
-                    <li>
-                      Along with renewing the boards, we take care to fix rust
-                      marks, reset fasteners, and refasten boards as needed.
-                    </li>
-                  </ul>
-                </Typography>
-              </TabPanel>
-              <TabPanel value={value} index={6}>
-                <Typography>
-                  <ul>
-                    <li>
-                      We generally provide tree trimming as an add-on service,
-                      when trees are affecting parts of the home.
-                    </li>
-                    <br />
-                    <li>
-                      We will trim small to medium sized branches on trees up to
-                      30 feet from the ground.
-                    </li>
-                  </ul>
-                </Typography>
-              </TabPanel>
-            </Box>
-          </Stack>
-        </Paper>
+                    When needed, I also perform repairs on all gutter types,
+                    including:
+                    <ul>
+                      <li>gutter/downspout reattachment</li>
+                      <li>downspout replacement</li>
+                      <li>replacement of gutter line sections</li>
+                      <li>leak repair</li>
+                    </ul>
+                  </Typography>
+                </TabPanel>
+                <TabPanel value={value} index={1}>
+                  <Typography>
+                    <ul>
+                      <li>
+                        Soft washing is often the choice when high pressure
+                        cleaning might damage or mar the surface in question.
+                        This is usually the case with most types of siding.
+                      </li>
+                      <br />
+                      <li>
+                        It can be used on
+                        <ul>
+                          <li>wood shake</li>
+                          <li>vinyl</li>
+                          <li>painted wood</li>
+                          <li>brick</li>
+                          <li>concrete</li>
+                          <li>stucco</li>
+                          <li>... and more</li>
+                        </ul>
+                      </li>
+                      <br />
+                      <li>
+                        We use low pressure and a gentle solution of rapidly
+                        bio-degradable surfactants and PH adjusters to kill
+                        growths like moss, algae, lichen, mildew and mold,
+                        remove dirt and grime, leave the surface inhospitable to
+                        new growth, and avoid damage to the siding.
+                      </li>
+                      <br />
+                      <li>
+                        With a siding wash, gutters, fascia, soffit, window
+                        frames, and doors will also get a full wash.
+                      </li>
+                      <br />
+                      <li>
+                        Plants of all types and sizes can be protected in a
+                        variety of ways.
+                      </li>
+                    </ul>
+                  </Typography>
+                </TabPanel>
+                <TabPanel value={value} index={2}>
+                  <Typography>
+                    <ul>
+                      <li>
+                        With or without the aid of cleaning solutions, we
+                        expertly select the appropriate power to deep clean hard
+                        surfaces, remove paint, or blast away deep soiled grime
+                        and oil stains.
+                      </li>
+                      <br />
+                      <li>
+                        Pressure washing can be used on:
+                        <ul>
+                          <li>brick</li>
+                          <li>stone</li>
+                          <li>concrete</li>
+                          <li>wood</li>
+                          <li>... and more</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </Typography>
+                </TabPanel>
+                <TabPanel value={value} index={3}>
+                  <Typography>
+                    <ul>
+                      <li>
+                        We go the extra mile to remove stubborn marks,
+                        construction mess, and stuck-on grime.
+                      </li>
+                      <br />
+                      <li>
+                        We will clean:
+                        <ul>
+                          <li>panes</li>
+                          <li>frames</li>
+                          <li>sills</li>
+                          <li>tracks</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </Typography>
+                </TabPanel>
+                <TabPanel value={value} index={4}>
+                  <Typography>
+                    <ul>
+                      <li>
+                        Like siding, roof shingles do not hold up to pressure
+                        washing. In fact, all major shingle manufacturers and
+                        insurance companies will void warrantees or drop
+                        coverage for pressure washing a shingled roof. As such,
+                        we only use soft washing to clean roofs.
+                      </li>
+                      <br />
+                      <li>
+                        We use low pressure and a gentle solution of rapidly
+                        bio-degradable surfactants and PH adjusters to kill
+                        growths like moss, algae, lichen, mildew and mold,
+                        remove dirt and grime, leave the surface inhospitable to
+                        new growth, and avoid damage to the siding.
+                      </li>
+                    </ul>
+                  </Typography>
+                </TabPanel>
+                <TabPanel value={value} index={5}>
+                  <Typography>
+                    <ul>
+                      <li>
+                        Depending on the state of the wood, we can:
+                        <ul>
+                          <li>clean</li>
+                          <li>treat</li>
+                          <li>sand</li>
+                          <li>fill</li>
+                          <li>brighten</li>
+                          <li>stain</li>
+                          <li>paint</li>
+                          <li>or replace boards</li>
+                        </ul>
+                      </li>
+                      <br />
+                      <li>
+                        Along with renewing the boards, we take care to fix rust
+                        marks, reset fasteners, and refasten boards as needed.
+                      </li>
+                    </ul>
+                  </Typography>
+                </TabPanel>
+                <TabPanel value={value} index={6}>
+                  <Typography>
+                    <ul>
+                      <li>
+                        We generally provide tree trimming as an add-on service,
+                        when trees are affecting parts of the home.
+                      </li>
+                      <br />
+                      <li>
+                        We will trim small to medium sized branches on trees up
+                        to 30 feet from the ground.
+                      </li>
+                    </ul>
+                  </Typography>
+                </TabPanel>
+              </Box>
+            </Stack>
+          </Paper>
+        </Box>
       </Box>
     </Box>
   );
