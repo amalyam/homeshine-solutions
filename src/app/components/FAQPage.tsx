@@ -79,7 +79,7 @@ export default function FAQPage() {
                 </Typography>
               </AccordionSummary>
               <AccordionDetails>
-                <Typography>Answer</Typography>
+                <Typography>Answer coming soon</Typography>
               </AccordionDetails>
             </Accordion>
             <Accordion>
@@ -89,7 +89,7 @@ export default function FAQPage() {
                 </Typography>
               </AccordionSummary>
               <AccordionDetails>
-                <Typography>Answer</Typography>
+                <Typography>Answer coming soon</Typography>
               </AccordionDetails>
             </Accordion>
             <Accordion>
@@ -99,7 +99,7 @@ export default function FAQPage() {
                 </Typography>
               </AccordionSummary>
               <AccordionDetails>
-                <Typography>Answer</Typography>
+                <Typography>Answer coming soon</Typography>
               </AccordionDetails>
             </Accordion>
             <Accordion>
@@ -109,7 +109,7 @@ export default function FAQPage() {
                 </Typography>
               </AccordionSummary>
               <AccordionDetails>
-                <Typography>Answer</Typography>
+                <Typography>Answer coming soon</Typography>
               </AccordionDetails>
             </Accordion>
             <Accordion>
@@ -119,7 +119,7 @@ export default function FAQPage() {
                 </Typography>
               </AccordionSummary>
               <AccordionDetails>
-                <Typography>Answer</Typography>
+                <Typography>Answer coming soon</Typography>
               </AccordionDetails>
             </Accordion>
             <Accordion>
@@ -129,7 +129,7 @@ export default function FAQPage() {
                 </Typography>
               </AccordionSummary>
               <AccordionDetails>
-                <Typography>Answer</Typography>
+                <Typography>Answer coming soon</Typography>
               </AccordionDetails>
             </Accordion>
             <Accordion>
@@ -139,7 +139,7 @@ export default function FAQPage() {
                 </Typography>
               </AccordionSummary>
               <AccordionDetails>
-                <Typography>Answer</Typography>
+                <Typography>Answer coming soon</Typography>
               </AccordionDetails>
             </Accordion>
           </div>
