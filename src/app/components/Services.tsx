@@ -98,7 +98,7 @@ export default function ServicesPage() {
               justifyContent: "center",
               backgroundColor: "white",
               margin: -1.2,
-              padding: 2,
+              padding: 1.5,
             }}
           >
             <Box display="flex" flexDirection="column" alignItems="center">
@@ -135,7 +135,7 @@ export default function ServicesPage() {
             maxWidth: "max-content",
             borderRadius: 2,
             marginBottom: 7,
-            padding: 2.5,
+            padding: 1.5,
           }}
         >
           <Paper
@@ -145,7 +145,6 @@ export default function ServicesPage() {
               justifyContent: "center",
               fontSize: "2.5rem",
               backgroundColor: "white",
-
               padding: 4,
             }}
           >
