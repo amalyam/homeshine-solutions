@@ -1,6 +1,6 @@
 - BusinessAppBar:
     - get rid of large whitespace gap right on xs - done, but not centered properly
-    - if on Home, free quote button centers contact form in viewport
+    - add "x" button on modal free quote box
 - About Us
     - get picture of Michael in uniform
 - Services
@@ -8,6 +8,7 @@
 - review gallery (flip through?)
 - Blog
 - FAQ
+    - scale in xs
 - add sections to home page for:
     - sample images
     - reviews
