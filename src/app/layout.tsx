@@ -35,7 +35,7 @@ export default function RootLayout({
       >
         <ThemeProvider theme={theme}>
           <BusinessAppBar />
-          {children}
+          <main style={{ flex: 1 }}>{children}</main>
           <Footer />
         </ThemeProvider>
         <Analytics />
