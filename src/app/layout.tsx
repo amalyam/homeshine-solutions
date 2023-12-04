@@ -30,7 +30,7 @@ export default function RootLayout({
           margin: 0,
           display: "flex",
           flexDirection: "column",
-          height: "100vh",
+          minHeight: "100vh",
         }}
       >
         <ThemeProvider theme={theme}>
