@@ -7,7 +7,6 @@ import Paper from "@mui/material/Paper";
 import Stack from "@mui/material/Stack";
 import Tab from "@mui/material/Tab";
 import Tabs from "@mui/material/Tabs";
-import theme from "../theme";
 import Typography from "@mui/material/Typography";
 import FoundationIcon from "@mui/icons-material/Foundation";
 import HouseSidingIcon from "@mui/icons-material/HouseSiding";
@@ -62,7 +61,10 @@ export default function ServicesPage() {
       sx={{
         display: "flex",
         justifyContent: "center",
-        background: `no-repeat center/cover url(${BackgroundImage.src})`,
+        background: {
+          xs: "none",
+          sm: "`no-repeat center/cover url(${BackgroundImage.src})`",
+        },
         minHeight: "100% 100%",
         alignItems: "center",
         zIndex: "1000",
@@ -75,7 +77,7 @@ export default function ServicesPage() {
           display: "flex",
           flexDirection: "column",
           blocksize: "fit-content",
-          maxWidth: "90%",
+          maxWidth: { xs: "100%", sm: "90%" },
           alignItems: "center",
         }}
       >
@@ -83,10 +85,13 @@ export default function ServicesPage() {
           sx={{
             display: "flex",
             justifyContent: "center",
-            backgroundColor: "rgba(33, 53, 55, 0.60)",
+            backgroundColor: {
+              xs: "transparent",
+              sm: "rgba(33, 53, 55, 0.60)",
+            },
             maxWidth: "max-content",
             borderRadius: 2,
-            margin: 8,
+            margin: { xs: "none", sm: 8 },
             padding: 3,
           }}
         >
@@ -99,6 +104,7 @@ export default function ServicesPage() {
               backgroundColor: "white",
               margin: -1.2,
               padding: 1.5,
+              boxShadow: { xs: "none", sm: "initial" },
             }}
           >
             <Box display="flex" flexDirection="column" alignItems="center">
@@ -108,7 +114,7 @@ export default function ServicesPage() {
               <Box display="flex" justifyContent="center">
                 <Typography
                   padding={4}
-                  width={{ md: "auto", lg: 600 }}
+                  width={{ xs: "90%", sm: "auto", lg: 600 }}
                   textAlign="left"
                 >
                   Every service begins with a conversation about your needs and
@@ -131,7 +137,10 @@ export default function ServicesPage() {
           sx={{
             display: "flex",
             justifyContent: "center",
-            backgroundColor: "rgba(33, 53, 55, 0.60)",
+            backgroundColor: {
+              xs: "transparent",
+              sm: "rgba(33, 53, 55, 0.60)",
+            },
             maxWidth: "max-content",
             borderRadius: 2,
             marginBottom: 7,
@@ -146,6 +155,7 @@ export default function ServicesPage() {
               fontSize: "2.5rem",
               backgroundColor: "white",
               padding: 4,
+              boxShadow: { xs: "none", sm: "initial" },
             }}
           >
             <Stack
