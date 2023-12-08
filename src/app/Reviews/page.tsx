@@ -19,8 +19,29 @@ export default function Reviews() {
         zIndex: "1000",
         flexGrow: "1",
         backgroundPosition: "top",
+        flexDirection: "column",
       }}
     >
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          backgroundColor: "rgba(33, 53, 55, 0.84)",
+          borderRadius: 2,
+          maxWidth: "max-content",
+          m: 3,
+          p: 2,
+        }}
+      >
+        <Typography
+          fontSize="2rem"
+          fontWeight="bold"
+          textAlign="center"
+          color="white"
+        >
+          Read reviews from real HomeShine customers!
+        </Typography>
+      </Box>
       <ReviewSlider />
     </Box>
   );
