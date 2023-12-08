@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { MobileStepper, Button } from "@mui/material";
+import { ArrowBackIos, ArrowForwardIos } from "@mui/icons-material";
 import { useKeenSlider } from "keen-slider/react";
 import Box from "@mui/material/Box";
 import Image from "next/image";
@@ -8,103 +10,100 @@ import review3 from "/src/images/review3.jpg";
 import styles from "../styles.module.css";
 import "keen-slider/keen-slider.min.css";
 
-function Arrow(props: {
-  disabled: boolean;
-  left?: boolean;
-  onClick: (e: any) => void;
-}) {
-  const disabeld = props.disabled ? styles["arrow--disabled"] : "";
-  return (
-    <svg
-      onClick={props.onClick}
-      className={`${styles["arrow"]} ${
-        props.left ? styles["arrow--left"] : styles["arrow--right"]
-      } ${disabeld}`}
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-    >
-      {props.left && (
-        <path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z" />
-      )}
-      {!props.left && (
-        <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />
-      )}
-    </svg>
-  );
-}
+const reviews = [review1, review2, review3];
 
 export default function ReviewSlider() {
-  const [currentSlide, setCurrentSlide] = React.useState(0);
-  const [loaded, setLoaded] = useState(false);
-  const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
-    initial: 0,
-    slideChanged(slider) {
-      setCurrentSlide(slider.track.details.rel);
-    },
-    created() {
-      setLoaded(true);
-    },
-  });
+  const [activeStep, setActiveStep] = useState(0);
+  const [imageHeight, setImageHeight] = useState(0);
+  const [imageWidth, setImageWidth] = useState(0);
+
+  const handleNext = () => {
+    setActiveStep((prevActiveStep) => (prevActiveStep + 1) % reviews.length);
+  };
+
+  const handleBack = () => {
+    setActiveStep(
+      (prevActiveStep) => (prevActiveStep + reviews.length - 1) % reviews.length
+    );
+  };
+
+  const handleImageLoad = (event: React.SyntheticEvent) => {
+    const img = event.target as HTMLImageElement;
+    const width = img.naturalWidth;
+    const height = img.naturalHeight;
+    const aspectRatio = width / height;
+    const maxHeight = 600;
+
+    if (height > maxHeight) {
+      setImageHeight(maxHeight);
+      setImageWidth(maxHeight * aspectRatio);
+    } else {
+      setImageHeight(height);
+      setImageWidth(width);
+    }
+  };
 
   return (
-    <Box sx={{ m: 8 }}>
-      <div className={styles["navigation-wrapper"]}>
-        <div ref={sliderRef} className={styles["keen-slider"]}>
-          <div className={`${styles["keen-slider__slide"]} ${styles.slide}`}>
-            <Image src={review1} alt="review 1" width={500} />
-          </div>
-          <div className={`${styles["keen-slider__slide"]} ${styles.slide}`}>
-            <Image src={review2} alt="review 2" width={400} />
-          </div>
-          <div className={`${styles["keen-slider__slide"]} ${styles.slide}`}>
-            <Image src={review3} alt="review 3" width={500} />
-          </div>
-        </div>
-        {loaded && instanceRef.current && (
-          <>
-            <Arrow
-              left
-              onClick={(e: any) => {
-                e.stopPropagation();
-                instanceRef.current?.prev();
-              }}
-              disabled={currentSlide === 0}
-            />
-
-            <Arrow
-              onClick={(e: any) => {
-                e.stopPropagation();
-                instanceRef.current?.next();
-              }}
-              disabled={
-                currentSlide ===
-                (instanceRef.current?.track?.details?.slides?.length ?? 0) - 1
-              }
-            />
-          </>
-        )}
+    <>
+      <Box
+        sx={{
+          position: "relative",
+          width: "60vw",
+          height: "80vh",
+        }}
+      >
+        <Box
+          sx={{
+            p: 2,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            backgroundColor: "rgba(33, 53, 55, 0.84)",
+            borderRadius: 2,
+            width: "100%",
+            height: "100%",
+          }}
+        >
+          <Image
+            src={reviews[activeStep]}
+            alt={`review ${activeStep + 1}`}
+            width={imageWidth}
+            height={imageHeight}
+            onLoad={handleImageLoad}
+          />
+          <Button
+            sx={{
+              position: "absolute",
+              top: "50%",
+              left: 0,
+              transform: "translateY(-50%)",
+              backgroundColor: "rgba(0 ,0 ,0, 0.5)",
+              "&:hover": { backgroundColor: "rgba(0,0,0,0.7)" },
+            }}
+            onClick={handleBack}
+          >
+            <ArrowBackIos />
+          </Button>
+          <Button
+            sx={{
+              position: "absolute",
+              top: "50%",
+              right: 0,
+              transform: "translateY(-50%)",
+              backgroundColor: "rgba(0 ,0 ,0, 0.5)",
+              "&:hover": { backgroundColor: "rgba(0,0,0,0.7)" },
+            }}
+            onClick={handleNext}
+          >
+            <ArrowForwardIos />
+          </Button>
+        </Box>
+      </Box>
+      <div style={{ display: "none" }}>
+        {reviews.map((review, index) => (
+          <img key={index} src={review.src} alt={`review ${index + 1}`} />
+        ))}
       </div>
-      {loaded && instanceRef.current && (
-        <div className={styles["dots"]}>
-          {[
-            ...Array(
-              instanceRef.current?.track?.details?.slides?.length ?? 0
-            ).keys(),
-          ].map((idx) => {
-            return (
-              <button
-                key={idx}
-                onClick={() => {
-                  instanceRef.current?.moveToIdx(idx);
-                }}
-                className={`${styles["dot"]} ${
-                  currentSlide === idx ? styles["active"] : ""
-                }`}
-              ></button>
-            );
-          })}
-        </div>
-      )}
-    </Box>
+    </>
   );
 }
