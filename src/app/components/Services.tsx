@@ -61,10 +61,7 @@ export default function ServicesPage() {
       sx={{
         display: "flex",
         justifyContent: "center",
-        background: {
-          xs: "none",
-          sm: "`no-repeat center/cover url(${BackgroundImage.src})`",
-        },
+        background: `no-repeat center/cover url(${BackgroundImage.src})`,
         minHeight: "100% 100%",
         alignItems: "center",
         zIndex: "1000",
@@ -104,7 +101,6 @@ export default function ServicesPage() {
               backgroundColor: "white",
               margin: -1.2,
               padding: 1.5,
-              boxShadow: { xs: "none", sm: "initial" },
             }}
           >
             <Box display="flex" flexDirection="column" alignItems="center">
@@ -141,7 +137,7 @@ export default function ServicesPage() {
               xs: "transparent",
               sm: "rgba(33, 53, 55, 0.60)",
             },
-            maxWidth: "max-content",
+            maxWidth: { xs: "90%", sm: "max-content" },
             borderRadius: 2,
             marginBottom: 7,
             padding: 1.5,
@@ -155,7 +151,7 @@ export default function ServicesPage() {
               fontSize: "2.5rem",
               backgroundColor: "white",
               padding: 4,
-              boxShadow: { xs: "none", sm: "initial" },
+              width: { xs: "90%", sm: "auto" },
             }}
           >
             <Stack
