@@ -52,6 +52,7 @@ export default function ReviewSlider() {
         <Box
           sx={{
             display: "flex",
+            flexDirection: "column",
             alignItems: "center",
             justifyContent: "center",
             backgroundColor: "rgba(33, 53, 55, 0.84)",
@@ -70,28 +71,33 @@ export default function ReviewSlider() {
           <Button
             sx={{
               position: "absolute",
-              top: "50%",
-              left: "15px",
-              transform: "translateY(-50%)",
+              top: { xs: "15px", sm: "50%" },
+              left: { xs: "50%", sm: "15px" },
+              transform: { xs: "translateX(-50%)", sm: "none" },
               backgroundColor: "rgba(0 ,0 ,0, 0.5)",
               "&:hover": { backgroundColor: "rgba(0,0,0,0.7)" },
             }}
             onClick={handleBack}
           >
-            <ArrowBackIos />
+            <ArrowBackIos
+              sx={{ transform: { xs: "rotate(90deg)", sm: "none" } }}
+            />
           </Button>
           <Button
             sx={{
               position: "absolute",
-              top: "50%",
-              right: "15px",
-              transform: "translateY(-50%)",
+              top: { xs: "auto", sm: "50%" },
+              bottom: { xs: "15px", sm: "auto" },
+              right: { xs: "50%", sm: "15px" },
+              transform: { xs: "translateX(50%)", sm: "none" },
               backgroundColor: "rgba(0 ,0 ,0, 0.5)",
               "&:hover": { backgroundColor: "rgba(0,0,0,0.7)" },
             }}
             onClick={handleNext}
           >
-            <ArrowForwardIos />
+            <ArrowForwardIos
+              sx={{ transform: { xs: "rotate(90deg)", sm: "none" } }}
+            />
           </Button>
         </Box>
       </Box>
