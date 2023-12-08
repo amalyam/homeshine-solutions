@@ -48,13 +48,12 @@ export default function ReviewSlider() {
       <Box
         sx={{
           position: "relative",
-          width: "60vw",
-          height: "80vh",
+          width: "50vw",
+          height: "70vh",
         }}
       >
         <Box
           sx={{
-            p: 2,
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
@@ -75,7 +74,7 @@ export default function ReviewSlider() {
             sx={{
               position: "absolute",
               top: "50%",
-              left: 0,
+              left: "15px",
               transform: "translateY(-50%)",
               backgroundColor: "rgba(0 ,0 ,0, 0.5)",
               "&:hover": { backgroundColor: "rgba(0,0,0,0.7)" },
@@ -88,7 +87,7 @@ export default function ReviewSlider() {
             sx={{
               position: "absolute",
               top: "50%",
-              right: 0,
+              right: "15px",
               transform: "translateY(-50%)",
               backgroundColor: "rgba(0 ,0 ,0, 0.5)",
               "&:hover": { backgroundColor: "rgba(0,0,0,0.7)" },
