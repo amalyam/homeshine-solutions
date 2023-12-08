@@ -8,7 +8,6 @@ import Paper from "@mui/material/Paper";
 import Stack from "@mui/material/Stack";
 import Tab from "@mui/material/Tab";
 import Tabs from "@mui/material/Tabs";
-import theme from "../theme";
 import Typography from "@mui/material/Typography";
 import FoundationIcon from "@mui/icons-material/Foundation";
 import HouseSidingIcon from "@mui/icons-material/HouseSiding";
@@ -62,13 +61,39 @@ export default function ServicesPage() {
   };
 
   return (
-    <div>
-      {isXsScreen ? (
+    <Box
+      sx={{
+        display: "flex",
+        justifyContent: "center",
+        background: `no-repeat center/cover url(${BackgroundImage.src})`,
+        minHeight: "100% 100%",
+        alignItems: "center",
+        zIndex: "1000",
+        flexGrow: "1",
+        backgroundPosition: "top",
+      }}
+    >
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          blocksize: "fit-content",
+          maxWidth: { xs: "100%", sm: "90%" },
+          alignItems: "center",
+        }}
+      >
         <Box
           sx={{
             display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
+            justifyContent: "center",
+            backgroundColor: {
+              xs: "transparent",
+              sm: "rgba(33, 53, 55, 0.60)",
+            },
+            maxWidth: "max-content",
+            borderRadius: 2,
+            margin: { xs: "none", sm: 8 },
+            padding: 3,
           }}
         >
           <Paper
@@ -86,7 +111,11 @@ export default function ServicesPage() {
                 Services
               </Typography>
               <Box display="flex" justifyContent="center">
-                <Typography padding={4} width="auto" textAlign="left">
+                <Typography
+                  padding={4}
+                  width={{ xs: "90%", sm: "auto", lg: 600 }}
+                  textAlign="left"
+                >
                   Every service begins with a conversation about your needs and
                   a quote.
                   <br />
@@ -102,6 +131,21 @@ export default function ServicesPage() {
               </Box>
             </Box>
           </Paper>
+        </Box>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            backgroundColor: {
+              xs: "transparent",
+              sm: "rgba(33, 53, 55, 0.60)",
+            },
+            maxWidth: { xs: "90%", sm: "max-content" },
+            borderRadius: 2,
+            marginBottom: 7,
+            padding: 1.5,
+          }}
+        >
           <Paper
             sx={{
               display: "flex",
@@ -110,6 +154,7 @@ export default function ServicesPage() {
               fontSize: "2.5rem",
               backgroundColor: "white",
               padding: 4,
+              width: { xs: "90%", sm: "auto" },
             }}
           >
             <Stack
