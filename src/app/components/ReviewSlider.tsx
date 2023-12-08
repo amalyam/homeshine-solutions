@@ -1,14 +1,11 @@
-import React, { useEffect, useState } from "react";
-import { MobileStepper, Button } from "@mui/material";
+import React, { useState } from "react";
+import Button from "@mui/material/Button";
 import { ArrowBackIos, ArrowForwardIos } from "@mui/icons-material";
-import { useKeenSlider } from "keen-slider/react";
 import Box from "@mui/material/Box";
 import Image from "next/image";
 import review1 from "/src/images/review1.jpg";
 import review2 from "/src/images/review2.jpg";
 import review3 from "/src/images/review3.jpg";
-import styles from "../styles.module.css";
-import "keen-slider/keen-slider.min.css";
 
 const reviews = [review1, review2, review3];
 
