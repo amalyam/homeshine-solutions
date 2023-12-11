@@ -1,7 +1,6 @@
 "use client";
 
 import { ReactNode, useState, SyntheticEvent } from "react";
-import { useMediaQuery } from "@mui/material";
 import BackgroundImage from "/src/images/deck-restoration-after.png";
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
@@ -54,7 +53,6 @@ function a11yProps(index: number) {
 
 export default function ServicesPage() {
   const [value, setValue] = useState(0);
-  const isXsScreen = useMediaQuery(theme.breakpoints.down("xs"));
 
   const handleChange = (event: SyntheticEvent, newValue: number) => {
     setValue(newValue);
@@ -446,7 +444,7 @@ export default function ServicesPage() {
             </Stack>
           </Paper>
         </Box>
-      ) : (
+        ) : (
         <Box
           sx={{
             display: "flex",
@@ -835,7 +833,7 @@ export default function ServicesPage() {
             </Box>
           </Box>
         </Box>
-      )}
-    </div>
+      </Box>
+    </Box>
   );
 }
