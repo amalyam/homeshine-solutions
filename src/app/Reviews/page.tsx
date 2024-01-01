@@ -39,7 +39,7 @@ export default function Reviews() {
           textAlign="center"
           color="white"
         >
-          Read reviews from real HomeShine customers!
+          Read reviews from HomeShine customers!
         </Typography>
       </Box>
       <ReviewSlider />
