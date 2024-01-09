@@ -1,7 +1,6 @@
 "use client";
 
 import React, { ReactNode, useState, SyntheticEvent } from "react";
-import BackgroundImage from "/src/images/deck-restoration-after.png";
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import Stack from "@mui/material/Stack";
@@ -15,8 +14,6 @@ import RoofingIcon from "@mui/icons-material/Roofing";
 import WaterDamageOutlinedIcon from "@mui/icons-material/WaterDamageOutlined";
 import WaterDropOutlinedIcon from "@mui/icons-material/WaterDropOutlined";
 import WindowOutlinedIcon from "@mui/icons-material/WindowOutlined";
-
-// TODO: redo page with media queries - no background image on mobile, just text full width
 
 interface TabPanelProps {
   children?: ReactNode;
@@ -63,7 +60,7 @@ export default function ServicesPage() {
       sx={{
         display: "flex",
         justifyContent: "center",
-        background: `no-repeat center/cover url(${BackgroundImage.src})`,
+        background: `no-repeat center/cover url(/images/deck-restoration-after.png)`,
         minHeight: "100% 100%",
         alignItems: "center",
         zIndex: "1000",
