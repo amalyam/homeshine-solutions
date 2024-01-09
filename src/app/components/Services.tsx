@@ -60,12 +60,14 @@ export default function ServicesPage() {
       sx={{
         display: "flex",
         justifyContent: "center",
-        background: `no-repeat center/cover url(/images/deck-restoration-after.png)`,
+        backgroundImage: `url(/images/deck-restoration-after.png)`,
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center top",
+        backgroundSize: "cover",
         minHeight: "100% 100%",
         alignItems: "center",
         zIndex: "1000",
         flexGrow: "1",
-        backgroundPosition: "top",
       }}
     >
       <Box
