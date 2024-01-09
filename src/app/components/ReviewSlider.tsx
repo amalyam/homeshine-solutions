@@ -1,14 +1,65 @@
-import React, { useState } from "react";
-import Button from "@mui/material/Button";
-import { ArrowBackIos, ArrowForwardIos } from "@mui/icons-material";
+import React, { useEffect } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 import Box from "@mui/material/Box";
 import Image from "next/image";
-import review1 from "/src/images/review1.jpg";
-import review2 from "/src/images/review2.jpg";
-import review3 from "/src/images/review3.jpg";
 
-const reviews = [review1, review2, review3];
+const reviews = [
+  "/images/review1.jpg",
+  "/images/review2.jpg",
+  "/images/review3.jpg",
+  "/images/review4.jpg",
+];
 
+export default function ReviewSlider() {
+  return (
+    <Box
+      sx={{
+        display: "flex",
+        justifyContent: "center",
+        backgroundColor: "rgba(33, 53, 55, 0.84)",
+        borderRadius: 2,
+        width: "45%",
+        m: 3,
+        p: 2,
+      }}
+    >
+      <Swiper
+        style={{ width: "100%", height: "500px" }}
+        modules={[Navigation, Pagination]}
+        spaceBetween={10}
+        slidesPerView={1}
+        navigation
+        loop
+      >
+        {reviews.map((review, index) => (
+          <SwiperSlide
+            key={index}
+            style={{
+              textAlign: "center",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              position: "relative",
+            }}
+          >
+            <Image
+              src={review}
+              alt={`Review ${index + 1}`}
+              layout="fill"
+              objectFit="contain"
+            />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </Box>
+  );
+}
+
+/*
 export default function ReviewSlider() {
   const [activeStep, setActiveStep] = useState(0);
   const [imageHeight, setImageHeight] = useState(0);
@@ -109,3 +160,4 @@ export default function ReviewSlider() {
     </>
   );
 }
+*/

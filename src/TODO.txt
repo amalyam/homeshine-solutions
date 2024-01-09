@@ -1,4 +1,12 @@
+- FAQ:
+    - fix display on xs/mobile
+- Services:
+    - fix doubling on xs/mobile
+- Reviews:
+    - fix review slider
 - BusinessAppBar:
+    - add "Menu" next to icon or make icon bigger?
+    - on mobile horizontal, make it disappear when sliding down
     - get rid of large whitespace gap right on xs - done, but not centered properly
     - add "x" button on modal free quote box
 - About Us
