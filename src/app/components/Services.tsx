@@ -1,6 +1,6 @@
 "use client";
 
-import { ReactNode, useState, SyntheticEvent } from "react";
+import React, { ReactNode, useState, SyntheticEvent } from "react";
 import BackgroundImage from "/src/images/deck-restoration-after.png";
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
