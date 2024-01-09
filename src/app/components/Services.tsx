@@ -16,6 +16,8 @@ import WaterDamageOutlinedIcon from "@mui/icons-material/WaterDamageOutlined";
 import WaterDropOutlinedIcon from "@mui/icons-material/WaterDropOutlined";
 import WindowOutlinedIcon from "@mui/icons-material/WindowOutlined";
 
+// TODO: redo page with media queries - no background image on mobile, just text full width
+
 interface TabPanelProps {
   children?: ReactNode;
   index: number;
