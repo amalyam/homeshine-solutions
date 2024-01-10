@@ -6,6 +6,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Box from "@mui/material/Box";
 import Image from "next/image";
+import styles from "../styles.module.css";
 
 const reviews = [
   "/images/review1.jpg",
