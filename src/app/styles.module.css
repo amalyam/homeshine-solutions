@@ -8,6 +8,6 @@
     font-size: 1.3rem;
 }
 
-:root {
-    --swiper-navigation-color: white;
-  }
+.containImage {
+    object-fit: contain;
+}
