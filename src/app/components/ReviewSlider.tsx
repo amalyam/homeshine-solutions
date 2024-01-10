@@ -29,7 +29,13 @@ export default function ReviewSlider() {
       }}
     >
       <Swiper
-        style={{ width: "100%", height: "500px" }}
+        style={
+          {
+            width: "100%",
+            height: "500px",
+            "--swiper-navigation-color": "white",
+          } as React.CSSProperties
+        }
         modules={[Navigation, Pagination]}
         spaceBetween={10}
         slidesPerView={1}
