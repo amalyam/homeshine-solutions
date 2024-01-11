@@ -16,32 +16,31 @@ const reviews = [
   "/images/review4.jpg",
 ];
 
-const VerticalSwiper = styled(Swiper)(({ theme }) => ({
+const BaseSwiper = styled(Swiper)(({ theme }) => ({
   width: "100%",
-  height: "500px",
-  "--swiper-navigation-color": "white",
-  "& .swiper-button-next, & .swiper-button-prev": {
-    width: "30px",
-    height: "30px",
-    left: "auto",
+  "& .swiper-pagination-bullet": {
+    // inactive bullets
+    background: theme.palette.primary.main,
   },
-  "& .swiper-button-next": {
-    bottom: "10px",
-    top: "495px",
-    right: "50%",
-    transform: "translateX(50%) rotate(90deg)",
-  },
-  "& .swiper-button-prev": {
-    top: "20px",
-    right: "50%",
-    transform: "translateX(50%) rotate(90deg)",
+  "& .swiper-pagination-bullet-active": {
+    // active bullets
+    background: theme.palette.secondary.main,
   },
 }));
 
-const HorizontalSwiper = styled(Swiper)(({ theme }) => ({
-  width: "100%",
+const VerticalSwiper = styled(BaseSwiper)(({ theme }) => ({
+  height: "475px",
+  "& .swiper-pagination": {
+    bottom: "0px",
+  },
+}));
+
+const HorizontalSwiper = styled(BaseSwiper)(({ theme }) => ({
   height: "500px",
   "--swiper-navigation-color": "white",
+  "& .swiper-slide": {
+    height: "470px",
+  },
 }));
 
 export default function ReviewSlider() {
