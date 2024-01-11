@@ -28,6 +28,7 @@ let theme = createTheme({
     info: {
       main: grey[600],
     },
+      main: "#008394",
   },
   typography: {
     allVariants: {
