@@ -67,7 +67,10 @@ export default function BusinessAppBar() {
           <ContactForm />
         </Container>
       </Modal>
-      <Box>
+      <Box
+        display={{ xs: "flex", sm: "block" }}
+        justifyContent={{ xs: "center", sm: "flex-start" }}
+      >
         <Toolbar
           disableGutters
           sx={{
@@ -89,6 +92,7 @@ export default function BusinessAppBar() {
                 display: { xs: "flex", md: "none" },
                 marginRight: "0px",
                 flexDirection: "column",
+                justifyContent: "center",
               }}
             >
               <IconButton
@@ -144,7 +148,7 @@ export default function BusinessAppBar() {
                 ))}
               </Menu>
             </Box>
-            <Box>
+            <Box display="flex" justifyContent="center">
               <Link href="/" underline="none">
                 <Image
                   src={HomeShineLogoTransparent}
@@ -152,7 +156,7 @@ export default function BusinessAppBar() {
                   style={{
                     objectFit: "contain",
                     height: "80px",
-                    marginLeft: 10,
+                    marginTop: "-22px",
                   }}
                 />
               </Link>
