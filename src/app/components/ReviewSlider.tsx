@@ -1,4 +1,6 @@
 import React from "react";
+import { styled, useTheme } from "@mui/system";
+import useMediaQuery from "@mui/material/useMediaQuery";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
@@ -6,7 +8,6 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Box from "@mui/material/Box";
 import Image from "next/image";
-import styles from "../styles.module.css";
 
 const reviews = [
   "/images/review1.jpg",
@@ -15,7 +16,40 @@ const reviews = [
   "/images/review4.jpg",
 ];
 
+const VerticalSwiper = styled(Swiper)(({ theme }) => ({
+  width: "100%",
+  height: "500px",
+  "--swiper-navigation-color": "white",
+  "& .swiper-button-next, & .swiper-button-prev": {
+    width: "30px",
+    height: "30px",
+    left: "auto",
+  },
+  "& .swiper-button-next": {
+    bottom: "10px",
+    top: "495px",
+    right: "50%",
+    transform: "translateX(50%) rotate(90deg)",
+  },
+  "& .swiper-button-prev": {
+    top: "20px",
+    right: "50%",
+    transform: "translateX(50%) rotate(90deg)",
+  },
+}));
+
+const HorizontalSwiper = styled(Swiper)(({ theme }) => ({
+  width: "100%",
+  height: "500px",
+  "--swiper-navigation-color": "white",
+}));
+
 export default function ReviewSlider() {
+  const theme = useTheme();
+  const isXs = useMediaQuery("(max-width:600px)");
+
+  const SwiperComponent = isXs ? VerticalSwiper : HorizontalSwiper;
+
   return (
     <Box
       sx={{
@@ -23,19 +57,12 @@ export default function ReviewSlider() {
         justifyContent: "center",
         backgroundColor: "rgba(33, 53, 55, 0.84)",
         borderRadius: 2,
-        width: "45%",
+        width: { xs: "90%", sm: "45%" },
         m: 3,
         p: 2,
       }}
     >
-      <Swiper
-        style={
-          {
-            width: "100%",
-            height: "500px",
-            "--swiper-navigation-color": "white",
-          } as React.CSSProperties
-        }
+      <SwiperComponent
         modules={[Navigation, Pagination]}
         spaceBetween={10}
         slidesPerView={1}
@@ -61,7 +88,7 @@ export default function ReviewSlider() {
             />
           </SwiperSlide>
         ))}
-      </Swiper>
+      </SwiperComponent>
     </Box>
   );
 }
