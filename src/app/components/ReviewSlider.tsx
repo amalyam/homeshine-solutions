@@ -1,7 +1,7 @@
 import React from "react";
 import { styled, useTheme } from "@mui/system";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide, SwiperRef } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -49,6 +49,13 @@ export default function ReviewSlider() {
 
   const SwiperComponent = isXs ? VerticalSwiper : HorizontalSwiper;
 
+  let swiperRef = React.useRef<SwiperRef>(null);
+  const goToNextSlide = () => {
+    if (swiperRef.current) {
+      swiperRef.current.swiper.slideNext();
+    }
+  };
+
   return (
     <Box
       sx={{
@@ -62,6 +69,7 @@ export default function ReviewSlider() {
       }}
     >
       <SwiperComponent
+        ref={swiperRef}
         modules={[Navigation, Pagination]}
         spaceBetween={10}
         slidesPerView={1}
@@ -79,6 +87,7 @@ export default function ReviewSlider() {
               alignItems: "center",
               position: "relative",
             }}
+            onClick={goToNextSlide}
           >
             <Image
               src={review}
