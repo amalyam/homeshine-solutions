@@ -117,7 +117,12 @@ function Copyright() {
 export default function AppFooter() {
   return (
     <Box
-      sx={{ position: "sticky", bottom: 0, zIndex: 1000, marginTop: "auto" }}
+      sx={{
+        position: { xs: "static", sm: "sticky" },
+        bottom: 0,
+        zIndex: 1000,
+        marginTop: "auto",
+      }}
     >
       <Typography
         component="footer"
