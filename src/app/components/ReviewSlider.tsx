@@ -66,9 +66,9 @@ export default function ReviewSlider() {
         modules={[Navigation, Pagination]}
         spaceBetween={10}
         slidesPerView={1}
-        navigation
         loop
         pagination={{ dynamicBullets: true, clickable: true }}
+        navigation={{ enabled: !isXs }}
       >
         {reviews.map((review, index) => (
           <SwiperSlide
