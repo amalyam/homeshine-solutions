@@ -47,7 +47,11 @@ export default function FAQPage() {
               padding: 2,
             }}
           >
-            <Typography fontWeight={500} lineHeight={1} fontSize="2.5rem">
+            <Typography
+              fontWeight={500}
+              lineHeight={1}
+              fontSize={{ xs: "1.6rem", sm: "2.5rem" }}
+            >
               Frequently Asked Questions
             </Typography>
           </Paper>
@@ -61,7 +65,7 @@ export default function FAQPage() {
             padding: 2,
           }}
         >
-          <div style={{ width: "45rem" }}>
+          <Box sx={{ width: { xs: "25rem", sm: "45rem" } }}>
             <Accordion>
               <AccordionSummary expandIcon={<ExpandMoreIcon />}>
                 <Typography className={styles.faqText}>
