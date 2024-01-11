@@ -17,7 +17,7 @@ import Modal from "@mui/material/Modal";
 import Stack from "@mui/material/Stack";
 import theme from "../theme";
 import Toolbar from "@mui/material/Toolbar";
-
+import { useMediaQuery } from "@mui/material";
 import { useState } from "react";
 
 // if on Home, free quote button centers contact form in viewport
@@ -51,8 +51,10 @@ export default function BusinessAppBar() {
     return setOpen(false);
   };
 
+  const isXs = useMediaQuery("(max-width:600px)");
+
   return (
-    <AppBar position="sticky">
+    <AppBar position={isXs ? "static" : "sticky"}>
       <Modal
         open={open}
         onClose={handleClose}
