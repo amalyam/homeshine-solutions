@@ -35,3 +35,4 @@ Other:
 - broken on width 900px-1200px
 - does coming soon page break when menu is open?
 - image starts tiling on very wide screen (e.g. 4k)
+- move all images into public/images folder

@@ -28,24 +28,16 @@ let theme = createTheme({
     info: {
       main: grey[600],
     },
+    footer: {
+      light: blueGrey[50],
+      main: "#008394",
+      dark: grey[900],
+    },
   },
   typography: {
     allVariants: {
       ...montserrat.style,
     },
-  },
-});
-
-theme = createTheme(theme, {
-  palette: {
-    footer: theme.palette.augmentColor({
-      color: {
-        light: blueGrey[50],
-        main: theme.palette.secondary.dark,
-        dark: grey[900],
-      },
-      name: "footer",
-    }),
   },
 });
 
