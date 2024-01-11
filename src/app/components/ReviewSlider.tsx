@@ -57,7 +57,7 @@ export default function ReviewSlider() {
         justifyContent: "center",
         backgroundColor: "rgba(33, 53, 55, 0.84)",
         borderRadius: 2,
-        width: { xs: "90%", sm: "45%" },
+        width: { xs: "90%", md: "80%", lg: "65%", xl: "45%" },
         m: 3,
         p: 2,
       }}
