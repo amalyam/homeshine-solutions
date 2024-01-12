@@ -1,6 +1,7 @@
 import BackgroundImage from "/src/images/Gutter_Clean_3.jpg";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
+import Image from "next/image";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
@@ -22,7 +23,9 @@ export default function AboutUs() {
         backgroundPosition: "top",
       }}
     >
-      <Container sx={{ alignItems: "center" }}>
+      <Container
+        sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+      >
         <Box
           sx={{
             display: "flex",
@@ -55,79 +58,155 @@ export default function AboutUs() {
             display: "flex",
             justifyContent: "center",
             backgroundColor: "rgba(0, 162, 212, 0.24)",
-            maxWidth: "max-content",
+            maxWidth: "1050px",
             borderRadius: 1,
             marginTop: { xs: "13px", sm: "none" },
+            marginBottom: 8,
           }}
         >
           <Paper
             sx={{
               backgroundColor: "white",
               margin: 1.2,
-              padding: 2,
+              padding: 6,
             }}
           >
-            <Typography>
+            <div
+              style={{
+                position: "relative",
+                height: "300px",
+                marginBottom: 30,
+              }}
+            >
+              <Image
+                src="/images/michael_powerwashing_vinal.jpeg"
+                alt="main photo"
+                layout="fill"
+                objectFit="contain"
+              />
+            </div>
+            <Typography
+              fontWeight={500}
+              display="block"
+              align="justify"
+              marginBottom={4.5}
+            >
               Hi, I’m Michael Elias, proud owner and operator of HomeShine
               Solutions! With a background as a former U.S. Marine and my
               current role as a teacher at Chelsea Public Schools, I established
               HomeShine with a singular purpose – to offer our community a
               trustworthy home services company delivering top-tier results with
-              unmatched value. I hope to work with you soon and would be
-              delighted to share references from other satisfied customers upon
-              request!
+              unmatched value. I look forward to working with you!
               <br />
-              <br />
+              <br />I would be delighted to share references from other
+              satisfied customers upon request!
+            </Typography>
+
+            <Typography
+              fontWeight={600}
+              sx={{
+                marginLeft: {
+                  xs: "0px",
+                  sm: "125px",
+                  md: "270px",
+                  lg: "280px",
+                  xl: "290px",
+                },
+              }}
+            >
               HomeShine Values:
-              <Typography>
-                <List sx={{ listStyle: "decimal", pl: 4 }}>
-                  <ListItem sx={{ display: "list-item" }}>
-                    <ListItemText
-                      primary="Trust + Integrity"
-                      primaryTypographyProps={{
-                        display: "flex",
-                        alignItems: "center",
-                      }}
-                    />
-                  </ListItem>
-                  <ListItem sx={{ display: "list-item" }}>
-                    <ListItemText
-                      primary="Craftsmanship"
-                      primaryTypographyProps={{
-                        display: "flex",
-                        alignItems: "center",
-                      }}
-                    />
-                  </ListItem>
-                  <ListItem sx={{ display: "list-item" }}>
-                    <ListItemText
-                      primary="Customer Education"
-                      primaryTypographyProps={{
-                        display: "flex",
-                        alignItems: "center",
-                      }}
-                    />
-                  </ListItem>
-                  <ListItem sx={{ display: "list-item" }}>
-                    <ListItemText
-                      primary="Continuous Improvement"
-                      primaryTypographyProps={{
-                        display: "flex",
-                        alignItems: "center",
-                      }}
-                    />
-                  </ListItem>
-                  <ListItem sx={{ display: "list-item" }}>
-                    <ListItemText
-                      primary="Environmental Responsibility"
-                      primaryTypographyProps={{
-                        display: "flex",
-                        alignItems: "center",
-                      }}
-                    />
-                  </ListItem>
-                </List>
-              </Typography>
+            </Typography>
+            <Typography
+              fontWeight={600}
+              display="flex"
+              flexDirection="column"
+              alignItems="center"
+            >
+              <List
+                sx={{
+                  listStyle: "decimal",
+                  pl: 4,
+                  margin: "3px",
+                }}
+              >
+                <ListItem
+                  sx={{
+                    display: "list-item",
+                    margin: "0.1em",
+                    padding: ".01px",
+                  }}
+                >
+                  <ListItemText
+                    primary="Trust + Integrity"
+                    primaryTypographyProps={{
+                      display: "flex",
+                      alignItems: "center",
+                    }}
+                  />
+                </ListItem>
+                <ListItem
+                  sx={{
+                    display: "list-item",
+                    margin: "0.1em",
+                    padding: ".01px",
+                  }}
+                >
+                  <ListItemText
+                    primary="Craftsmanship"
+                    primaryTypographyProps={{
+                      display: "flex",
+                      alignItems: "center",
+                    }}
+                  />
+                </ListItem>
+                <ListItem
+                  sx={{
+                    display: "list-item",
+                    margin: "0.1em",
+                    padding: ".01px",
+                  }}
+                >
+                  <ListItemText
+                    primary="Customer Education"
+                    primaryTypographyProps={{
+                      display: "flex",
+                      alignItems: "center",
+                    }}
+                  />
+                </ListItem>
+                <ListItem
+                  sx={{
+                    display: "list-item",
+                    margin: "0.1em",
+                    padding: ".01px",
+                  }}
+                >
+                  <ListItemText
+                    primary="Continuous Improvement"
+                    primaryTypographyProps={{
+                      display: "flex",
+                      alignItems: "center",
+                    }}
+                  />
+                </ListItem>
+                <ListItem
+                  sx={{
+                    display: "list-item",
+                    margin: "0.1em",
+                    padding: ".01px",
+                  }}
+                >
+                  <ListItemText
+                    primary="Environmental Responsibility"
+                    primaryTypographyProps={{
+                      display: "flex",
+                      alignItems: "center",
+                    }}
+                  />
+                </ListItem>
+              </List>
+            </Typography>
+            <Typography sx={{ marginTop: 3 }}>
               A bit more about us:
               <br />
               <br />
