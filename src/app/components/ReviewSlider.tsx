@@ -30,6 +30,7 @@ const BaseSwiper = styled(Swiper)(({ theme }) => ({
 
 const VerticalSwiper = styled(BaseSwiper)(({ theme }) => ({
   height: "475px",
+  "--swiper-navigation-color": "transparent",
   "& .swiper-pagination": {
     bottom: "0px",
   },
