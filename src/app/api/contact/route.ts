@@ -1,4 +1,4 @@
-import { sql } from "@vercel/postgres";
+//import { sql } from "@vercel/postgres";
 import { NextRequest, NextResponse } from "next/server";
 import FormFields from "../../types/FormFields";
 import { google, Auth } from "googleapis";
@@ -48,7 +48,10 @@ export async function POST(request: NextRequest) {
         email: "noreply@mail.homeshinesolutions.com",
       },
       subject: "Free Quote - Copy of Your Responses",
-      reply_to: "Michael Elias <michael.homeshinesolutions@gmail.com>",
+      reply_to: "Michael Elias <homeshinesolutionsllc@gmail.com>",
+      headers: {
+        CC: "homeshinesolutions@gmail.com",
+      },
       html: emailBodyHtml(data),
     },
   };
@@ -80,7 +83,7 @@ export async function POST(request: NextRequest) {
   console.log("Adding row to spreadsheet");
   await googleService.spreadsheets.values.append({
     spreadsheetId: "1HpxH5RSSLOrpKdRCwm7h0Ndneo2SSMBB2UOhS0Yl3QM", // from the URL
-    range: process.env.CONTACT_SHEET_NAME, // or whatever other sheet name you name it
+    range: process.env.CONTACT_SHEET_NAME, // CONTACT_SHEET_NAME is an env variable
     valueInputOption: "USER_ENTERED",
     requestBody: {
       values: [

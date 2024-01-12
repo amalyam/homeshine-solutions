@@ -1,22 +1,7 @@
-- FAQ:
-    - fix display on xs/mobile
-- Services:
-    - fix doubling on xs/mobile
-- Reviews:
-    - fix review slider
 - BusinessAppBar:
     - add "Menu" next to icon or make icon bigger?
-    - on mobile horizontal, make it disappear when sliding down
-    - get rid of large whitespace gap right on xs - done, but not centered properly
-    - add "x" button on modal free quote box
 - About Us
-    - get picture of Michael in uniform
-- Services
-- flip through before/after image gallery
-- review gallery (flip through?)
-- Blog
-- FAQ
-    - scale in xs
+    - replace current photo with something better
 - add sections to home page for:
     - sample images
     - reviews
@@ -30,9 +15,10 @@
     - add popover on message box with suggestions of what to include
     - chips get cut off in mobile view
 Other:
+- Add personal tag to footer
+- flip through before/after image gallery
 - fix night mode issues
-- make custom breakpoints to set better spacing of Home page IntroText and ContactForm
-- broken on width 900px-1200px
+- broken on width 900px-1200px?
 - does coming soon page break when menu is open?
 - image starts tiling on very wide screen (e.g. 4k)
 - move all images into public/images folder
