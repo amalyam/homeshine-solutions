@@ -1,4 +1,4 @@
-//import { sql } from "@vercel/postgres";
+// import { sql } from "@vercel/postgres";
 import { NextRequest, NextResponse } from "next/server";
 import FormFields from "../../types/FormFields";
 import { google, Auth } from "googleapis";
@@ -88,28 +88,39 @@ export async function POST(request: NextRequest) {
   // `;
 
   console.log("Adding row to spreadsheet");
-  await googleService.spreadsheets.values.append({
-    spreadsheetId: "1HpxH5RSSLOrpKdRCwm7h0Ndneo2SSMBB2UOhS0Yl3QM", // from the URL
-    range: process.env.CONTACT_SHEET_NAME, // CONTACT_SHEET_NAME is an env variable
-    valueInputOption: "USER_ENTERED",
-    requestBody: {
-      values: [
-        [
-          new Date().toLocaleString("en-US", {
-            timeZone: "America/New_York",
-          }),
-          name,
-          email,
-          phone,
-          address,
-          zip,
-          services?.join(",") ?? "",
-          referralSource?.join(", ") ?? "",
-          message,
-        ],
-      ], // fill with the data you're inserting
-    },
-  });
+  try {
+    const params = {
+      spreadsheetId: "1HpxH5RSSLOrpKdRCwm7h0Ndneo2SSMBB2UOhS0Yl3QM", // from the URL
+      range: process.env.CONTACT_SHEET_NAME, // CONTACT_SHEET_NAME is an env variable
+      valueInputOption: "USER_ENTERED",
+      requestBody: {
+        values: [
+          [
+            new Date().toLocaleString("en-US", {
+              timeZone: "America/New_York",
+            }),
+            name,
+            email,
+            phone,
+            address,
+            zip,
+            services?.join(",") ?? "",
+            referralSource?.join(", ") ?? "",
+            message,
+          ],
+        ], // fill with the data you're inserting
+      },
+    };
+    console.log("Parameters for append operation: ", params);
+
+    const result = await googleService.spreadsheets.values.append(params);
+
+    console.log("Result of append operation: ", result);
+
+    console.log("success");
+  } catch (error) {
+    console.error("Error appending data to Google Sheets: ", error);
+  }
 
   console.log("success");
   return NextResponse.json({ success: true });
