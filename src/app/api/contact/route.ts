@@ -80,7 +80,7 @@ export async function POST(request: NextRequest) {
   console.log("Adding row to spreadsheet");
   await googleService.spreadsheets.values.append({
     spreadsheetId: "1HpxH5RSSLOrpKdRCwm7h0Ndneo2SSMBB2UOhS0Yl3QM", // from the URL
-    range: process.env.CONTACT_SHEET_NAME, // or whatever other sheet name you name it
+    range: process.env.CONTACT_SHEET_NAME, // CONTACT_SHEET_NAME is an env variable
     valueInputOption: "USER_ENTERED",
     requestBody: {
       values: [
