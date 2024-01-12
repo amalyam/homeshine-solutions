@@ -1,4 +1,4 @@
-import BackgroundImage from "/src/images/Gutter_Clean_3.jpg";
+import BackgroundImage from "/public/images/Gutter_Clean_6.png";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Image from "next/image";
