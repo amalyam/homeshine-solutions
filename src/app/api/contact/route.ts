@@ -41,6 +41,13 @@ export async function POST(request: NextRequest) {
           name: `${name}`,
         },
       },
+      {
+        address: {
+          email: "homeshinesolutionsllc@gmail.com",
+          name: "HomeShine Solutions, LLC.",
+          header_to: `${email}`,
+        },
+      },
     ],
     content: {
       from: {
@@ -50,7 +57,7 @@ export async function POST(request: NextRequest) {
       subject: "Free Quote - Copy of Your Responses",
       reply_to: "Michael Elias <homeshinesolutionsllc@gmail.com>",
       headers: {
-        CC: "homeshinesolutions@gmail.com",
+        CC: "HomeShine Solutions, LLC. <homeshinesolutionsllc@gmail.com>",
       },
       html: emailBodyHtml(data),
     },
