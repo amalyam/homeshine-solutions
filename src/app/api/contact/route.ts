@@ -1,4 +1,4 @@
-import { sql } from "@vercel/postgres";
+//import { sql } from "@vercel/postgres";
 import { NextRequest, NextResponse } from "next/server";
 import FormFields from "../../types/FormFields";
 import { google, Auth } from "googleapis";
@@ -49,6 +49,9 @@ export async function POST(request: NextRequest) {
       },
       subject: "Free Quote - Copy of Your Responses",
       reply_to: "Michael Elias <homeshinesolutionsllc@gmail.com>",
+      headers: {
+        CC: "homeshinesolutions@gmail.com",
+      },
       html: emailBodyHtml(data),
     },
   };
