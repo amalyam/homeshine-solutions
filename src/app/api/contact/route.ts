@@ -48,7 +48,7 @@ export async function POST(request: NextRequest) {
         email: "noreply@mail.homeshinesolutions.com",
       },
       subject: "Free Quote - Copy of Your Responses",
-      reply_to: "Michael Elias <michael.homeshinesolutions@gmail.com>",
+      reply_to: "Michael Elias <homeshinesolutionsllc@gmail.com>",
       html: emailBodyHtml(data),
     },
   };
