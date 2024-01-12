@@ -118,9 +118,10 @@ export default function AppFooter() {
   return (
     <Box
       sx={{
-        width: "100%",
+        position: { xs: "static", sm: "sticky" },
         bottom: 0,
         zIndex: 1000,
+        marginTop: "auto",
       }}
     >
       <Typography

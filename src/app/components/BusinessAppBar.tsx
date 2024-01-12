@@ -17,7 +17,7 @@ import Modal from "@mui/material/Modal";
 import Stack from "@mui/material/Stack";
 import theme from "../theme";
 import Toolbar from "@mui/material/Toolbar";
-
+import { useMediaQuery } from "@mui/material";
 import { useState } from "react";
 
 // if on Home, free quote button centers contact form in viewport
@@ -51,8 +51,10 @@ export default function BusinessAppBar() {
     return setOpen(false);
   };
 
+  const isXs = useMediaQuery("(max-width:600px)");
+
   return (
-    <AppBar position="sticky">
+    <AppBar position={isXs ? "static" : "sticky"}>
       <Modal
         open={open}
         onClose={handleClose}
@@ -65,7 +67,10 @@ export default function BusinessAppBar() {
           <ContactForm />
         </Container>
       </Modal>
-      <Box>
+      <Box
+        display={{ xs: "flex", sm: "block" }}
+        justifyContent={{ xs: "center", sm: "flex-start" }}
+      >
         <Toolbar
           disableGutters
           sx={{
@@ -87,6 +92,7 @@ export default function BusinessAppBar() {
                 display: { xs: "flex", md: "none" },
                 marginRight: "0px",
                 flexDirection: "column",
+                justifyContent: "center",
               }}
             >
               <IconButton
@@ -142,7 +148,7 @@ export default function BusinessAppBar() {
                 ))}
               </Menu>
             </Box>
-            <Box>
+            <Box display="flex" justifyContent="center">
               <Link href="/" underline="none">
                 <Image
                   src={HomeShineLogoTransparent}
@@ -150,7 +156,7 @@ export default function BusinessAppBar() {
                   style={{
                     objectFit: "contain",
                     height: "80px",
-                    marginLeft: 10,
+                    marginTop: "-22px",
                   }}
                 />
               </Link>

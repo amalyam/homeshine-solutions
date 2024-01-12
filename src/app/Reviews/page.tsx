@@ -1,9 +1,8 @@
 "use client";
 
-import ComingSoon from "../components/ComingSoon";
 import Box from "@mui/material/Box";
 import ReviewSlider from "../components/ReviewSlider";
-import Siding from "/src/images/Soft_Wash_Siding.png";
+import SunsetGutter from "/public/images/sunset_gutter.jpeg";
 import Typography from "@mui/material/Typography";
 
 export default function Reviews() {
@@ -12,13 +11,12 @@ export default function Reviews() {
       sx={{
         display: "flex",
         justifyContent: "center",
-        background: `no-repeat center/cover url(${Siding.src})`,
+        background: `no-repeat center/cover url(${SunsetGutter.src})`,
         minHeight: "100% 100%",
         minWidth: "100vw",
         alignItems: "center",
         zIndex: "1000",
         flexGrow: "1",
-        backgroundPosition: "top",
         flexDirection: "column",
       }}
     >
