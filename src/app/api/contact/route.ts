@@ -28,6 +28,19 @@ const googleService = google.sheets({
   }),
 });
 
+try {
+  // initialize Google Sheets API client with JWT authentication
+  const auth = new google.auth.JWT({
+    email: process.env.GOOGLE_CLIENT_EMAIL,
+    key: process.env.GOOGLE_CLOUD_PRIVATE_KEY?.replace(/\\n/g, "\n"),
+    scopes: ["https://www.googleapis.com/auth/spreadsheets"],
+  });
+
+  const sheets = google.sheets({ version: "v4", auth });
+} catch {
+  console.error("The GOOGLE_CLOUD_PRIVATE_KEY is not set.");
+}
+
 export async function POST(request: NextRequest) {
   console.log("request to contact route");
   const { data } = (await request.json()) as { data: FormFields };
