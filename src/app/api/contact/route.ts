@@ -4,6 +4,16 @@ import FormFields from "../../types/FormFields";
 import { google, Auth } from "googleapis";
 import emailBodyHtml from "./emailBodyHtml";
 
+if (
+  !process.env.GOOGLE_CLOUD_CLIENT_ID ||
+  !process.env.GOOGLE_CLOUD_EMAIL ||
+  !process.env.GOOGLE_CLOUD_PRIVATE_KEY
+) {
+  console.error(
+    "The GOOGLE_CLOUD_CLIENT_ID, GOOGLE_CLOUD_EMAIL, or GOOGLE_CLOUD_PRIVATE_KEY environment variable is not set"
+  );
+}
+
 const googleService = google.sheets({
   version: "v4",
   auth: new google.auth.GoogleAuth({
@@ -17,6 +27,19 @@ const googleService = google.sheets({
     scopes: ["https://www.googleapis.com/auth/spreadsheets"],
   }),
 });
+
+try {
+  // initialize Google Sheets API client with JWT authentication
+  const auth = new google.auth.JWT({
+    email: process.env.GOOGLE_CLIENT_EMAIL,
+    key: process.env.GOOGLE_CLOUD_PRIVATE_KEY?.replace(/\\n/g, "\n"),
+    scopes: ["https://www.googleapis.com/auth/spreadsheets"],
+  });
+
+  const sheets = google.sheets({ version: "v4", auth });
+} catch {
+  console.error("The GOOGLE_CLOUD_PRIVATE_KEY is not set.");
+}
 
 export async function POST(request: NextRequest) {
   console.log("request to contact route");
