@@ -12,6 +12,7 @@ export default function Reviews() {
         display: "flex",
         justifyContent: "center",
         background: `no-repeat center/cover url(${SunsetGutter.src})`,
+        backgroundSize: "cover",
         minHeight: "100% 100%",
         minWidth: "100vw",
         alignItems: "center",
