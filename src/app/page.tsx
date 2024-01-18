@@ -8,19 +8,20 @@ export default function Home() {
   return (
     <Box
       sx={{
+        display: "flex",
+        justifyContent: "space-around",
         backgroundImage: `url(${CleanRoof.src})`,
+        backgroundSize: "cover",
         minHeight: "100% 100%",
+        alignItems: "center",
+        zIndex: "1000",
+        flexGrow: "1",
         backgroundPosition: { xs: "top", sm: "top" },
         backgroundPositionX: { xs: "center", sm: "left" },
         flexDirection: {
           xs: "column",
           lg: "row",
         },
-        justifyContent: "space-around",
-        height: "300%",
-        alignItems: "center",
-        zIndex: "1000",
-        flexGrow: "1",
       }}
     >
       <Box
