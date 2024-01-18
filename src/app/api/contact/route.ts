@@ -4,14 +4,14 @@ import FormFields from "../../types/FormFields";
 import { google, Auth } from "googleapis";
 import emailBodyHtml from "./emailBodyHtml";
 
-if (
-  !process.env.GOOGLE_CLOUD_CLIENT_ID ||
-  !process.env.GOOGLE_CLOUD_EMAIL ||
-  !process.env.GOOGLE_CLOUD_PRIVATE_KEY
-) {
-  console.error(
-    "The GOOGLE_CLOUD_CLIENT_ID, GOOGLE_CLOUD_EMAIL, or GOOGLE_CLOUD_PRIVATE_KEY environment variable is not set"
-  );
+if (!process.env.GOOGLE_CLOUD_CLIENT_ID) {
+  console.error("The GOOGLE_CLOUD_CLIENT_ID environment variable is not set");
+}
+if (!process.env.GOOGLE_CLOUD_EMAIL) {
+  console.error("The GOOGLE_CLOUD_EMAIL environment variable is not set");
+}
+if (!process.env.GOOGLE_CLOUD_PRIVATE_KEY) {
+  console.error("The GOOGLE_CLOUD_PRIVATE_KEY environment variable is not set");
 }
 
 const googleService = google.sheets({
