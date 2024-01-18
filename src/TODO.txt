@@ -1,3 +1,4 @@
+FIX: home and reviews page whitespace between background and footer!
 - BusinessAppBar:
     - add "Menu" next to icon or make icon bigger?
 - About Us
