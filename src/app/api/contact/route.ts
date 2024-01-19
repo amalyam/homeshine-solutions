@@ -27,7 +27,7 @@ try {
   // initialize Google Sheets API client with JWT authentication
   const auth = new google.auth.JWT({
     email: process.env.GOOGLE_CLOUD_EMAIL,
-    key: process.env.GOOGLE_CLOUD_PRIVATE_KEY?.replace(/\\n/g, "\n"),
+    key: process.env.GOOGLE_CLOUD_PRIVATE_KEY,
     scopes: ["https://www.googleapis.com/auth/spreadsheets"],
   });
 
