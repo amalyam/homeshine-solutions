@@ -19,8 +19,6 @@ const googleService = google.sheets({
   auth: new google.auth.GoogleAuth({
     credentials: {
       type: "service_account",
-      quota_project_id: "homeshine-website",
-      client_id: process.env.GOOGLE_CLOUD_CLIENT_ID,
       client_email: process.env.GOOGLE_CLOUD_EMAIL,
       private_key: process.env.GOOGLE_CLOUD_PRIVATE_KEY,
     },
