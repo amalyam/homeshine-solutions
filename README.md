@@ -11,6 +11,8 @@ www.homeshinesolutions.com was built with: [React](https://reactjs.org/), [TypeS
 
 ### To improve the user experience, some planned future site updates include:
 
+- migrate from Next.js to [Astro](https://astro.build/) to improve overall site performance
+- improve user accessbility across the site
 - improve mobile experience of modal contact form
 - add before/after image gallery
 - clear submission form a few seconds after submitting
