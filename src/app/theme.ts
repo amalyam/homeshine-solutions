@@ -16,7 +16,7 @@ declare module "@mui/material/styles" {
   }
 }
 
-let theme = createTheme({
+const theme = createTheme({
   palette: {
     primary: {
       main: "#ffffff",
