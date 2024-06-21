@@ -10,15 +10,16 @@
         "next",
         "next/core-web-vitals"
     ],
-    "rules": {
-        "react/no-danger": "off",
-        "react/react-in-jsx-scope": "off",
-        "react/no-unescaped-entities": "off",
-        "@typescript-eslint/no-unused-vars": "off",
-        "react/jsx-key": "off",
-        "prefer-const": "off",
-        "@typescript-eslint/no-explicit-any": "off"
-    },
+    // "rules": {
+    //     "react/no-danger": "off",
+    //     "react/react-in-jsx-scope": "off",
+    //     "react/no-unescaped-entities": "off",
+    //     "@typescript-eslint/no-unused-vars": "off",
+    //     "react/jsx-key": "off",
+    //     "prefer-const": "off",
+    //     "@typescript-eslint/no-explicit-any": "off",
+    //     "react/jsx-no-target-blank": "off"
+    // },
     "settings": {
         "react": {
             "version": "detect"
