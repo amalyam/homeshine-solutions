@@ -4,9 +4,6 @@ import FormFields from "../../types/FormFields";
 import { google, Auth } from "googleapis";
 import emailBodyHtml from "./emailBodyHtml";
 
-if (!process.env.GOOGLE_CLOUD_CLIENT_ID) {
-  console.error("The GOOGLE_CLOUD_CLIENT_ID environment variable is not set");
-}
 if (!process.env.GOOGLE_CLOUD_EMAIL) {
   console.error("The GOOGLE_CLOUD_EMAIL environment variable is not set");
 }
@@ -19,8 +16,6 @@ const googleService = google.sheets({
   auth: new google.auth.GoogleAuth({
     credentials: {
       type: "service_account",
-      quota_project_id: "homeshine-website",
-      client_id: process.env.GOOGLE_CLOUD_CLIENT_ID,
       client_email: process.env.GOOGLE_CLOUD_EMAIL,
       private_key: process.env.GOOGLE_CLOUD_PRIVATE_KEY,
     },
@@ -32,7 +27,7 @@ try {
   // initialize Google Sheets API client with JWT authentication
   const auth = new google.auth.JWT({
     email: process.env.GOOGLE_CLOUD_EMAIL,
-    key: process.env.GOOGLE_CLOUD_PRIVATE_KEY?.replace(/\\n/g, "\n"),
+    key: process.env.GOOGLE_CLOUD_PRIVATE_KEY,
     scopes: ["https://www.googleapis.com/auth/spreadsheets"],
   });
 

@@ -2,11 +2,8 @@
 
 import Box from "@mui/material/Box";
 import GutterClean3 from "/src/images/Gutter_Clean_3.jpg";
-import MossHand from "/src/images/moss-hand-3.jpg";
 import Typography from "@mui/material/Typography";
-import { alpha } from "@mui/material";
 import theme from "../theme";
-import CleanSteps from "/src/images/clean-steps.jpg";
 
 export default function ComingSoon() {
   return (
