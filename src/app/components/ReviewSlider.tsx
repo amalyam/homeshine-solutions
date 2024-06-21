@@ -1,5 +1,5 @@
 import React from "react";
-import { styled, useTheme } from "@mui/system";
+import { styled } from "@mui/system";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { Swiper, SwiperSlide, SwiperRef } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
@@ -28,7 +28,7 @@ const BaseSwiper = styled(Swiper)(({ theme }) => ({
   },
 }));
 
-const VerticalSwiper = styled(BaseSwiper)(({ theme }) => ({
+const VerticalSwiper = styled(BaseSwiper)(() => ({
   height: "475px",
   "--swiper-navigation-color": "transparent",
   "& .swiper-pagination": {
@@ -36,7 +36,7 @@ const VerticalSwiper = styled(BaseSwiper)(({ theme }) => ({
   },
 }));
 
-const HorizontalSwiper = styled(BaseSwiper)(({ theme }) => ({
+const HorizontalSwiper = styled(BaseSwiper)(() => ({
   height: "500px",
   "--swiper-navigation-color": "white",
   "& .swiper-slide": {
@@ -45,12 +45,11 @@ const HorizontalSwiper = styled(BaseSwiper)(({ theme }) => ({
 }));
 
 export default function ReviewSlider() {
-  const theme = useTheme();
   const isXs = useMediaQuery("(max-width:600px)");
 
   const SwiperComponent = isXs ? VerticalSwiper : HorizontalSwiper;
 
-  let swiperRef = React.useRef<SwiperRef>(null);
+  const swiperRef = React.useRef<SwiperRef>(null);
   const goToNextSlide = () => {
     if (swiperRef.current) {
       swiperRef.current.swiper.slideNext();
